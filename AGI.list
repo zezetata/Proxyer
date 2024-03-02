@@ -1,0 +1,27 @@
+
+# AGI
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,sider.ai
+DOMAIN-SUFFIX,coze.com
+DOMAIN-SUFFIX,revenuecat.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,typingcloud.com
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,ai.google.dev
+DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,api.mixpanel.com
+DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,msn.com
+DOMAIN-SUFFIX,bing.net
+DOMAIN-SUFFIX,bing.com
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,microsoftapp.net
+DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN-SUFFIX,app.grammarly.com
+
+
+# AGI APP
+PROCESS-NAME,/Applications/Bob.app/Contents/MacOS/Bob
+PROCESS-NAME,/Applications/OpenCat.app/Contents/MacOS/OpenCat
