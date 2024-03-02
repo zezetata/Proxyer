@@ -20,8 +20,3 @@ DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,microsoftapp.net
 DOMAIN-SUFFIX,copilot.microsoft.com
 DOMAIN-SUFFIX,app.grammarly.com
-
-
-# AGI APP
-PROCESS-NAME,/Applications/Bob.app/Contents/MacOS/Bob
-PROCESS-NAME,/Applications/OpenCat.app/Contents/MacOS/OpenCat
