@@ -16,10 +16,14 @@ DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,api.mixpanel.com
 DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,live.com
 DOMAIN-SUFFIX,msn.com
 DOMAIN-SUFFIX,bing.net
 DOMAIN-SUFFIX,bing.com
+DOMAIN-SUFFIX,windows.com
+DOMAIN-SUFFIX,bingapis.com
 DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,microsoftapp.net
+DOMAIN-SUFFIX,microsoftonline.com
 DOMAIN-SUFFIX,copilot.microsoft.com
 DOMAIN-SUFFIX,app.grammarly.com
