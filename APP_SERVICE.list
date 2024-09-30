@@ -1,6 +1,4 @@
 DOMAIN-SUFFIX,setapp.com
-DOMAIN-SUFFIX,discord.com
-DOMAIN-SUFFIX,discord.gg
 DOMAIN-SUFFIX,frdic.com
 DOMAIN-SUFFIX,dictionary.cambridge.org
 DOMAIN-SUFFIX,gotinder.com
@@ -53,3 +51,8 @@ DOMAIN-SUFFIX,wikimedia.org
 DOMAIN-SUFFIX,time.com
 DOMAIN-SUFFIX,myoland.com
 DOMAIN-SUFFIX,v2ex.com
+DOMAIN-SUFFIX,discord.com
+DOMAIN-SUFFIX,discordapp.com
+DOMAIN-SUFFIX,discord.gg
+DOMAIN-SUFFIX,discord.media
+DOMAIN-SUFFIX,discordapp.net
