@@ -89,3 +89,7 @@ DOMAIN-SUFFIX,cnn.com/world
 DOMAIN-SUFFIX,raycast.com
 DOMAIN-SUFFIX,shadowsocks-links.com
 DOMAIN-SUFFIX,caus.com
+DOMAIN-SUFFIX,bsky.app
+DOMAIN-SUFFIX,bsky.social
+DOMAIN-SUFFIX,bsky.network
+DOMAIN-SUFFIX,did.bsky.team
