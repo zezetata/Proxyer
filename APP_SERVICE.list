@@ -90,10 +90,14 @@ DOMAIN-SUFFIX,scmp.com
 DOMAIN-SUFFIX,wsj.com
 DOMAIN-SUFFIX,wsj.net
 DOMAIN-SUFFIX,investors.com
-DOMAIN-SUFFIX,marketwatch.com
 DOMAIN-SUFFIX,cmail20.com
 DOMAIN-SUFFIX,dowjones.io
 DOMAIN-SUFFIX,dwcdn.net
+
+#MarketWatch
+DOMAIN-SUFFIX,marketwatch.com
+DOMAIN-SUFFIX,mktw.net
+DOMAIN-SUFFIX,omtrdc.net
 
 #Barrons
 DOMAIN-SUFFIX,barrons.com
