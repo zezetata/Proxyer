@@ -65,8 +65,6 @@ DOMAIN-SUFFIX,discord.gg
 DOMAIN-SUFFIX,discord.media
 DOMAIN-SUFFIX,discordapp.net
 DOMAIN-SUFFIX,branch.io
-DOMAIN-SUFFIX,reuters.com
-DOMAIN-SUFFIX,bloomberg.com
 DOMAIN-SUFFIX,politico.eu
 DOMAIN-SUFFIX,politico.com
 DOMAIN-SUFFIX,politicopro.com
@@ -93,3 +91,14 @@ DOMAIN-SUFFIX,bsky.app
 DOMAIN-SUFFIX,bsky.social
 DOMAIN-SUFFIX,bsky.network
 DOMAIN-SUFFIX,did.bsky.team
+DOMAIN-SUFFIX,zaobao.com
+DOMAIN-SUFFIX,scmp.com
+DOMAIN-SUFFIX,ft.com
+DOMAIN-SUFFIX,ftstrategies.com
+DOMAIN-SUFFIX,reuters.tv
+DOMAIN-SUFFIX,reutersconnect.com
+DOMAIN-SUFFIX,thomsonreuters.com
+DOMAIN-SUFFIX,theguardian.com
+DOMAIN-SUFFIX,bloomberg.com
+DOMAIN-SUFFIX,washingtonpost.com
+DOMAIN-SUFFIX,apnews.com
