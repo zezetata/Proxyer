@@ -1,4 +1,4 @@
-zedDOMAIN-SUFFIX,setapp.com
+DOMAIN-SUFFIX,setapp.com
 DOMAIN-SUFFIX,frdic.com
 DOMAIN-SUFFIX,dictionary.cambridge.org
 DOMAIN-SUFFIX,gotinder.com
@@ -65,8 +65,6 @@ DOMAIN-SUFFIX,today.com
 DOMAIN-SUFFIX,nbc.com
 DOMAIN-SUFFIX,newsdata.io
 DOMAIN-SUFFIX,nbcnews.ap.org
-DOMAIN-SUFFIX,ft.com
-DOMAIN-SUFFIX,ftchinese.com
 DOMAIN-SUFFIX,cnn.com
 DOMAIN-SUFFIX,money.cnn.com
 DOMAIN-SUFFIX,edition.cnn.com
@@ -109,6 +107,7 @@ DOMAIN-SUFFIX,scorecardresearch.com
 
 #FT
 DOMAIN-SUFFIX,ft.com
+DOMAIN-SUFFIX,ftchinese.com
 DOMAIN-SUFFIX,ftstrategies.com
 
 #Reuters
