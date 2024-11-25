@@ -1,4 +1,4 @@
-zed# AGI
+# AGI
 DOMAIN-SUFFIX,poe.com
 DOMAIN-SUFFIX,sider.ai
 DOMAIN-SUFFIX,coze.com
@@ -30,6 +30,8 @@ DOMAIN-SUFFIX,deepl.com
 DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-SUFFIX,huggingface.co
 DOMAIN-SUFFIX,blogspot.com
+
+# Yahoo
 DOMAIN-SUFFIX,yahoo.com
 DOMAIN-SUFFIX,ymail.com
 DOMAIN-SUFFIX,yimg.com
