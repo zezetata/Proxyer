@@ -5,23 +5,3 @@ DOMAIN-SUFFIX,yimg.com
 DOMAIN-SUFFIX,myyahoo.com
 DOMAIN-SUFFIX,yahoo.mail.com
 DOMAIN-SUFFIX,gstatic.com
-
-# Apple News
-DOMAIN-SUFFIX,ls.apple.com
-DOMAIN,apple.comscoreresearch.com
-DOMAIN,bag.itunes.apple.com
-DOMAIN,gateway.icloud.com
-DOMAIN,news-assets.apple.com
-DOMAIN,news-client-search.apple.com
-DOMAIN,news-edge.apple.com
-DOMAIN,news-events.apple.com
-DOMAIN,news-sports-events.apple.com
-DOMAIN,newsletter-edge.apple.com
-DOMAIN,fpinit.itunes.apple.com
-DOMAIN,gspe1-ssl.ls.apple.com
-DOMAIN,c.apple.news
-DOMAIN,news-todayconfig-edge.apple.com
-URL-REGEX,^https?:\/\/news-assets\.apple\.com\/(audio-narrative|podcast\/audio)\/.*
-USER-AGENT,AppleNews*
-USER-AGENT,News*
-PROCESS-NAME,News
