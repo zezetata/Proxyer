@@ -8,7 +8,9 @@ DOMAIN-SUFFIX,gstatic.com
 
 # Apple News
 DOMAIN-SUFFIX,ls.apple.com
-PROCESS-NAME,News
+DOMAIN,apple.comscoreresearch.com
+DOMAIN,gspe1-ssl.ls.apple.com
+DOMAIN,news-client-search.apple.com
 USER-AGENT,AppleNews*
 USER-AGENT,News*
-DOMAIN,apple.comscoreresearch.com
+PROCESS-NAME,News
