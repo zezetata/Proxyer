@@ -14,6 +14,7 @@ DOMAIN,gspe1-ssl.ls.apple.com
 DOMAIN,c.apple.news
 DOMAIN,news-todayconfig-edge.apple.com
 URL-REGEX,^https?:\/\/news-assets\.apple\.com\/(audio-narrative|podcast\/audio)\/.*
-USER-AGENT,AppleNews*
 USER-AGENT,News*
+USER-AGENT,AppleNews*
+USER-AGENT,com.apple.news*
 PROCESS-NAME,News
