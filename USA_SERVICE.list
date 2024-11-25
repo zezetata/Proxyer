@@ -11,6 +11,12 @@ DOMAIN-SUFFIX,ls.apple.com
 DOMAIN,apple.comscoreresearch.com
 DOMAIN,gspe1-ssl.ls.apple.com
 DOMAIN,news-client-search.apple.com
+# > News
+DOMAIN,news-edge.apple.com
+DOMAIN,news-events.apple.com
+DOMAIN,apple.comscoreresearch.com
+# News+ Audio
+URL-REGEX,^https?:\/\/news-assets\.apple\.com\/(audio-narrative|podcast\/audio)\/.*
 USER-AGENT,AppleNews*
 USER-AGENT,News*
 PROCESS-NAME,News
