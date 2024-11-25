@@ -1,20 +1,41 @@
 # AGI
+
+# Synthesis
 DOMAIN-SUFFIX,poe.com
 DOMAIN-SUFFIX,sider.ai
 DOMAIN-SUFFIX,coze.com
-DOMAIN-SUFFIX,revenuecat.com
-DOMAIN-SUFFIX,claude.ai
-DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,deepl.com
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,openrouter.ai
 DOMAIN-SUFFIX,typingcloud.com
 DOMAIN-SUFFIX,typingmind.com
+
+# Higging Face
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,blogspot.com
+
+# Anthropic
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,anthropic.com
+
+# OpenAI
+DOMAIN-SUFFIX,ai.com
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,chatgpt.com
-DOMAIN-SUFFIX,ai.google.dev
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+DOMAIN-SUFFIX,openai.com.cdn.cloudflare.net
+
+# Google
 DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,ai.google.dev
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,api.mixpanel.com
 DOMAIN-SUFFIX,app-measurement.com
+
+# Microsoft
 DOMAIN-SUFFIX,live.com
 DOMAIN-SUFFIX,msn.com
 DOMAIN-SUFFIX,bing.net
@@ -25,16 +46,3 @@ DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,microsoftapp.net
 DOMAIN-SUFFIX,microsoftonline.com
 DOMAIN-SUFFIX,copilot.microsoft.com
-DOMAIN-SUFFIX,app.grammarly.com
-DOMAIN-SUFFIX,deepl.com
-DOMAIN-SUFFIX,perplexity.ai
-DOMAIN-SUFFIX,huggingface.co
-DOMAIN-SUFFIX,blogspot.com
-
-# Yahoo
-DOMAIN-SUFFIX,yahoo.com
-DOMAIN-SUFFIX,ymail.com
-DOMAIN-SUFFIX,yimg.com
-DOMAIN-SUFFIX,myyahoo.com
-DOMAIN-SUFFIX,yahoo.mail.com
-DOMAIN-SUFFIX,gstatic.com
