@@ -31,6 +31,12 @@ DOMAIN-SUFFIX,haiwaikan.com
 DOMAIN-SUFFIX,cntraveler.com
 DOMAIN-SUFFIX,avo.app
 
+# Spotify
+PROCESS-NAME,Spotify
+USER-AGENT,*Spotify*
+DOMAIN-SUFFIX,scdn.co
+DOMAIN-SUFFIX,spotify.com
+
 # Grammarly
 DOMAIN-SUFFIX,grammarly.com
 DOMAIN-SUFFIX,grammarly.io
