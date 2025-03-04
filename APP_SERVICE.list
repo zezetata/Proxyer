@@ -22,6 +22,9 @@ DOMAIN-SUFFIX,flickr.com
 DOMAIN-SUFFIX,taoplusglobal.com // 购物
 DOMAIN-SUFFIX,shadowsocks-links.com
 
+# Shopify
+DOMAIN-SUFFIX,shopify.com
+
 # 海外看
 DOMAIN-SUFFIX,v82u1l.com
 DOMAIN-SUFFIX,iz8qkg.com
