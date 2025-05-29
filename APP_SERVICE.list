@@ -26,6 +26,27 @@ DOMAIN-SUFFIX,moomoo.com
 DOMAIN-SUFFIX,torrentmac.com
 DOMAIN-SUFFIX,torrentmac.net
 
+# Forbes
+DOMAIN-SUFFIX,forbes.com
+DOMAIN-SUFFIX,outbrain.com
+DOMAIN-SUFFIX,media.net
+DOMAIN-SUFFIX,ml314.com
+DOMAIN-SUFFIX,p-n.io
+DOMAIN-SUFFIX,qualaroo.com
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,quantserve.com
+DOMAIN-SUFFIX,datadome.co
+DOMAIN-SUFFIX,criteo.com
+DOMAIN-SUFFIX,casalemedia.com
+DOMAIN-SUFFIX,openx.net
+DOMAIN-SUFFIX,kargo.com
+DOMAIN-SUFFIX,pubmatic.com
+DOMAIN-SUFFIX,2mdn.net
+DOMAIN-SUFFIX,lkdq.net
+DOMAIN-SUFFIX,casalemedia.com
+DOMAIN-SUFFIX,creativecdn.com
+DOMAIN-SUFFIX,doubleverify.com
+
 # Shopify
 DOMAIN-SUFFIX,shopify.com
 DOMAIN-SUFFIX,myshopify.com
@@ -126,7 +147,6 @@ DOMAIN-SUFFIX,webrtc.org
 DOMAIN-SUFFIX,widevine.com
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-SUFFIX,zynamics.com
-DOMAIN-KEYWORD,google
 DOMAIN-KEYWORD,.blogspot.
 DOMAIN-SUFFIX,goog
 
