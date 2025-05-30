@@ -1,3 +1,10 @@
+# Podcast
+DOMAIN-SUFFIX,itunes.apple.com
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,podcasts.apple.com
+DOMAIN-SUFFIX,xp.apple.com
+DOMAIN-SUFFIX,acast.com
+
 # Yahoo
 DOMAIN-SUFFIX,yahoo.com
 DOMAIN-SUFFIX,ymail.com
