@@ -6,6 +6,11 @@ DOMAIN-SUFFIX,xp.apple.com
 DOMAIN-SUFFIX,acast.com
 DOMAIN-SUFFIX,akadns.net
 DOMAIN-SUFFIX,qtlcdn.com
+DOMAIN-SUFFIX,cdnmg.com
+DOMAIN-SUFFIX,akamai.net
+DOMAIN-SUFFIX,cdnmg.com
+DOMAIN-SUFFIX,ksyuncdn.com
+DOMAIN-SUFFIX,cdnmg.com
 
 # Yahoo
 DOMAIN-SUFFIX,yahoo.com
