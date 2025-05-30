@@ -4,6 +4,8 @@ DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,podcasts.apple.com
 DOMAIN-SUFFIX,xp.apple.com
 DOMAIN-SUFFIX,acast.com
+DOMAIN-SUFFIX,akadns.net
+DOMAIN-SUFFIX,qtlcdn.com
 
 # Yahoo
 DOMAIN-SUFFIX,yahoo.com
