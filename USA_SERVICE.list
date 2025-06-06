@@ -12,6 +12,9 @@ DOMAIN-SUFFIX,cdnmg.com
 DOMAIN-SUFFIX,ksyuncdn.com
 DOMAIN-SUFFIX,cdnmg.com
 
+# Github
+DOMAIN-SUFFIX,github.com
+
 # Yahoo
 DOMAIN-SUFFIX,yahoo.com
 DOMAIN-SUFFIX,ymail.com
