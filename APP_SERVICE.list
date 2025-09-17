@@ -213,6 +213,16 @@ DOMAIN-SUFFIX,wiktionary.org
 #  The Economist
 DOMAIN-SUFFIX,economist.com
 DOMAIN-SUFFIX,static-economist.com
+DOMAIN-SUFFIX,teads.tv
+DOMAIN-SUFFIX,parsely.com
+DOMAIN-SUFFIX,aswpsdkeu.com
+DOMAIN-SUFFIX,optimizely.com
+DOMAIN-SUFFIX,micpn-eu.com
+DOMAIN-SUFFIX,permutive.com
+DOMAIN-SUFFIX,podscribe.com
+DOMAIN-SUFFIX,arttrk.com
+DOMAIN-SUFFIX,mathtag.com
+DOMAIN-SUFFIX,adsrvr.org
 
 # The New York Times
 DOMAIN-SUFFIX,newyorktimes.com
