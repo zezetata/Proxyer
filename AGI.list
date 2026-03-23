@@ -24,6 +24,7 @@ DOMAIN-SUFFIX,blogspot.com
 # Anthropic
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,skilljar.com
 DOMAIN-SUFFIX,anthropic.com
 
 # OpenAI
