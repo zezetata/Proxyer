@@ -983,3 +983,6 @@ DOMAIN-SUFFIX,ifixit.com
 DOMAIN-SUFFIX,terabox.com
 DOMAIN,addons.mozilla.org // Firefox Add-ons HTTP 451
 DOMAIN,wego.here.com
+
+# News
+DOMAIN-SUFFIX,gitflic.ru
