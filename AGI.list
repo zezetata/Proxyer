@@ -27,11 +27,6 @@ DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,claude.com
 DOMAIN-SUFFIX,skilljar.com
 
-DOMAIN,anthropic.com
-DOMAIN,claude.ai
-DOMAIN,claude.com
-DOMAIN,skilljar.com
-
 # OpenAI
 DOMAIN-SUFFIX,ai.com
 DOMAIN-SUFFIX,openai.com
