@@ -239,18 +239,6 @@ DOMAIN-SUFFIX,nytlog.com
 DOMAIN-SUFFIX,nytstyle.com
 DOMAIN-SUFFIX,tmagazine.com
 
-# Redit
-DOMAIN-SUFFIX,redd.it
-DOMAIN-SUFFIX,reddit.com
-DOMAIN-SUFFIX,redditinc.com
-DOMAIN-SUFFIX,reddithelp.com
-DOMAIN-SUFFIX,redditgifts.com
-DOMAIN-SUFFIX,redditspace.com
-DOMAIN-SUFFIX,redditmedia.com
-DOMAIN-SUFFIX,redditmail.com
-DOMAIN-SUFFIX,redditforcommunity.com
-DOMAIN-SUFFIX,redditstatic.com
-
 # Pinterest
 DOMAIN-SUFFIX,pinimg.com
 DOMAIN-KEYWORD,.pinterest.

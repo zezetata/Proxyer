@@ -51,3 +51,15 @@ DOMAIN-SUFFIX,yimg.com
 DOMAIN-SUFFIX,myyahoo.com
 DOMAIN-SUFFIX,yahoo.mail.com
 DOMAIN-SUFFIX,gstatic.com
+
+# Redit
+DOMAIN-SUFFIX,redd.it
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,redditinc.com
+DOMAIN-SUFFIX,reddithelp.com
+DOMAIN-SUFFIX,redditgifts.com
+DOMAIN-SUFFIX,redditspace.com
+DOMAIN-SUFFIX,redditmedia.com
+DOMAIN-SUFFIX,redditmail.com
+DOMAIN-SUFFIX,redditforcommunity.com
+DOMAIN-SUFFIX,redditstatic.com
