@@ -978,3 +978,6 @@ DOMAIN,wego.here.com
 
 # News
 DOMAIN-SUFFIX,gitflic.ru
+
+# Tools
+DOMAIN-SUFFIX,linux.do
