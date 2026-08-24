@@ -18,6 +18,7 @@ DOMAIN-SUFFIX,typingcloud.com
 DOMAIN-SUFFIX,typingmind.com
 DOMAIN-SUFFIX,chatgpt-sidebar.com
 DOMAIN-SUFFIX,browser-intake-datadoghq.com
+DOMAIN-SUFFIX,sentry.io
 
 # Higging Face
 DOMAIN-SUFFIX,huggingface.co
