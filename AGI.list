@@ -1,25 +1,125 @@
-# AGI
+# ==============================================================================
+# NAME: Global Independent AGI & AI Ecosystem Rule-Set (AGI_Synthesis.list)
+# DESCRIPTION: Categorized, pure global independent AGI platforms, LLM providers,
+#              Multi-model hubs, Workflow/Agent platforms, AI IDEs/Coding,
+#              Generative Studios, Writing/Translation & Telemetry SDKs.
+#              (Strictly excludes China mainland services, Google, Microsoft,
+#               OpenAI, Meta, Anthropic, X & Cursor).
+# UPDATED: 2026-10
+# USAGE IN SURGE (Surge.conf):
+#   RULE-SET,AGI_Synthesis.list,AI-Aggregator,extended-matching
+# ==============================================================================
 
-# Synthesis
-DOMAIN-SUFFIX,poe.com
-DOMAIN-SUFFIX,sider.ai
-DOMAIN-SUFFIX,coze.com
-DOMAIN-SUFFIX,deepl.com
+# ------------------------------------------------------------------------------
+# 1. Global Frontier LLM Providers & Inference APIs (独立前沿大模型厂商与推理云)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,mistral.ai
+DOMAIN-SUFFIX,cohere.com
+DOMAIN-SUFFIX,cohere.ai
 DOMAIN-SUFFIX,perplexity.ai
-DOMAIN-SUFFIX,openrouter.ai
-DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,perplexity.com
 DOMAIN-SUFFIX,groq.com
+DOMAIN-SUFFIX,together.ai
+DOMAIN-SUFFIX,together.xyz
+DOMAIN-SUFFIX,fireworks.ai
+DOMAIN-SUFFIX,anyscale.com
+DOMAIN-SUFFIX,baseten.co
+DOMAIN-SUFFIX,databricks.com
+DOMAIN-SUFFIX,replicate.com
+DOMAIN-SUFFIX,replicate.delivery
+DOMAIN-SUFFIX,huggingface.co
+DOMAIN-SUFFIX,hf.co
+DOMAIN-SUFFIX,openrouter.ai
+
+# ------------------------------------------------------------------------------
+# 2. Multi-Model Chat Hubs & AI Aggregators (多模型聚合聊天前端与竞技场)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,poe.com
+DOMAIN-SUFFIX,typingmind.com
+DOMAIN-SUFFIX,typingcloud.com
+DOMAIN-SUFFIX,lmsys.org
+DOMAIN-SUFFIX,chat.lmsys.org
+DOMAIN-SUFFIX,chathub.gg
+
+# ------------------------------------------------------------------------------
+# 3. Workflow, Agent & Vector Database RAG Platforms (AI 工作流、Agent 与向量数据库编排)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,coze.com
 DOMAIN-SUFFIX,dify.ai
-DOMAIN-SUFFIX,jasper.ai
+DOMAIN-SUFFIX,flowiseai.com
+DOMAIN-SUFFIX,langchain.com
+DOMAIN-SUFFIX,smith.langchain.com
+DOMAIN-SUFFIX,pinecone.io
+DOMAIN-SUFFIX,trychroma.com
+DOMAIN-SUFFIX,qdrant.tech
+DOMAIN-SUFFIX,milvus.io
+DOMAIN-SUFFIX,vellum.ai
+DOMAIN-SUFFIX,promptfoo.dev
+DOMAIN-SUFFIX,bland.ai
+DOMAIN-SUFFIX,vapi.ai
+
+# ------------------------------------------------------------------------------
+# 4. Independent AI Coding Assistants & Agentic IDEs (独立 AI 编程助手与智能 IDE)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,codeium.com
+DOMAIN-SUFFIX,tabnine.com
+DOMAIN-SUFFIX,windsurf.ai
+DOMAIN-SUFFIX,devin.ai
+DOMAIN-SUFFIX,cognition.ai
+DOMAIN-SUFFIX,v0.dev
+DOMAIN-SUFFIX,bolt.new
+DOMAIN-SUFFIX,lovable.dev
+DOMAIN-SUFFIX,replit.com
+DOMAIN-SUFFIX,replit.dev
+
+# ------------------------------------------------------------------------------
+# 5. Global AI Image, Video, Audio & Multi-modal Studios (全球多模态图像/视频/音频生成大厂)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,midjourney.com
+DOMAIN-SUFFIX,stability.ai
+DOMAIN-SUFFIX,runwayml.com
+DOMAIN-SUFFIX,pika.art
+DOMAIN-SUFFIX,luma.ai
+DOMAIN-SUFFIX,lumalabs.ai
+DOMAIN-SUFFIX,elevenlabs.io
+DOMAIN-SUFFIX,suno.com
+DOMAIN-SUFFIX,suno.ai
+DOMAIN-SUFFIX,udio.com
+DOMAIN-SUFFIX,civitai.com
 DOMAIN-SUFFIX,openart.ai
 DOMAIN-SUFFIX,clipdrop.co
-DOMAIN-SUFFIX,meta.ai
-DOMAIN-SUFFIX,typingcloud.com
-DOMAIN-SUFFIX,typingmind.com
-DOMAIN-SUFFIX,chatgpt-sidebar.com
+DOMAIN-SUFFIX,haiper.ai
+DOMAIN-SUFFIX,leonardo.ai
+
+# ------------------------------------------------------------------------------
+# 6. AI Writing, Translation & Productivity Tools (AI 写作、智能翻译与办公协同)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,deepl.com
+DOMAIN-SUFFIX,jasper.ai
+DOMAIN-SUFFIX,copy.ai
+DOMAIN-SUFFIX,writesonic.com
+DOMAIN-SUFFIX,grammarly.com
+DOMAIN-SUFFIX,notion.so
+DOMAIN-SUFFIX,notion.site
+DOMAIN-SUFFIX,read.ai
+DOMAIN-SUFFIX,fireflies.ai
+DOMAIN-SUFFIX,otter.ai
+DOMAIN-SUFFIX,linear.app
+
+# ------------------------------------------------------------------------------
+# 7. Browser Extensions & AI UI Wrappers (浏览器 AI 侧边栏与聚合扩展)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,sider.ai
+DOMAIN-SUFFIX,maxai.me
+DOMAIN-SUFFIX,harpa.ai
+DOMAIN-SUFFIX,Monica.im
+DOMAIN-SUFFIX,monica.im
+
+# ------------------------------------------------------------------------------
+# 8. Frontend Telemetry, Monitoring & A/B Testing SDKs (前端遥测、RUM 监控与埋点)
+# ------------------------------------------------------------------------------
 DOMAIN-SUFFIX,browser-intake-datadoghq.com
 DOMAIN-SUFFIX,sentry.io
-
-# Higging Face
-DOMAIN-SUFFIX,huggingface.co
-DOMAIN-SUFFIX,blogspot.com
+DOMAIN-SUFFIX,statsigapi.net
+DOMAIN-SUFFIX,growthbook.io
+DOMAIN-SUFFIX,posthog.com
