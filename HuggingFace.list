@@ -21,43 +21,19 @@ DOMAIN-SUFFIX,huggingface.tech
 # 极其重要：通过 git-lfs / huggingface-cli / hf_transfer 拉取数十 GB 的 safetensors/gguf 模型时，
 #           302 重定向后的真实大文件流量走的是以下 CDN 与 Xet (cas-bridge) 边缘域名！
 # ------------------------------------------------------------------------------
-DOMAIN,cdn-lfs.huggingface.co
-DOMAIN,cdn-lfs.hf.co
-DOMAIN,cdn-lfs-us-1.huggingface.co
-DOMAIN,cdn-lfs-us-1.hf.co
-DOMAIN,cdn-lfs-eu-1.huggingface.co
-DOMAIN,cdn-lfs-eu-1.hf.co
-DOMAIN,cas-bridge.xethub.hf.co
-DOMAIN,cas-server.xethub.hf.co
-DOMAIN-SUFFIX,xethub.hf.co
 DOMAIN-SUFFIX,xethub.com
-DOMAIN,cdn-uploads.huggingface.co
-DOMAIN,cdn-avatars.huggingface.co
-DOMAIN,cdn-media.huggingface.co
-DOMAIN,thumbnails.huggingface.co
 
 # ------------------------------------------------------------------------------
 # 3. Hugging Face Spaces, Inference API & Endpoints (在线 AI 应用容器与推理端点)
 # ------------------------------------------------------------------------------
 DOMAIN-SUFFIX,hf.space
 DOMAIN-SUFFIX,huggingface.space
-DOMAIN,api-inference.huggingface.co
-DOMAIN,router.huggingface.co
 DOMAIN-SUFFIX,endpoints.huggingface.cloud
 DOMAIN-SUFFIX,huggingface.cloud
 
-# ------------------------------------------------------------------------------
-# 4. Explicit Hub, Auth, Docs & Community Subdomains (关键子域名显式声明)
-# ------------------------------------------------------------------------------
-DOMAIN,huggingface.co
-DOMAIN,www.huggingface.co
-DOMAIN,discuss.huggingface.co
-DOMAIN,status.huggingface.co
-DOMAIN,ui.endpoints.huggingface.co
-DOMAIN,internal.huggingface.co
 
 # ------------------------------------------------------------------------------
-# 5. Gradio, Argilla & Acquired Ecosystem (Gradio 交互界面、内网穿透隧道与收购项目)
+# 4. Gradio, Argilla & Acquired Ecosystem (Gradio 交互界面、内网穿透隧道与收购项目)
 # 注：本地运行 Gradio 开启 share=True 时依赖 gradio.live 建立 FRP 隧道
 # ------------------------------------------------------------------------------
 DOMAIN-SUFFIX,gradio.app
@@ -66,7 +42,7 @@ DOMAIN-SUFFIX,gradio.dev
 DOMAIN-SUFFIX,argilla.io
 
 # ------------------------------------------------------------------------------
-# 6. Process & Client User-Agent Rules (命令行下载工具与 Python SDK 标识匹配)
+# 5. Process & Client User-Agent Rules (命令行下载工具与 Python SDK 标识匹配)
 # ------------------------------------------------------------------------------
 USER-AGENT,huggingface-cli*
 USER-AGENT,*huggingface_hub*

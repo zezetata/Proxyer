@@ -19,8 +19,6 @@ DOMAIN-SUFFIX,tiktokv.eu
 DOMAIN-SUFFIX,tiktokw.us
 DOMAIN-SUFFIX,tiktokw.eu
 DOMAIN-SUFFIX,tiktokus.info
-DOMAIN-SUFFIX,vm.tiktok.com
-DOMAIN-SUFFIX,vt.tiktok.com
 
 # ------------------------------------------------------------------------------
 # 2. TikTok Video, Audio, Live Streaming & Static CDNs (音视频流、直播流与静态边缘节点)
@@ -37,7 +35,6 @@ DOMAIN-SUFFIX,ttlivecdn.com
 DOMAIN-SUFFIX,ttwstatic.com
 DOMAIN-SUFFIX,tik-tokapi.com
 DOMAIN-KEYWORD,tiktokcdn
-DOMAIN-KEYWORD,-tiktokcdn-
 
 # ------------------------------------------------------------------------------
 # 3. ByteDance Overseas Infrastructure & SDKs (字节跳动海外专用底座与风控/推送网关)
@@ -95,7 +92,6 @@ DOMAIN-SUFFIX,resso.com
 DOMAIN-SUFFIX,resso.app
 DOMAIN-SUFFIX,gauthmath.com
 DOMAIN-SUFFIX,larksuite.com
-DOMAIN-SUFFIX,coze.com
 DOMAIN-SUFFIX,trae.ai
 DOMAIN-SUFFIX,marscode.com
 

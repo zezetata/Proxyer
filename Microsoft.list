@@ -14,7 +14,6 @@ DOMAIN-SUFFIX,microsoft
 DOMAIN-SUFFIX,azure
 DOMAIN-SUFFIX,bing
 DOMAIN-SUFFIX,hotmail
-DOMAIN-SUFFIX,live
 DOMAIN-SUFFIX,msn
 DOMAIN-SUFFIX,office
 DOMAIN-SUFFIX,onedrive
@@ -55,8 +54,6 @@ DOMAIN-SUFFIX,sfx.ms
 DOMAIN-SUFFIX,gfx.ms
 DOMAIN-SUFFIX,aka.ms
 DOMAIN-SUFFIX,1drv.ms
-DOMAIN-SUFFIX,msftconnecttest.com
-DOMAIN-SUFFIX,msftncsi.com
 
 # ------------------------------------------------------------------------------
 # 4. Microsoft 365, Office, OneDrive, Teams & Outlook (办公套件、云盘、邮件与协作)
@@ -99,9 +96,7 @@ DOMAIN-SUFFIX,dynamics.com
 # ------------------------------------------------------------------------------
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,bing.net
-DOMAIN-SUFFIX,bing.com.cn
 DOMAIN-SUFFIX,msn.com
-DOMAIN-SUFFIX,msn.cn
 DOMAIN-SUFFIX,microsoftedge.com
 DOMAIN-SUFFIX,edge.microsoft.com
 DOMAIN-SUFFIX,msedge.net

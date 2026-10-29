@@ -44,22 +44,15 @@ DOMAIN-SUFFIX,discordstatus.com
 DOMAIN-SUFFIX,disboard.org
 DOMAIN-SUFFIX,hammerandchisel.ssl.zendesk.com
 DOMAIN-SUFFIX,watchanimeattheoffice.com
-DOMAIN-SUFFIX,bigbeans.solutions
 
 # ------------------------------------------------------------------------------
 # 2. Exact Domains & Third-Party Integrations (精确域名、CDN 子域名与第三方依赖)
 # ------------------------------------------------------------------------------
-DOMAIN,api.discord.gg
-DOMAIN,gateway.discord.gg
 DOMAIN,status.discord.com
 DOMAIN,support.discord.com
-DOMAIN,disboard.org
-DOMAIN,cdn.discordapp.com
 DOMAIN,media.discordapp.net
 DOMAIN,images-ext-1.discordapp.net
 DOMAIN,images-ext-2.discordapp.net
-DOMAIN,sentry.io
-DOMAIN,browser-intake-datadoghq.com
 
 # ------------------------------------------------------------------------------
 # 3. Process & Client User-Agent Rules (macOS / iOS / Windows 客户端进程与 UA 识别)
@@ -77,7 +70,6 @@ PROCESS-NAME,Discord Helper (GPU)
 IP-CIDR,34.0.0.0/9,no-resolve
 IP-CIDR,35.184.0.0/13,no-resolve
 IP-CIDR,66.22.192.0/18,no-resolve
-IP-CIDR,162.159.128.0/17,no-resolve
 IP-CIDR6,2602:fbaf::/32,no-resolve
 IP-CIDR6,2a03:b0c0::/32,no-resolve
 IP-ASN,14757,no-resolve

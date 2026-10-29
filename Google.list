@@ -11,15 +11,6 @@
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
-# 0. [可选] QUIC (UDP 443) 逻辑匹配规则 (Surge RULE-SET 原生支持 AND/OR/PROTOCOL 规则)
-# 说明：
-# - 在 Surge 中，RULE-SET (.list) 里的规则默认不带策略名（统一走调用该 RULE-SET 时指定的策略，如 Google）。
-# - 如果你希望在这个 .list 文件里直接识别 Google 的 UDP 443 (QUIC) 流量（例如配合专门的 Reject Rule-Set 调用），
-#   可取消下方这一行的注释；若作为常规代理 Rule-Set 调用，保持注释即可，由下方的域名规则接管全部 TCP/UDP 流量。
-# ------------------------------------------------------------------------------
-AND,((PROTOCOL,UDP),(DEST-PORT,443),(OR,((DOMAIN-SUFFIX,googlevideo.com),(DOMAIN-SUFFIX,youtube.com),(DOMAIN-SUFFIX,ytimg.com),(DOMAIN-SUFFIX,googleapis.com),(DOMAIN-SUFFIX,gstatic.com),(DOMAIN-SUFFIX,google.com),(DOMAIN-SUFFIX,googleusercontent.com))))
-
-# ------------------------------------------------------------------------------
 # 1. Google Brand & Registry Exclusive TLDs (Google 品牌私有顶级域名后缀)
 # ------------------------------------------------------------------------------
 DOMAIN-SUFFIX,google
@@ -31,26 +22,8 @@ DOMAIN-SUFFIX,android
 DOMAIN-SUFFIX,gmail
 DOMAIN-SUFFIX,gbiz
 DOMAIN-SUFFIX,gdrive
-DOMAIN-SUFFIX,gdn
 DOMAIN-SUFFIX,guge
 DOMAIN-SUFFIX,hangout
-DOMAIN-SUFFIX,nexus
-DOMAIN-SUFFIX,play
-DOMAIN-SUFFIX,prod
-DOMAIN-SUFFIX,search
-DOMAIN-SUFFIX,welt
-DOMAIN-SUFFIX,xn--flw351e
-DOMAIN-SUFFIX,xn--qcka1pmc
-DOMAIN-SUFFIX,dclk
-DOMAIN-SUFFIX,ads
-DOMAIN-SUFFIX,cal
-DOMAIN-SUFFIX,channel
-DOMAIN-SUFFIX,docs
-DOMAIN-SUFFIX,drive
-DOMAIN-SUFFIX,fly
-DOMAIN-SUFFIX,here
-DOMAIN-SUFFIX,map
-DOMAIN-SUFFIX,meet
 
 # ------------------------------------------------------------------------------
 # 2. Google Registry Public TLDs - Google Official Domains (公共后缀中的 Google 官方自用域名)
@@ -109,7 +82,6 @@ DOMAIN-SUFFIX,tekton.dev
 DOMAIN-SUFFIX,osv.dev
 DOMAIN-SUFFIX,deps.dev
 DOMAIN-SUFFIX,sigstore.dev
-DOMAIN-SUFFIX,open-vsx.org
 DOMAIN-SUFFIX,pkg.dev
 DOMAIN-SUFFIX,cloudshell.dev
 DOMAIN-SUFFIX,run.app
@@ -576,8 +548,6 @@ IP-CIDR,8.8.8.0/24,no-resolve
 IP-CIDR,8.8.4.0/24,no-resolve
 IP-CIDR,8.34.208.0/20,no-resolve
 IP-CIDR,8.35.192.0/20,no-resolve
-IP-CIDR,34.0.0.0/9,no-resolve
-IP-CIDR,35.184.0.0/13,no-resolve
 IP-CIDR,35.192.0.0/12,no-resolve
 IP-CIDR,35.208.0.0/12,no-resolve
 IP-CIDR,35.224.0.0/12,no-resolve

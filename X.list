@@ -12,18 +12,6 @@
 # 注：Grok 独立站与 API 对部分地区（如香港/欧盟未合规节点）有严格校验，建议指向美国固定节点
 # ------------------------------------------------------------------------------
 DOMAIN-SUFFIX,x.ai
-DOMAIN-SUFFIX,grok.com
-DOMAIN-SUFFIX,grok.x.com
-DOMAIN,api.x.ai
-DOMAIN,console.x.ai
-DOMAIN,accounts.x.ai
-DOMAIN,docs.x.ai
-DOMAIN,status.x.ai
-DOMAIN,chat.x.ai
-DOMAIN,ide.x.ai
-DOMAIN,grok.x.ai
-DOMAIN,assets.x.ai
-DOMAIN,cdn.x.ai
 
 # ------------------------------------------------------------------------------
 # 2. Cursor AI IDE & Anysphere Ecosystem (Cursor 编辑器、Tab 补全、Agent 与插件市场)
@@ -36,12 +24,7 @@ DOMAIN-SUFFIX,cursorapi.com
 DOMAIN-SUFFIX,cursor-cdn.com
 DOMAIN-SUFFIX,anysphere.inc
 DOMAIN-SUFFIX,anysphere.co
-DOMAIN,api2.cursor.sh
-DOMAIN,api3.cursor.sh
-DOMAIN,api4.cursor.sh
-DOMAIN,repo42.cursor.sh
 DOMAIN,marketplace.cursorapi.com
-DOMAIN,downloads.cursor.com
 DOMAIN,download.todesktop.com
 DOMAIN-SUFFIX,open-vsx.org
 
@@ -68,12 +51,7 @@ DOMAIN-SUFFIX,ads-twitter.com
 DOMAIN-SUFFIX,cms-twdigitalassets.com
 DOMAIN-SUFFIX,tellapart.com
 DOMAIN-SUFFIX,tweetdeck.com
-DOMAIN,api.x.com
 DOMAIN,api.twitter.com
-DOMAIN,abs.twimg.com
-DOMAIN,pbs.twimg.com
-DOMAIN,video.twimg.com
-DOMAIN,ton.twimg.com
 DOMAIN-KEYWORD,twitter
 
 # ------------------------------------------------------------------------------
@@ -83,11 +61,6 @@ DOMAIN-SUFFIX,spacex.com
 DOMAIN-SUFFIX,starlink.com
 DOMAIN-SUFFIX,starlink.sx
 DOMAIN-SUFFIX,starlinkisp.net
-DOMAIN,api.starlink.com
-DOMAIN,auth.starlink.com
-DOMAIN,shop.starlink.com
-DOMAIN,support.starlink.com
-DOMAIN,telemetry.starlink.com
 
 # ------------------------------------------------------------------------------
 # 5. Process & Client User-Agent Rules (macOS / iOS 客户端、Grok 与 Cursor 进程匹配)
@@ -105,7 +78,6 @@ USER-AGENT,*Grok*
 USER-AGENT,Cursor*
 USER-AGENT,Twitter*
 USER-AGENT,TwitterAndroid*
-USER-AGENT,X*
 USER-AGENT,com.atebits.Tweetie2*
 USER-AGENT,Starlink*
 

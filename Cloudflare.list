@@ -26,18 +26,11 @@ DOMAIN-SUFFIX,cloudflareinsights.com
 DOMAIN-SUFFIX,cloudflarestream.com
 DOMAIN-SUFFIX,cloudflareresearch.com
 DOMAIN-SUFFIX,every1dns.net
-DOMAIN,dash.cloudflare.com
-DOMAIN,api.cloudflare.com
-DOMAIN,developers.cloudflare.com
-DOMAIN,blog.cloudflare.com
-DOMAIN,support.cloudflare.com
-DOMAIN,community.cloudflare.com
 
 # ------------------------------------------------------------------------------
 # 3. WARP+, 1.1.1.1 DNS & Zero Trust / Cloudflare One (WARP VPN 与零信任客户端)
 # ------------------------------------------------------------------------------
 DOMAIN-SUFFIX,one.one.one.one
-DOMAIN,one.one.one.one
 DOMAIN,cloudflare-dns.com
 DOMAIN,dns.cloudflare.com
 DOMAIN,engage.cloudflareclient.com
@@ -65,7 +58,7 @@ DOMAIN-SUFFIX,turnstile.com
 DOMAIN-SUFFIX,cloudflare-ipfs.com
 DOMAIN-SUFFIX,cf-ip.com
 DOMAIN-SUFFIX,cf-ns.com
-DOMAIN,challenges.cloudflare.com
+DOMAIN-SUFFIX,imagedelivery.net
 
 # ------------------------------------------------------------------------------
 # 6. Process & Client User-Agent Rules (macOS / iOS 客户端与 WARP 进程匹配)

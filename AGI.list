@@ -27,8 +27,6 @@ DOMAIN-SUFFIX,baseten.co
 DOMAIN-SUFFIX,databricks.com
 DOMAIN-SUFFIX,replicate.com
 DOMAIN-SUFFIX,replicate.delivery
-DOMAIN-SUFFIX,huggingface.co
-DOMAIN-SUFFIX,hf.co
 DOMAIN-SUFFIX,openrouter.ai
 
 # ------------------------------------------------------------------------------
@@ -38,7 +36,6 @@ DOMAIN-SUFFIX,poe.com
 DOMAIN-SUFFIX,typingmind.com
 DOMAIN-SUFFIX,typingcloud.com
 DOMAIN-SUFFIX,lmsys.org
-DOMAIN-SUFFIX,chat.lmsys.org
 DOMAIN-SUFFIX,chathub.gg
 
 # ------------------------------------------------------------------------------
@@ -48,7 +45,6 @@ DOMAIN-SUFFIX,coze.com
 DOMAIN-SUFFIX,dify.ai
 DOMAIN-SUFFIX,flowiseai.com
 DOMAIN-SUFFIX,langchain.com
-DOMAIN-SUFFIX,smith.langchain.com
 DOMAIN-SUFFIX,pinecone.io
 DOMAIN-SUFFIX,trychroma.com
 DOMAIN-SUFFIX,qdrant.tech
@@ -112,13 +108,13 @@ DOMAIN-SUFFIX,linear.app
 DOMAIN-SUFFIX,sider.ai
 DOMAIN-SUFFIX,maxai.me
 DOMAIN-SUFFIX,harpa.ai
-DOMAIN-SUFFIX,Monica.im
 DOMAIN-SUFFIX,monica.im
 
 # ------------------------------------------------------------------------------
 # 8. Frontend Telemetry, Monitoring & A/B Testing SDKs (前端遥测、RUM 监控与埋点)
 # ------------------------------------------------------------------------------
 DOMAIN-SUFFIX,browser-intake-datadoghq.com
+DOMAIN-SUFFIX,auth0.com
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,statsigapi.net
 DOMAIN-SUFFIX,growthbook.io

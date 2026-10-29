@@ -20,10 +20,6 @@ DOMAIN-SUFFIX,oaiusercontent.com
 # 2. Explicit Key Endpoints (核心 API、后台、认证与静态资源显式声明)
 # ------------------------------------------------------------------------------
 # API & Developer Console / Playground
-DOMAIN,api.openai.com
-DOMAIN,platform.openai.com
-DOMAIN,api.chatgpt.com
-DOMAIN,chat.openai.com
 DOMAIN,sora.com
 DOMAIN,www.sora.com
 
@@ -31,14 +27,9 @@ DOMAIN,www.sora.com
 DOMAIN-SUFFIX,auth0.com
 DOMAIN,openai-sso.auth0.com
 
-# Static CDN & Assets
-DOMAIN,cdn.openai.com
-DOMAIN,files.oaiusercontent.com
-
 # ------------------------------------------------------------------------------
 # 3. Realtime API, WebSockets & Experimental Endpoints (实时语音、实时 API 与 Codex 终端通道)
 # ------------------------------------------------------------------------------
-DOMAIN,realtime.api.openai.com
 DOMAIN,chatgpt-async.com
 
 # ------------------------------------------------------------------------------
@@ -46,7 +37,6 @@ DOMAIN,chatgpt-async.com
 # ------------------------------------------------------------------------------
 DOMAIN,o33249.ingest.sentry.io
 DOMAIN,events.statsigapi.net
-DOMAIN,browser-intake-datadoghq.com
 DOMAIN,config.statsig.com
 
 # ------------------------------------------------------------------------------

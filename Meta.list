@@ -24,13 +24,8 @@ DOMAIN-SUFFIX,atscaleconference.com
 # ------------------------------------------------------------------------------
 # 2. Meta AI, Llama & Generative AI Ecosystem (Meta AI 大模型与人工智能平台)
 # ------------------------------------------------------------------------------
-DOMAIN,meta.ai
 DOMAIN-SUFFIX,meta.ai
-DOMAIN,llama.com
 DOMAIN-SUFFIX,llama.com
-DOMAIN,llama.meta.com
-DOMAIN,ai.meta.com
-DOMAIN,imagine.meta.com
 DOMAIN,audiocraft.metademolab.com
 DOMAIN-SUFFIX,metademolab.com
 DOMAIN-SUFFIX,wit.ai
@@ -97,9 +92,6 @@ DOMAIN-SUFFIX,oculuscdn.com
 DOMAIN-SUFFIX,oculusrift.com
 DOMAIN-SUFFIX,oculusvr.com
 DOMAIN-SUFFIX,powersunitedvr.com
-DOMAIN,horizon.meta.com
-DOMAIN,quest.meta.com
-DOMAIN,view.meta.com
 
 # ------------------------------------------------------------------------------
 # 7. Meta Developer Tools & Open Source Ecosystem (React / PyTorch / Docusaurus 等开源框架)
@@ -139,18 +131,9 @@ DOMAIN-SUFFIX,atdmt.com
 # X. Muse Ecosystem & Related Services (Muse 相关的视频、画布、硬件与 AI 规则)
 # ------------------------------------------------------------------------------
 DOMAIN-SUFFIX,muse.ai
-DOMAIN,api.muse.ai
-DOMAIN,assets.muse.ai
-DOMAIN,player.muse.ai
-DOMAIN,search.muse.ai
 DOMAIN-SUFFIX,museapp.com
-DOMAIN,app.museapp.com
-DOMAIN,api.museapp.com
-DOMAIN,updates.museapp.com
 DOMAIN-SUFFIX,choosemuse.com
 DOMAIN-SUFFIX,interaxon.ca
-DOMAIN,app.choosemuse.com
-DOMAIN,api.choosemuse.com
 
 # 9. Process & Client User-Agent Rules (iOS / macOS / 桌面客户端进程与 UA 识别)
 # ------------------------------------------------------------------------------
