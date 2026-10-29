@@ -1,23 +1,81 @@
-# Podcast
-DOMAIN-SUFFIX,itunes.apple.com
-DOMAIN-SUFFIX,mzstatic.com
-DOMAIN-SUFFIX,podcasts.apple.com
-DOMAIN-SUFFIX,xp.apple.com
-DOMAIN-SUFFIX,acast.com
-DOMAIN-SUFFIX,akadns.net
-DOMAIN-SUFFIX,akamai.net
-DOMAIN-SUFFIX,cdnmg.com
+# ==============================================================================
+# NAME: United States Internet Services Rule-Set (USA_SERVICE.list)
+# DESCRIPTION: Covers US-based internet services, media, social platforms,
+#              developer tools, cloud/CDN & fintech not covered by dedicated
+#              brand rule-sets (Excludes Google, Microsoft/GitHub, Amazon, Meta,
+#              OpenAI, Anthropic, X/xAI/SpaceX, Cloudflare, Discord & PayPal).
+# UPDATED: 2026-10
+# USAGE IN SURGE (Surge.conf):
+#   RULE-SET,https://raw.githubusercontent.com/zezetata/Proxyer/master/USA_SERVICE.list,"🇺🇸 USA Service",extended-matching
+# ==============================================================================
 
-# Yahoo
-DOMAIN-SUFFIX,yahoo.com
-DOMAIN-SUFFIX,ymail.com
-DOMAIN-SUFFIX,yimg.com
-DOMAIN-SUFFIX,myyahoo.com
-DOMAIN-SUFFIX,yahoo.mail.com
+# ------------------------------------------------------------------------------
+# 1. US Mainstream News, Finance & Magazines (美国主流新闻、财经媒体与深度杂志)
+# ------------------------------------------------------------------------------
+# > The New York Times (纽约时报)
+DOMAIN-SUFFIX,nytimes.com
+DOMAIN-SUFFIX,newyorktimes.com
+DOMAIN-SUFFIX,nyt.com
+DOMAIN-SUFFIX,nytco.com
+DOMAIN-SUFFIX,nytimg.com
+DOMAIN-SUFFIX,nytlog.com
+DOMAIN-SUFFIX,nytstyle.com
+DOMAIN-SUFFIX,tmagazine.com
 
-# Redit
-DOMAIN-SUFFIX,redd.it
+# > Dow Jones: WSJ, Barron's & MarketWatch (道琼斯：华尔街日报、巴伦周刊、市场观察)
+DOMAIN-SUFFIX,wsj.com
+DOMAIN-SUFFIX,wsj.net
+DOMAIN-SUFFIX,dowjones.com
+DOMAIN-SUFFIX,dowjones.io
+DOMAIN-SUFFIX,barrons.com
+DOMAIN-SUFFIX,marketwatch.com
+DOMAIN-SUFFIX,mktw.net
+DOMAIN-SUFFIX,investors.com
+DOMAIN-SUFFIX,djservices.io
+DOMAIN-SUFFIX,dwcdn.net
+
+# > Bloomberg (彭博社 - 排除国内直连的 bloomberg.cn)
+DOMAIN-SUFFIX,bloomberg.com
+DOMAIN-SUFFIX,bloomberg.de
+DOMAIN-SUFFIX,bloombergview.com
+DOMAIN-SUFFIX,bwbx.io
+
+# > The Washington Post (华盛顿邮报)
+DOMAIN-SUFFIX,washingtonpost.com
+DOMAIN-SUFFIX,wpdigital.net
+
+# > Forbes, Time, The New Yorker & Condé Nast (福布斯、时代周刊、纽约客、康泰纳仕)
+DOMAIN-SUFFIX,forbes.com
+DOMAIN-SUFFIX,time.com
+DOMAIN-SUFFIX,newyorker.com
+DOMAIN-SUFFIX,cntraveler.com
+DOMAIN-SUFFIX,wired.com
+DOMAIN-SUFFIX,arstechnica.com
+
+# > CNN, NBC, AP & Politico (美国电视新闻网、美联社与政客杂志)
+DOMAIN-SUFFIX,cnn.com
+DOMAIN-SUFFIX,cnn.io
+DOMAIN-SUFFIX,cnn.co.uk
+DOMAIN-SUFFIX,nbc.com
+DOMAIN-SUFFIX,nbcnews.com
+DOMAIN-SUFFIX,mynbcnews.com
+DOMAIN-SUFFIX,apnews.com
+DOMAIN-SUFFIX,ap.org
+DOMAIN-SUFFIX,politico.com
+DOMAIN-SUFFIX,politico.eu
+DOMAIN-SUFFIX,politicopro.com
+DOMAIN-SUFFIX,today.com
+DOMAIN-SUFFIX,newsweek.com
+DOMAIN-SUFFIX,foreignaffairs.com
+DOMAIN-SUFFIX,foreignpolicy.com
+DOMAIN-SUFFIX,newsdata.io
+
+# ------------------------------------------------------------------------------
+# 2. US Social Networks, Forums & Content Publishing (美国社交网络、社区与内容出版)
+# ------------------------------------------------------------------------------
+# > Reddit (全美最大社区论坛)
 DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,redd.it
 DOMAIN-SUFFIX,redditinc.com
 DOMAIN-SUFFIX,reddithelp.com
 DOMAIN-SUFFIX,redditgifts.com
@@ -27,11 +85,158 @@ DOMAIN-SUFFIX,redditmail.com
 DOMAIN-SUFFIX,redditforcommunity.com
 DOMAIN-SUFFIX,redditstatic.com
 
-# Other Musk-affiliated (optional)
-DOMAIN-SUFFIX,neuralink.com
-DOMAIN-SUFFIX,boringcompany.com
+# > Bluesky (去中心化社交网络)
+DOMAIN-SUFFIX,bsky.app
+DOMAIN-SUFFIX,bsky.social
+DOMAIN-SUFFIX,bsky.network
+DOMAIN-SUFFIX,bsky.team
+
+# > Quora, Medium & Substack (问答社区、专栏博客与独立通讯订阅)
+DOMAIN-SUFFIX,quora.com
+DOMAIN-SUFFIX,quoracdn.net
+DOMAIN-SUFFIX,medium.com
+DOMAIN-SUFFIX,substack.com
+
+# > Pinterest & Flickr (图片社交与摄影社区)
+DOMAIN-SUFFIX,pinterest.com
+DOMAIN-SUFFIX,pinimg.com
+DOMAIN-KEYWORD,.pinterest.
+DOMAIN-SUFFIX,flickr.com
+DOMAIN-SUFFIX,staticflickr.com
+
+# > Automattic (WordPress / Tumblr / Gravatar)
+DOMAIN-SUFFIX,wordpress.com
+DOMAIN-SUFFIX,wordpress.org
+DOMAIN-SUFFIX,wp.com
+DOMAIN-SUFFIX,tumblr.com
+DOMAIN-SUFFIX,gravatar.com
+DOMAIN-SUFFIX,videopress.com
+
+# > Match Group & Bumble (Tinder / Bumble 社交软件)
+DOMAIN-SUFFIX,tinder.com
+DOMAIN-SUFFIX,gotinder.com
+DOMAIN-SUFFIX,bumble.com
+DOMAIN-SUFFIX,bumblebff.com
+DOMAIN-SUFFIX,bumbcdn.com
+
+# > Clubhouse (语音社交)
+DOMAIN-SUFFIX,joinclubhouse.com
+DOMAIN-SUFFIX,clubhouseapi.com
+DOMAIN,clubhouse.pubnubapi.com
+
+# ------------------------------------------------------------------------------
+# 3. Knowledge, Reference, News Readers & Portals (百科全书、门户与阅读器)
+# ------------------------------------------------------------------------------
+# > Wikimedia Foundation (维基百科全栈生态)
+DOMAIN-SUFFIX,wikipedia.org
+DOMAIN-SUFFIX,wikimedia.org
+DOMAIN-SUFFIX,wikimediafoundation.org
+DOMAIN-SUFFIX,mediawiki.org
+DOMAIN-SUFFIX,wikidata.org
+DOMAIN-SUFFIX,wikibooks.org
+DOMAIN-SUFFIX,wikinews.org
+DOMAIN-SUFFIX,wikiquote.org
+DOMAIN-SUFFIX,wikisource.org
+DOMAIN-SUFFIX,wikiversity.org
+DOMAIN-SUFFIX,wikivoyage.org
+DOMAIN-SUFFIX,wiktionary.org
+DOMAIN-SUFFIX,wikileaks.org
+
+# > Yahoo & Engadget (雅虎门户、邮箱与瘾科技)
+DOMAIN-SUFFIX,yahoo.com
+DOMAIN-SUFFIX,ymail.com
+DOMAIN-SUFFIX,yimg.com
+DOMAIN-SUFFIX,myyahoo.com
+DOMAIN-SUFFIX,engadget.com
+
+# > Feedly, Flipboard, Thesaurus & iFixit (RSS 阅读器、新闻聚合、词典与拆解维修指南)
+DOMAIN-SUFFIX,feedly.com
+DOMAIN-SUFFIX,flipboard.com
+DOMAIN-SUFFIX,thesaurus.com
+DOMAIN-SUFFIX,dictionary.com
+DOMAIN-SUFFIX,ifixit.com
+
+# ------------------------------------------------------------------------------
+# 4. Apple US-Locked Services & Podcasts (Apple 美区锁区播客与音频分发)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,podcasts.apple.com
+DOMAIN-SUFFIX,itunes.apple.com
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,xp.apple.com
+DOMAIN-SUFFIX,acast.com
+DOMAIN-SUFFIX,tritondigital.com
+DOMAIN-SUFFIX,podscribe.com
+
+# ------------------------------------------------------------------------------
+# 5. US Developer Tools, Cloud, CDN & Security (美国开发者工具、BaaS、CDN 与安全鉴权)
+# ------------------------------------------------------------------------------
+# > Homebrew, Raycast, Mozilla Add-ons & Network Tools (macOS 生产力与网络工具)
+DOMAIN-SUFFIX,brew.sh
+DOMAIN-SUFFIX,raycast.com
+DOMAIN-SUFFIX,ray.so
+DOMAIN-SUFFIX,proxifier.com
+DOMAIN-SUFFIX,privoxy.org
+DOMAIN-SUFFIX,wireguard.com
+DOMAIN,addons.mozilla.org
+
+# > Supabase (开源 Firebase 替代方案与 Postgres BaaS)
+DOMAIN-SUFFIX,supabase.com
+DOMAIN-SUFFIX,supabase.co
+DOMAIN-SUFFIX,supabase.in
+
+# > Dropbox (美国云存储服务)
+DOMAIN-SUFFIX,dropbox.com
+DOMAIN-SUFFIX,dropboxapi.com
+DOMAIN-SUFFIX,dropboxusercontent.com
+
+# > Fastly, Akamai & JSDelivr CDN (美国核心边缘 CDN 与静态资源加速)
+DOMAIN-SUFFIX,fastly.net
+DOMAIN-SUFFIX,akamai.net
+DOMAIN-SUFFIX,akadns.net
+DOMAIN-SUFFIX,akamaized.net
+DOMAIN-SUFFIX,jsdelivr.net
+
+# > Datadog, New Relic, Okta & Optimizely (美国云监控、APM、身份认证与移动端归因)
+DOMAIN-SUFFIX,datadoghq.com
+DOMAIN-SUFFIX,nr-data.net
+DOMAIN-SUFFIX,newrelic.com
+DOMAIN-SUFFIX,okta.com
+DOMAIN-SUFFIX,oktacdn.com
+DOMAIN-SUFFIX,optimizely.com
+DOMAIN-SUFFIX,branch.io
+DOMAIN-SUFFIX,appsflyer.com
+DOMAIN-SUFFIX,urbanairship.com
+DOMAIN-SUFFIX,avo.app
+
+# ------------------------------------------------------------------------------
+# 6. US Fintech, Crypto Exchanges & Remote Work (美国金融支付、合规加密交易所与远程工作)
+# ------------------------------------------------------------------------------
+# > Stripe & Moomoo (美国在线支付网关与美股券商)
+DOMAIN-SUFFIX,stripe.com
+DOMAIN-SUFFIX,stripe.network
+DOMAIN-SUFFIX,moomoo.com
+
+# > US Regulated Crypto & Web3 (美国本土合规交易所、行情与以太坊生态)
+DOMAIN-SUFFIX,coinbase.com
+DOMAIN-SUFFIX,coinmarketcap.com
+DOMAIN-SUFFIX,kraken.com
+DOMAIN-SUFFIX,gemini.com
+DOMAIN-SUFFIX,uniswap.org
+DOMAIN-SUFFIX,etherscan.io
+DOMAIN-SUFFIX,bitcointalk.org
+
+# > Y Combinator & US Remote Job Boards (YC 创业社区与美国远程招聘平台)
+DOMAIN-SUFFIX,ycombinator.com
+DOMAIN-SUFFIX,upwork.com
+DOMAIN-SUFFIX,remoteok.com
+DOMAIN-SUFFIX,weworkremotely.com
+DOMAIN-SUFFIX,remotive.com
+
+# ------------------------------------------------------------------------------
+# 7. Tesla, Neuralink & The Boring Company (马斯克旗下非 X/SpaceX 实体公司)
+# 注：已剔除 tesla.cn（归入 China.list 直连），此处仅代理海外官网
+# ------------------------------------------------------------------------------
 DOMAIN-SUFFIX,tesla.com
 DOMAIN-SUFFIX,teslamotors.com
-
-# Others
-DOMAIN-SUFFIX,datadoghq.com
+DOMAIN-SUFFIX,neuralink.com
+DOMAIN-SUFFIX,boringcompany.com
