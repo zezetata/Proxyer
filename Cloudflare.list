@@ -1,0 +1,97 @@
+# ==============================================================================
+# NAME: Cloudflare Complete Ecosystem Rule-Set (Cloudflare.list)
+# DESCRIPTION: Covers Cloudflare Dashboard/API, Warp+, 1.1.1.1, Zero Trust / Access,
+#              Workers / Pages, Pages.dev, R2, KV, D1, Turnstile, CDN & ASNs.
+# UPDATED: 2026-10
+# USAGE IN SURGE (Surge.conf):
+#   RULE-SET,Cloudflare.list,Cloudflare,extended-matching
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Cloudflare Brand Exclusive TLDs (Cloudflare 品牌专属顶级域名后缀)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,cloudflare
+DOMAIN-SUFFIX,cloudflareaccess
+DOMAIN-SUFFIX,cloudflareclient
+DOMAIN-SUFFIX,cloudflaressl
+DOMAIN-SUFFIX,cloudflarestatus
+
+# ------------------------------------------------------------------------------
+# 2. Core Dashboard, Account & API (核心控制台、控制面板、API 与开发者鉴权)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,cloudflare.com
+DOMAIN-SUFFIX,cloudflare.net
+DOMAIN-SUFFIX,cloudflare.org
+DOMAIN-SUFFIX,cloudflareinsights.com
+DOMAIN-SUFFIX,cloudflarestream.com
+DOMAIN-SUFFIX,cloudflareresearch.com
+DOMAIN-SUFFIX,every1dns.net
+DOMAIN,dash.cloudflare.com
+DOMAIN,api.cloudflare.com
+DOMAIN,developers.cloudflare.com
+DOMAIN,blog.cloudflare.com
+DOMAIN,support.cloudflare.com
+DOMAIN,community.cloudflare.com
+
+# ------------------------------------------------------------------------------
+# 3. WARP+, 1.1.1.1 DNS & Zero Trust / Cloudflare One (WARP VPN 与零信任客户端)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,one.one.one.one
+DOMAIN,one.one.one.one
+DOMAIN,cloudflare-dns.com
+DOMAIN,dns.cloudflare.com
+DOMAIN,engage.cloudflareclient.com
+DOMAIN-SUFFIX,cloudflareaccess.com
+DOMAIN-SUFFIX,cloudflareclient.com
+DOMAIN-SUFFIX,teams.cloudflare.com
+
+# ------------------------------------------------------------------------------
+# 4. Cloudflare Workers, Pages, R2, KV & Serverless Infra (无服务器计算与边缘存储)
+# 注：包含 *.workers.dev、*.pages.dev 以及各类边缘计算网关域名
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,workers.dev
+DOMAIN-SUFFIX,r2.cloudflarestorage.com
+DOMAIN-SUFFIX,r2.dev
+DOMAIN-SUFFIX,cfdata.org
+DOMAIN-SUFFIX,pages.cloudflare.com
+DOMAIN-SUFFIX,workers.cloudflare.com
+DOMAIN-SUFFIX,pages.app
+
+# ------------------------------------------------------------------------------
+# 5. Security, Turnstile, Captcha & CDN Services (Web 盾、人机验证与全球 CDN 网关)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,challenges.cloudflare.com
+DOMAIN-SUFFIX,turnstile.com
+DOMAIN-SUFFIX,cloudflare-ipfs.com
+DOMAIN-SUFFIX,cf-ip.com
+DOMAIN-SUFFIX,cf-ns.com
+DOMAIN,challenges.cloudflare.com
+
+# ------------------------------------------------------------------------------
+# 6. Process & Client User-Agent Rules (macOS / iOS 客户端与 WARP 进程匹配)
+# ------------------------------------------------------------------------------
+USER-AGENT,Cloudflare*
+USER-AGENT,WARP*
+USER-AGENT,*CloudflareWARP*
+PROCESS-NAME,Cloudflare WARP
+PROCESS-NAME,CloudflareWARP
+PROCESS-NAME,warp-cli
+
+# ------------------------------------------------------------------------------
+# 7. Cloudflare Official ASNs & Core Anycast IP Blocks (官方自治系统号与核心 IP 段)
+# 注：Cloudflare 运营着全球最大的 CDN 及 1.1.1.1 递归 DNS，其 ASN (AS13335) 承载了互联网巨量流量。
+#     若在 Surge 中希望 1.1.1.1 (`1.1.1.1` / `1.0.0.1`) 或 WARP 隧道完全走代理，底部 ASN 与 Anycast 段必不可少。
+# ------------------------------------------------------------------------------
+IP-CIDR,1.1.1.1/32,no-resolve
+IP-CIDR,1.0.0.1/32,no-resolve
+IP-CIDR,104.16.0.0/12,no-resolve
+IP-CIDR,172.64.0.0/13,no-resolve
+IP-CIDR,162.158.0.0/15,no-resolve
+IP-CIDR,198.41.128.0/17,no-resolve
+IP-CIDR,190.93.240.0/20,no-resolve
+IP-CIDR,188.114.96.0/20,no-resolve
+IP-CIDR,197.234.240.0/22,no-resolve
+IP-CIDR,198.41.200.0/22,no-resolve
+IP-CIDR,198.41.32.0/19,no-resolve
+IP-CIDR6,2606:4700::/32,no-resolve
+IP-ASN,13335,no-resolve

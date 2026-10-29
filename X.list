@@ -1,0 +1,134 @@
+# ==============================================================================
+# NAME: X, xAI (Grok), Cursor & SpaceX Complete Rule-Set (X_xAI_Cursor.list)
+# DESCRIPTION: Covers X (Twitter), xAI & Grok / Grokbot, Cursor AI IDE,
+#              SpaceX & Starlink, Media CDNs, Client Processes & Official ASNs.
+# UPDATED: 2026-10
+# USAGE IN SURGE (Surge.conf):
+#   RULE-SET,X_xAI_Cursor.list,AI-or-Proxy,extended-matching
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. xAI & Grok / Grokbot Ecosystem (xAI 官方平台、Grok 网页/客户端与 API 接口)
+# 注：Grok 独立站与 API 对部分地区（如香港/欧盟未合规节点）有严格校验，建议指向美国固定节点
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,grok.x.com
+DOMAIN,api.x.ai
+DOMAIN,console.x.ai
+DOMAIN,accounts.x.ai
+DOMAIN,docs.x.ai
+DOMAIN,status.x.ai
+DOMAIN,chat.x.ai
+DOMAIN,ide.x.ai
+DOMAIN,grok.x.ai
+DOMAIN,assets.x.ai
+DOMAIN,cdn.x.ai
+
+# ------------------------------------------------------------------------------
+# 2. Cursor AI IDE & Anysphere Ecosystem (Cursor 编辑器、Tab 补全、Agent 与插件市场)
+# 注：Cursor 的 AI 对话与 Tab 实时补全走 api2/api3/repo42 等高并发 HTTP/2 流，
+#     且其内置插件市场依赖 open-vsx.org，统一纳入可彻底解决补全断流与插件下载超时。
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,cursor.com
+DOMAIN-SUFFIX,cursor.sh
+DOMAIN-SUFFIX,cursorapi.com
+DOMAIN-SUFFIX,cursor-cdn.com
+DOMAIN-SUFFIX,anysphere.inc
+DOMAIN-SUFFIX,anysphere.co
+DOMAIN,api2.cursor.sh
+DOMAIN,api3.cursor.sh
+DOMAIN,api4.cursor.sh
+DOMAIN,repo42.cursor.sh
+DOMAIN,marketplace.cursorapi.com
+DOMAIN,downloads.cursor.com
+DOMAIN,download.todesktop.com
+DOMAIN-SUFFIX,open-vsx.org
+
+# ------------------------------------------------------------------------------
+# 3. X (Twitter) Core, Shorteners & Media CDN (X 社交主站、短链、音视频流与图床)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,x.com
+DOMAIN-SUFFIX,twitter.com
+DOMAIN-SUFFIX,t.co
+DOMAIN-SUFFIX,twimg.com
+DOMAIN-SUFFIX,twitpic.com
+DOMAIN-SUFFIX,twitter.co
+DOMAIN-SUFFIX,twitter.jp
+DOMAIN-SUFFIX,twitterinc.com
+DOMAIN-SUFFIX,twitteroauth.com
+DOMAIN-SUFFIX,twitterstat.us
+DOMAIN-SUFFIX,twttr.com
+DOMAIN-SUFFIX,twttr.net
+DOMAIN-SUFFIX,twvid.com
+DOMAIN-SUFFIX,vine.co
+DOMAIN-SUFFIX,periscope.tv
+DOMAIN-SUFFIX,pscp.tv
+DOMAIN-SUFFIX,ads-twitter.com
+DOMAIN-SUFFIX,cms-twdigitalassets.com
+DOMAIN-SUFFIX,tellapart.com
+DOMAIN-SUFFIX,tweetdeck.com
+DOMAIN,api.x.com
+DOMAIN,api.twitter.com
+DOMAIN,abs.twimg.com
+DOMAIN,pbs.twimg.com
+DOMAIN,video.twimg.com
+DOMAIN,ton.twimg.com
+DOMAIN-KEYWORD,twitter
+
+# ------------------------------------------------------------------------------
+# 4. SpaceX & Starlink Ecosystem (SpaceX 官网、星链控制面板、遥测与客户门户)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,spacex.com
+DOMAIN-SUFFIX,starlink.com
+DOMAIN-SUFFIX,starlink.sx
+DOMAIN-SUFFIX,starlinkisp.net
+DOMAIN,api.starlink.com
+DOMAIN,auth.starlink.com
+DOMAIN,shop.starlink.com
+DOMAIN,support.starlink.com
+DOMAIN,telemetry.starlink.com
+
+# ------------------------------------------------------------------------------
+# 5. Process & Client User-Agent Rules (macOS / iOS 客户端、Grok 与 Cursor 进程匹配)
+# ------------------------------------------------------------------------------
+# Cursor IDE Desktop Processes (macOS / Windows)
+PROCESS-NAME,Cursor
+PROCESS-NAME,Cursor Helper
+PROCESS-NAME,Cursor Helper (Renderer)
+PROCESS-NAME,Cursor Helper (Plugin)
+PROCESS-NAME,cursor
+
+# X / Grok / Starlink Client User-Agents
+USER-AGENT,Grok*
+USER-AGENT,*Grok*
+USER-AGENT,Cursor*
+USER-AGENT,Twitter*
+USER-AGENT,TwitterAndroid*
+USER-AGENT,X*
+USER-AGENT,com.atebits.Tweetie2*
+USER-AGENT,Starlink*
+
+# ------------------------------------------------------------------------------
+# 6. Official ASNs & Core Anycast IP Blocks (X / SpaceX 官方自治系统号与核心 IP 段)
+# 注：用于兜底 X 语音空间 (Spaces)、直播流媒体以及未走域名的客户端长连接请求
+# ------------------------------------------------------------------------------
+# X / Twitter Core IPv4 & IPv6 Blocks
+IP-CIDR,69.195.160.0/19,no-resolve
+IP-CIDR,104.244.40.0/21,no-resolve
+IP-CIDR,185.45.4.0/22,no-resolve
+IP-CIDR,192.133.76.0/22,no-resolve
+IP-CIDR,199.16.156.0/22,no-resolve
+IP-CIDR,199.59.148.0/22,no-resolve
+IP-CIDR,199.96.56.0/21,no-resolve
+IP-CIDR,202.160.128.0/22,no-resolve
+IP-CIDR,209.237.192.0/19,no-resolve
+IP-CIDR6,2620:101:8000::/40,no-resolve
+IP-CIDR6,2a01:b740::/32,no-resolve
+
+# X Corp Official ASNs (AS13414, AS35995, AS63179) & SpaceX/Starlink ASNs (AS14593, AS27277)
+IP-ASN,13414,no-resolve
+IP-ASN,35995,no-resolve
+IP-ASN,63179,no-resolve
+IP-ASN,14593,no-resolve
+IP-ASN,27277,no-resolve

@@ -1,0 +1,69 @@
+# ==============================================================================
+# NAME: OpenAI, ChatGPT & Codex Complete Rule-Set (OpenAI.list)
+# DESCRIPTION: Covers ChatGPT Web/App, OpenAI API, Codex CLI, Playground,
+#              Sora, Realtime API, Auth0, Telemetry/Analytics & ASN/IPs.
+# UPDATED: 2026-10
+# USAGE IN SURGE (Surge.conf):
+#   RULE-SET,OpenAI.list,OpenAI,extended-matching
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Core OpenAI & ChatGPT Domains (核心主站、API 与官方短链)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,openai.com
+DOMAIN-SUFFIX,chatgpt.com
+DOMAIN-SUFFIX,chatgpt.ai
+DOMAIN-SUFFIX,oaistatic.com
+DOMAIN-SUFFIX,oaiusercontent.com
+
+# ------------------------------------------------------------------------------
+# 2. Explicit Key Endpoints (核心 API、后台、认证与静态资源显式声明)
+# ------------------------------------------------------------------------------
+# API & Developer Console / Playground
+DOMAIN,api.openai.com
+DOMAIN,platform.openai.com
+DOMAIN,api.chatgpt.com
+DOMAIN,chat.openai.com
+DOMAIN,sora.com
+DOMAIN,www.sora.com
+
+# Auth0 Authentication (OpenAI 统一登录与账号鉴权中心)
+DOMAIN-SUFFIX,auth0.com
+DOMAIN,openai-sso.auth0.com
+
+# Static CDN & Assets
+DOMAIN,cdn.openai.com
+DOMAIN,files.oaiusercontent.com
+
+# ------------------------------------------------------------------------------
+# 3. Realtime API, WebSockets & Experimental Endpoints (实时语音、实时 API 与 Codex 终端通道)
+# ------------------------------------------------------------------------------
+DOMAIN,realtime.api.openai.com
+DOMAIN,chatgpt-async.com
+
+# ------------------------------------------------------------------------------
+# 4. Telemetry, Analytics & Feature Flags (遥测、统计与客户端风控校验 - 建议保留)
+# ------------------------------------------------------------------------------
+DOMAIN,o33249.ingest.sentry.io
+DOMAIN,events.statsigapi.net
+DOMAIN,browser-intake-datadoghq.com
+DOMAIN,config.statsig.com
+
+# ------------------------------------------------------------------------------
+# 5. Process & Client User-Agent Rules (macOS / Windows 客户端与 CLI 进程匹配)
+# ------------------------------------------------------------------------------
+# USER-AGENT,ChatGPT*
+# USER-AGENT,*chatgpt*
+# PROCESS-NAME,ChatGPT
+# PROCESS-NAME,ChatGPT Helper
+# PROCESS-NAME,codex
+
+# ------------------------------------------------------------------------------
+# 6. OpenAI Official ASN & Anycast IP Blocks (OpenAI 官方自治系统号与专属 IP 段)
+# ------------------------------------------------------------------------------
+IP-CIDR,24.199.123.0/24,no-resolve
+IP-CIDR,64.23.132.0/24,no-resolve
+IP-CIDR,138.199.38.0/24,no-resolve
+IP-CIDR,159.223.0.0/16,no-resolve
+IP-CIDR6,2a09:f180::/32,no-resolve
+IP-ASN,394711,no-resolve

@@ -1,0 +1,284 @@
+# ==============================================================================
+# NAME: Amazon Complete Ecosystem Rule-Set (Amazon.list)
+# DESCRIPTION: Covers Amazon Retail, AWS (Cloud/S3/CloudFront), Amazon AI
+#              (Bedrock/Q/Nova/Kiro), Prime Video, Twitch, Audible/Kindle,
+#              Alexa/Ring, Subsidiaries (IMDb/Goodreads) & Official ASNs.
+# UPDATED: 2026-10
+# USAGE IN SURGE (Surge.conf):
+#   RULE-SET,Amazon.list,Amazon,extended-matching
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Amazon Brand Exclusive TLDs (亚马逊品牌专属顶级域名后缀)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,amazon
+DOMAIN-SUFFIX,aws
+DOMAIN-SUFFIX,audible
+DOMAIN-SUFFIX,author
+DOMAIN-SUFFIX,book
+DOMAIN-SUFFIX,bot
+DOMAIN-SUFFIX,buy
+DOMAIN-SUFFIX,call
+DOMAIN-SUFFIX,circle
+DOMAIN-SUFFIX,cloud
+DOMAIN-SUFFIX,deal
+DOMAIN-SUFFIX,fast
+DOMAIN-SUFFIX,fire
+DOMAIN-SUFFIX,free
+DOMAIN-SUFFIX,got
+DOMAIN-SUFFIX,hot
+DOMAIN-SUFFIX,imdb
+DOMAIN-SUFFIX,jot
+DOMAIN-SUFFIX,joy
+DOMAIN-SUFFIX,kindle
+DOMAIN-SUFFIX,like
+DOMAIN-SUFFIX,moi
+DOMAIN-SUFFIX,now
+DOMAIN-SUFFIX,pay
+DOMAIN-SUFFIX,pin
+DOMAIN-SUFFIX,prime
+DOMAIN-SUFFIX,read
+DOMAIN-SUFFIX,room
+DOMAIN-SUFFIX,safe
+DOMAIN-SUFFIX,save
+DOMAIN-SUFFIX,secure
+DOMAIN-SUFFIX,silk
+DOMAIN-SUFFIX,smile
+DOMAIN-SUFFIX,spot
+DOMAIN-SUFFIX,talk
+DOMAIN-SUFFIX,tunes
+DOMAIN-SUFFIX,tushu
+DOMAIN-SUFFIX,wanggou
+DOMAIN-SUFFIX,watch
+DOMAIN-SUFFIX,wow
+DOMAIN-SUFFIX,yamaxun
+DOMAIN-SUFFIX,you
+DOMAIN-SUFFIX,zappos
+
+# ------------------------------------------------------------------------------
+# 2. Amazon AI, Bedrock, Amazon Q, Nova & Kiro IDE (大模型、AI 助手与开发工具)
+# ------------------------------------------------------------------------------
+DOMAIN,nova.amazon.com
+DOMAIN-SUFFIX,kiro.dev
+DOMAIN,q.us-east-1.amazonaws.com
+DOMAIN,codewhisperer.us-east-1.amazonaws.com
+DOMAIN,bedrock.us-east-1.amazonaws.com
+DOMAIN,bedrock-runtime.us-east-1.amazonaws.com
+DOMAIN,bedrock-runtime.us-west-2.amazonaws.com
+DOMAIN-SUFFIX,partyrock.aws
+DOMAIN-SUFFIX,sagemaker.aws
+
+# ------------------------------------------------------------------------------
+# 3. Amazon Retail, Shorteners & Global Regional Stores (全球电商主站与短链接)
+# 注：排除 .cn (z.cn / amazon.cn) 避免影响国内直连解析，其余全球站点通过收敛规则覆盖
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,amazon.com
+DOMAIN-SUFFIX,amazon.co
+DOMAIN-SUFFIX,amazon.co.jp
+DOMAIN-SUFFIX,amazon.co.uk
+DOMAIN-SUFFIX,amazon.ca
+DOMAIN-SUFFIX,amazon.de
+DOMAIN-SUFFIX,amazon.es
+DOMAIN-SUFFIX,amazon.fr
+DOMAIN-SUFFIX,amazon.in
+DOMAIN-SUFFIX,amazon.it
+DOMAIN-SUFFIX,amazon.nl
+DOMAIN-SUFFIX,amazon.pl
+DOMAIN-SUFFIX,amazon.se
+DOMAIN-SUFFIX,amazon.sg
+DOMAIN-SUFFIX,amazon.ae
+DOMAIN-SUFFIX,amazon.sa
+DOMAIN-SUFFIX,amazon.eg
+DOMAIN-SUFFIX,amazon.com.au
+DOMAIN-SUFFIX,amazon.com.be
+DOMAIN-SUFFIX,amazon.com.br
+DOMAIN-SUFFIX,amazon.com.mx
+DOMAIN-SUFFIX,amazon.com.sg
+DOMAIN-SUFFIX,amazon.com.tr
+DOMAIN-SUFFIX,amazon.jobs
+DOMAIN-SUFFIX,aboutamazon.com
+DOMAIN-SUFFIX,amzn.com
+DOMAIN-SUFFIX,amzn.to
+DOMAIN-SUFFIX,amzn.asia
+DOMAIN-SUFFIX,amzn.eu
+DOMAIN-SUFFIX,a.co
+DOMAIN-SUFFIX,associates-amazon.com
+DOMAIN-SUFFIX,amazonbusiness.com
+DOMAIN-SUFFIX,amazonpay.com
+DOMAIN-SUFFIX,amazonpayments.com
+DOMAIN-SUFFIX,amazontours.com
+DOMAIN-SUFFIX,amazonuniversity.jobs
+# 收敛匹配全球所有国家/地区二级后缀 (如 amazon.co.*, amazon.com.*)
+DOMAIN-KEYWORD,.amazon.
+
+# ------------------------------------------------------------------------------
+# 4. Amazon Static Media, Images & SSL CDNs (全站商品图床、字体与静态资源)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,media-amazon.com
+DOMAIN-SUFFIX,images-amazon.com
+DOMAIN-SUFFIX,ssl-images-amazon.com
+DOMAIN-SUFFIX,ia.media-amazon.com
+DOMAIN-SUFFIX,m.media-amazon.com
+DOMAIN-SUFFIX,amazon-adsystem.com
+DOMAIN-SUFFIX,serving-sys.com
+DOMAIN-SUFFIX,agf-media.com
+
+# ------------------------------------------------------------------------------
+# 5. Amazon Web Services (AWS), S3, CloudFront & Developer Infra (AWS 云服务与 CDN)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,amazonaws.com
+DOMAIN-SUFFIX,aws.amazon.com
+DOMAIN-SUFFIX,awsstatic.com
+DOMAIN-SUFFIX,awscloud.com
+DOMAIN-SUFFIX,aws.dev
+DOMAIN-SUFFIX,builder.aws
+DOMAIN-SUFFIX,cloudfront.net
+DOMAIN-SUFFIX,elasticbeanstalk.com
+DOMAIN-SUFFIX,elb.amazonaws.com
+DOMAIN-SUFFIX,execute-api.us-east-1.amazonaws.com
+DOMAIN-SUFFIX,execute-api.us-west-2.amazonaws.com
+DOMAIN-SUFFIX,execute-api.ap-northeast-1.amazonaws.com
+DOMAIN-SUFFIX,execute-api.ap-southeast-1.amazonaws.com
+DOMAIN-SUFFIX,amplifyapp.com
+DOMAIN-SUFFIX,awsapps.com
+DOMAIN-SUFFIX,awsdns-cn.net
+DOMAIN-SUFFIX,awsglobalaccelerator.com
+DOMAIN-SUFFIX,chime.aws
+DOMAIN-SUFFIX,wickr.com
+
+# ------------------------------------------------------------------------------
+# 6. Prime Video, Amazon Music & Streaming Media (流媒体视频、音乐与 DRM 分发)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,primevideo.com
+DOMAIN-SUFFIX,primevideo.info
+DOMAIN-SUFFIX,primevideo.org
+DOMAIN-SUFFIX,primevideo.tv
+DOMAIN-SUFFIX,aiv-cdn.net
+DOMAIN-SUFFIX,aiv-delivery.net
+DOMAIN-SUFFIX,amazonvideo.com
+DOMAIN-SUFFIX,atv-ps.amazon.com
+DOMAIN-SUFFIX,atv-ext.amazon.com
+DOMAIN-SUFFIX,atv-ext-eu.amazon.com
+DOMAIN-SUFFIX,atv-ext-fe.amazon.com
+DOMAIN-SUFFIX,pv-cdn.net
+DOMAIN-SUFFIX,llnwd.net
+DOMAIN-SUFFIX,music.amazon.com
+DOMAIN-SUFFIX,music.amazon.co.jp
+DOMAIN-SUFFIX,amazonmusic.com
+
+# ------------------------------------------------------------------------------
+# 7. Twitch Interactive & Live Streaming (Twitch 游戏直播、聊天室与视频边缘流)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,twitch.tv
+DOMAIN-SUFFIX,twitchcdn.net
+DOMAIN-SUFFIX,twitchsvc.net
+DOMAIN-SUFFIX,jtvnw.net
+DOMAIN-SUFFIX,ttvnw.net
+DOMAIN-SUFFIX,ext-twitch.tv
+
+# ------------------------------------------------------------------------------
+# 8. Kindle, Audible, ComiXology & Digital Publishing (电子书、有声书与漫画同步)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,kindle.com
+DOMAIN-SUFFIX,audible.com
+DOMAIN-SUFFIX,audible.co.jp
+DOMAIN-SUFFIX,audible.co.uk
+DOMAIN-SUFFIX,audible.de
+DOMAIN-SUFFIX,audible.fr
+DOMAIN-SUFFIX,audible.ca
+DOMAIN-SUFFIX,audible.com.au
+DOMAIN-SUFFIX,audible.in
+DOMAIN-SUFFIX,audible.it
+DOMAIN-SUFFIX,audible.es
+DOMAIN-SUFFIX,comixology.com
+DOMAIN-SUFFIX,goodreads.com
+DOMAIN-SUFFIX,gr-assets.com
+DOMAIN-SUFFIX,abebooks.com
+DOMAIN-SUFFIX,bookdepository.com
+DOMAIN-SUFFIX,createspace.com
+DOMAIN-SUFFIX,acx.com
+
+# ------------------------------------------------------------------------------
+# 9. Alexa, Echo, Ring, Blink, Eero & Smart Home (智能语音、安防摄像头与硬件固件)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,alexa.com
+DOMAIN-SUFFIX,amazonalexa.com
+DOMAIN-SUFFIX,echo-api.amazon.com
+DOMAIN-SUFFIX,firetvcaptiveportal.com
+DOMAIN-SUFFIX,ring.com
+DOMAIN-SUFFIX,blinkforhome.com
+DOMAIN-SUFFIX,immedia-semi.com
+DOMAIN-SUFFIX,eero.com
+DOMAIN-SUFFIX,eeroup.com
+
+# ------------------------------------------------------------------------------
+# 10. Amazon Subsidiaries & Acquired Brands (IMDb / Whole Foods / Zappos / Woot 等)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,imdb.com
+DOMAIN-SUFFIX,imdb.to
+DOMAIN-SUFFIX,boxofficemojo.com
+DOMAIN-SUFFIX,dpreview.com
+DOMAIN-SUFFIX,wholefoodsmarket.com
+DOMAIN-SUFFIX,zappos.com
+DOMAIN-SUFFIX,6pm.com
+DOMAIN-SUFFIX,shopbop.com
+DOMAIN-SUFFIX,woot.com
+DOMAIN-SUFFIX,pillpack.com
+DOMAIN-SUFFIX,one-medical.com
+DOMAIN-SUFFIX,onemedical.com
+DOMAIN-SUFFIX,zoox.com
+DOMAIN-SUFFIX,mgm.com
+
+# ------------------------------------------------------------------------------
+# 11. Process & Client User-Agent Rules (macOS / iOS 客户端与开发工具进程匹配)
+# ------------------------------------------------------------------------------
+USER-AGENT,InstantVideo.US*
+USER-AGENT,Prime%20Video*
+USER-AGENT,AIVApp*
+USER-AGENT,Amazon*
+USER-AGENT,Kindle*
+USER-AGENT,Audible*
+USER-AGENT,Alexa*
+USER-AGENT,Twitch*
+PROCESS-NAME,Prime Video
+PROCESS-NAME,Kindle
+PROCESS-NAME,Amazon Music
+PROCESS-NAME,Amazon Chime
+PROCESS-NAME,Kiro
+
+# ------------------------------------------------------------------------------
+# 12. Amazon / AWS Official ASNs & Core Anycast Blocks (官方自治系统号与核心 IP 段)
+# 注：AWS 承载了全球大量第三方服务 (如 Notion/Slack/海外游戏)，若不希望所有 AWS IP 均走此策略组，
+#     可注释掉最底部的 IP-ASN,16509 和 IP-ASN,14618，仅凭上方域名规则精准分流。
+# ------------------------------------------------------------------------------
+IP-CIDR,13.32.0.0/15,no-resolve
+IP-CIDR,13.35.0.0/16,no-resolve
+IP-CIDR,13.224.0.0/14,no-resolve
+IP-CIDR,18.64.0.0/14,no-resolve
+IP-CIDR,52.84.0.0/15,no-resolve
+IP-CIDR,54.182.0.0/16,no-resolve
+IP-CIDR,54.192.0.0/16,no-resolve
+IP-CIDR,54.230.0.0/16,no-resolve
+IP-CIDR,54.239.128.0/18,no-resolve
+IP-CIDR,54.239.192.0/19,no-resolve
+IP-CIDR,54.240.192.0/18,no-resolve
+IP-CIDR,99.84.0.0/16,no-resolve
+IP-CIDR,108.156.0.0/14,no-resolve
+IP-CIDR,143.204.0.0/16,no-resolve
+IP-CIDR,204.246.164.0/22,no-resolve
+IP-CIDR,204.246.168.0/22,no-resolve
+IP-CIDR,205.251.192.0/19,no-resolve
+IP-CIDR,205.251.249.0/24,no-resolve
+IP-CIDR,23.246.0.0/18,no-resolve
+# Twitch Live Video Edge IP Blocks (AS46489)
+IP-CIDR,45.113.128.0/22,no-resolve
+IP-CIDR,52.223.192.0/18,no-resolve
+IP-CIDR,99.181.64.0/18,no-resolve
+IP-CIDR,192.16.64.0/21,no-resolve
+IP-CIDR,192.108.239.0/24,no-resolve
+IP-CIDR,199.9.248.0/21,no-resolve
+
+# Amazon / AWS / Twitch Official ASNs
+IP-ASN,46489,no-resolve
+IP-ASN,16509,no-resolve
+IP-ASN,14618,no-resolve

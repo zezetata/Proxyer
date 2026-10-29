@@ -1,0 +1,83 @@
+# ==============================================================================
+# NAME: Anthropic & Claude Complete Rule-Set (Anthropic.list)
+# DESCRIPTION: Covers Claude Web/Desktop/Mobile, Claude API, Claude Code (CLI),
+#              Artifacts & MCP Sandboxes, OAuth, Telemetry/Feature Flags & ASN/IPs.
+# UPDATED: 2026-10
+# USAGE IN SURGE (Surge.conf):
+#   RULE-SET,Anthropic.list,Anthropic,extended-matching
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Core Anthropic & Claude Domains (核心主站、API、平台与短链后缀)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,anthropic.com
+DOMAIN-SUFFIX,claude.ai
+DOMAIN-SUFFIX,claude.com
+DOMAIN-SUFFIX,clau.de
+DOMAIN-SUFFIX,skilljar.com
+
+# ------------------------------------------------------------------------------
+# 2. Artifacts, Sandboxes & MCP (Model Context Protocol) Ecosystem (预览沙盒与 MCP 服务)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,claudeusercontent.com
+DOMAIN-SUFFIX,claudemcpcontent.com
+DOMAIN-SUFFIX,modelcontextprotocol.io
+DOMAIN,mcp.claude.com
+DOMAIN-SUFFIX,mcp.claude.com
+
+# ------------------------------------------------------------------------------
+# 3. Explicit Key Endpoints (核心子域名显式声明 - 确保 DNS 映射与 SNI 高优命中)
+# ------------------------------------------------------------------------------
+# API & Developer Console
+DOMAIN,api.anthropic.com
+DOMAIN,console.anthropic.com
+DOMAIN,platform.claude.com
+DOMAIN,docs.anthropic.com
+DOMAIN,docs.claude.com
+DOMAIN,status.anthropic.com
+DOMAIN,support.anthropic.com
+DOMAIN,www.anthropic.com
+
+# Claude Web, Mobile & Desktop App Updates
+DOMAIN,claude.ai
+DOMAIN,www.claude.ai
+DOMAIN,assets.claude.ai
+DOMAIN,downloads.claude.ai
+DOMAIN,auth.anthropic.com
+DOMAIN,sso.anthropic.com
+
+# ------------------------------------------------------------------------------
+# 4. Feature Flags, A/B Testing & Telemetry (特性开关、风控校验与遥测接口)
+# 注：Claude 客户端与网页端高度依赖 Statsig / GrowthBook 下发功能权限与区域可用性配置，
+#     若這些域名直连暴露非支持区 IP，极易触发账号风控或新功能（如 Computer Use / 沙盒）被隐藏。
+# ------------------------------------------------------------------------------
+DOMAIN,statsig.anthropic.com
+DOMAIN,beyond.statsigapi.net
+DOMAIN,featureassets.org
+DOMAIN,prodregistryv2.org
+DOMAIN,cdn.growthbook.io
+DOMAIN,cdn.usefathom.com
+DOMAIN,o1158394.ingest.us.sentry.io
+
+# ------------------------------------------------------------------------------
+# 5. Customer Support & Payment Auth Widget (内置客服组件与验证关联域名 - 按需保留)
+# ------------------------------------------------------------------------------
+DOMAIN,widget.intercom.io
+DOMAIN,api-iam.intercom.io
+DOMAIN,js.intercomcdn.com
+
+# ------------------------------------------------------------------------------
+# 6. Process & Client User-Agent Rules (macOS / iOS 客户端与 Claude Code CLI 进程匹配)
+# ------------------------------------------------------------------------------
+# USER-AGENT,Claude*
+# USER-AGENT,*claude*
+# PROCESS-NAME,Claude
+# PROCESS-NAME,Claude Helper
+# PROCESS-NAME,claude
+
+# ------------------------------------------------------------------------------
+# 7. Anthropic Official ASN & Anycast IP Blocks (Anthropic 官方自治系统号与专属 IP 段)
+# ------------------------------------------------------------------------------
+IP-CIDR,160.79.104.0/21,no-resolve
+IP-CIDR6,2607:6bc0::/48,no-resolve
+IP-ASN,399358,no-resolve

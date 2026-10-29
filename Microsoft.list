@@ -1,0 +1,237 @@
+# ==============================================================================
+# NAME: Microsoft Complete Ecosystem Rule-Set (Microsoft.list)
+# DESCRIPTION: Covers Microsoft Core, Copilot/AI, Microsoft 365 (Office/OneDrive/
+#              Teams/Outlook), Azure, GitHub/VSCode/DevTools, Xbox, LinkedIn & ASN.
+# UPDATED: 2026-10
+# USAGE IN SURGE (Surge.conf):
+#   RULE-SET,Microsoft.list,Microsoft,extended-matching
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Microsoft Brand Exclusive TLDs (微软品牌专属顶级域名后缀)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,microsoft
+DOMAIN-SUFFIX,azure
+DOMAIN-SUFFIX,bing
+DOMAIN-SUFFIX,hotmail
+DOMAIN-SUFFIX,live
+DOMAIN-SUFFIX,msn
+DOMAIN-SUFFIX,office
+DOMAIN-SUFFIX,onedrive
+DOMAIN-SUFFIX,skype
+DOMAIN-SUFFIX,windows
+DOMAIN-SUFFIX,xbox
+
+# ------------------------------------------------------------------------------
+# 2. Microsoft Copilot & AI Ecosystem (Copilot、Designer 与微软 AI 助手生态)
+# 注：Copilot 对中国大陆及香港 IP 严格锁区，若合并使用请确保策略组指向美/日/新节点，
+#     或在主配置中将以下几条 AI 域名优先指向你的 AI 策略组。
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,copilot.microsoft.com
+DOMAIN,copilot.cloud.microsoft
+DOMAIN,designer.microsoft.com
+DOMAIN,sydney.bing.com
+DOMAIN,edgeservices.bing.com
+DOMAIN-SUFFIX,bingapis.com
+
+# ------------------------------------------------------------------------------
+# 3. Microsoft Core, Account Auth (Entra / Live) & Static CDN (核心主站、统一鉴权与静态资源)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,msft.net
+DOMAIN-SUFFIX,msftauth.net
+DOMAIN-SUFFIX,msftauthimages.net
+DOMAIN-SUFFIX,msauth.net
+DOMAIN-SUFFIX,msauthimages.net
+DOMAIN-SUFFIX,msecnd.net
+DOMAIN-SUFFIX,msocdn.com
+DOMAIN-SUFFIX,msocsp.com
+DOMAIN-SUFFIX,msidentity.com
+DOMAIN-SUFFIX,microsoftonline.com
+DOMAIN-SUFFIX,microsoftonline-p.com
+DOMAIN-SUFFIX,live.com
+DOMAIN-SUFFIX,live.net
+DOMAIN-SUFFIX,sfx.ms
+DOMAIN-SUFFIX,gfx.ms
+DOMAIN-SUFFIX,aka.ms
+DOMAIN-SUFFIX,1drv.ms
+DOMAIN-SUFFIX,msftconnecttest.com
+DOMAIN-SUFFIX,msftncsi.com
+
+# ------------------------------------------------------------------------------
+# 4. Microsoft 365, Office, OneDrive, Teams & Outlook (办公套件、云盘、邮件与协作)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,cloud.microsoft
+DOMAIN-SUFFIX,office.com
+DOMAIN-SUFFIX,office.net
+DOMAIN-SUFFIX,office365.com
+DOMAIN-SUFFIX,office.live.com
+DOMAIN-SUFFIX,onenote.com
+DOMAIN-SUFFIX,onenote.net
+DOMAIN-SUFFIX,onedrive.com
+DOMAIN-SUFFIX,onedrive.live.com
+DOMAIN-SUFFIX,1drv.com
+DOMAIN-SUFFIX,sharepoint.com
+DOMAIN-SUFFIX,sharepointonline.com
+DOMAIN-SUFFIX,svc.ms
+DOMAIN-SUFFIX,outlook.com
+DOMAIN-SUFFIX,outlook.live.com
+DOMAIN-SUFFIX,hotmail.com
+DOMAIN-SUFFIX,outlookmobile.com
+DOMAIN-SUFFIX,acompli.net
+DOMAIN-SUFFIX,teams.microsoft.com
+DOMAIN-SUFFIX,teams.live.com
+DOMAIN-SUFFIX,skype.com
+DOMAIN-SUFFIX,skypeassets.com
+DOMAIN-SUFFIX,skypedata.akadns.net
+DOMAIN-SUFFIX,sway.com
+DOMAIN-SUFFIX,sway-cdn.com
+DOMAIN-SUFFIX,sway-extensions.com
+DOMAIN-SUFFIX,yammer.com
+DOMAIN-SUFFIX,yammerusercontent.com
+DOMAIN-SUFFIX,powerbi.com
+DOMAIN-SUFFIX,powerapps.com
+DOMAIN-SUFFIX,powerautomate.com
+DOMAIN-SUFFIX,dynamics.com
+
+# ------------------------------------------------------------------------------
+# 5. Bing Search, Edge Browser & MSN (必应搜索、Edge 浏览器同步/插件与资讯)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,bing.com
+DOMAIN-SUFFIX,bing.net
+DOMAIN-SUFFIX,bing.com.cn
+DOMAIN-SUFFIX,msn.com
+DOMAIN-SUFFIX,msn.cn
+DOMAIN-SUFFIX,microsoftedge.com
+DOMAIN-SUFFIX,edge.microsoft.com
+DOMAIN-SUFFIX,msedge.net
+
+# ------------------------------------------------------------------------------
+# 6. Developer Tools, VS Code, .NET, TypeScript & NuGet (开发者工具、VS Code 与开源生态)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,visualstudio.com
+DOMAIN-SUFFIX,vscode.dev
+DOMAIN-SUFFIX,vscode-cdn.net
+DOMAIN-SUFFIX,vscode-unpkg.net
+DOMAIN-SUFFIX,vsassets.io
+DOMAIN-SUFFIX,gallerycdn.vsassets.io
+DOMAIN-SUFFIX,dotnet.microsoft.com
+DOMAIN-SUFFIX,nuget.org
+DOMAIN-SUFFIX,typescriptlang.org
+DOMAIN-SUFFIX,playwright.dev
+DOMAIN-SUFFIX,npmjs.com
+DOMAIN-SUFFIX,npmjs.org
+DOMAIN-SUFFIX,npm.community
+DOMAIN-SUFFIX,codeplex.com
+DOMAIN-SUFFIX,xamarin.com
+DOMAIN-SUFFIX,appcenter.ms
+DOMAIN-SUFFIX,hockeyapp.net
+
+# ------------------------------------------------------------------------------
+# 7. GitHub Ecosystem (GitHub 主站、API、Copilot、Raw 资源与 Pages - 按需保留)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,github.com
+DOMAIN-SUFFIX,github.io
+DOMAIN-SUFFIX,github.dev
+DOMAIN-SUFFIX,github.blog
+DOMAIN-SUFFIX,github.community
+DOMAIN-SUFFIX,githubapp.com
+DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,githubcopilot.com
+DOMAIN-SUFFIX,githubusercontent.com
+DOMAIN-SUFFIX,githubstatus.com
+DOMAIN-SUFFIX,ghcr.io
+DOMAIN-SUFFIX,git.io
+DOMAIN-SUFFIX,myoctocat.com
+DOMAIN-SUFFIX,opensource.guide
+
+# ------------------------------------------------------------------------------
+# 8. Microsoft Azure Cloud Platform (Azure 云平台、CDN、容器与对象存储)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,azure.com
+DOMAIN-SUFFIX,azure.net
+DOMAIN-SUFFIX,azureedge.net
+DOMAIN-SUFFIX,azurefd.net
+DOMAIN-SUFFIX,azurewebsites.net
+DOMAIN-SUFFIX,azure-api.net
+DOMAIN-SUFFIX,azure-devices.net
+DOMAIN-SUFFIX,azure-mobile.net
+DOMAIN-SUFFIX,azurecontainer.io
+DOMAIN-SUFFIX,azurecr.io
+DOMAIN-SUFFIX,azuredatalakestore.net
+DOMAIN-SUFFIX,azuredevops.com
+DOMAIN-SUFFIX,azurehdinsight.net
+DOMAIN-SUFFIX,azurerms.com
+DOMAIN-SUFFIX,cosmosdb.com
+DOMAIN-SUFFIX,trafficmanager.net
+DOMAIN-SUFFIX,cloudapp.net
+DOMAIN-SUFFIX,cloudappsecurity.com
+DOMAIN-SUFFIX,windows.net
+DOMAIN-SUFFIX,windowsazure.com
+
+# ------------------------------------------------------------------------------
+# 9. Windows Update, Store, Defender & Telemetry (系统服务、应用商店与遥测)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,windows.com
+DOMAIN-SUFFIX,windowsupdate.com
+DOMAIN-SUFFIX,update.microsoft.com
+DOMAIN-SUFFIX,microsoftstore.com
+DOMAIN-SUFFIX,mp.microsoft.com
+DOMAIN-SUFFIX,s-microsoft.com
+DOMAIN-SUFFIX,statics-marketingsites-wcus-ms-com.akamaized.net
+DOMAIN-SUFFIX,visualwebsiteoptimizer.com
+DOMAIN-SUFFIX,applicationinsights.io
+DOMAIN-SUFFIX,applicationinsights.net
+DOMAIN-SUFFIX,aria.microsoft.com
+DOMAIN-SUFFIX,events.data.microsoft.com
+
+# ------------------------------------------------------------------------------
+# 10. Xbox, Gaming, Mojang & Activision Blizzard (游戏生态、Xbox Live 与 Minecraft)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,xbox.com
+DOMAIN-SUFFIX,xbox.co
+DOMAIN-SUFFIX,xbox.eu
+DOMAIN-SUFFIX,xbox.org
+DOMAIN-SUFFIX,xboxab.com
+DOMAIN-SUFFIX,xboxgamepass.com
+DOMAIN-SUFFIX,xboxgamestudios.com
+DOMAIN-SUFFIX,xboxlive.com
+DOMAIN-SUFFIX,xboxone.com
+DOMAIN-SUFFIX,xboxplayanywhere.com
+DOMAIN-SUFFIX,xboxservices.com
+DOMAIN-SUFFIX,xboxstudios.com
+DOMAIN-SUFFIX,xbx.lv
+DOMAIN-SUFFIX,gamepass.com
+DOMAIN-SUFFIX,forzamotorsport.net
+DOMAIN-SUFFIX,forzaracingchampionship.com
+DOMAIN-SUFFIX,forzarc.com
+DOMAIN-SUFFIX,halo.lv
+DOMAIN-SUFFIX,halowaypoint.com
+DOMAIN-SUFFIX,minecraft.net
+DOMAIN-SUFFIX,minecraftshop.com
+DOMAIN-SUFFIX,mojang.com
+DOMAIN-SUFFIX,bethesda.net
+
+# ------------------------------------------------------------------------------
+# 11. LinkedIn Ecosystem (领英职场社交与静态资源)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,linkedin.com
+DOMAIN-SUFFIX,licdn.com
+DOMAIN-SUFFIX,lnkd.in
+DOMAIN-SUFFIX,slideshare.net
+DOMAIN-SUFFIX,lynda.com
+
+# ------------------------------------------------------------------------------
+# 12. Process, User-Agent & Official ASN (macOS/iOS 客户端进程、UA 与微软自治系统号)
+# ------------------------------------------------------------------------------
+USER-AGENT,OneDrive*
+USER-AGENT,Microsoft*
+USER-AGENT,*com.microsoft.*
+PROCESS-NAME,OneDrive
+PROCESS-NAME,Microsoft Teams
+PROCESS-NAME,Microsoft Outlook
+PROCESS-NAME,Microsoft Edge
+PROCESS-NAME,Code
+PROCESS-NAME,Code Helper
+IP-ASN,8075,no-resolve
+IP-ASN,8068,no-resolve

@@ -1,0 +1,196 @@
+# ==============================================================================
+# NAME: Meta Complete Ecosystem Rule-Set (Meta.list)
+# DESCRIPTION: Covers Meta AI / Llama, Facebook, Instagram, Threads, WhatsApp,
+#              Messenger, Quest/VR (Oculus), Open Source Frameworks & ASN/IPs.
+# UPDATED: 2026-10
+# USAGE IN SURGE (Surge.conf):
+#   RULE-SET,Meta.list,Meta,extended-matching
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. Meta Corporate, Brand TLDs & Core Infrastructure (母公司主域与底层基础设施)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,meta.com
+DOMAIN-SUFFIX,fb.com
+DOMAIN-SUFFIX,fb.me
+DOMAIN-SUFFIX,fbcdn.net
+DOMAIN-SUFFIX,fbsbx.com
+DOMAIN-SUFFIX,tfbnw.net
+DOMAIN-SUFFIX,facebook-dns.com
+DOMAIN-SUFFIX,metaenterprise.com
+DOMAIN-SUFFIX,metastatus.com
+DOMAIN-SUFFIX,atscaleconference.com
+
+# ------------------------------------------------------------------------------
+# 2. Meta AI, Llama & Generative AI Ecosystem (Meta AI 大模型与人工智能平台)
+# ------------------------------------------------------------------------------
+DOMAIN,meta.ai
+DOMAIN-SUFFIX,meta.ai
+DOMAIN,llama.com
+DOMAIN-SUFFIX,llama.com
+DOMAIN,llama.meta.com
+DOMAIN,ai.meta.com
+DOMAIN,imagine.meta.com
+DOMAIN,audiocraft.metademolab.com
+DOMAIN-SUFFIX,metademolab.com
+DOMAIN-SUFFIX,wit.ai
+
+# ------------------------------------------------------------------------------
+# 3. Facebook & Messenger Ecosystem (Facebook 社交主站、短链与 Messenger 通信)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,facebook.com
+DOMAIN-SUFFIX,facebook.net
+DOMAIN-SUFFIX,facebook.org
+DOMAIN-SUFFIX,fb.watch
+DOMAIN-SUFFIX,fb.gg
+DOMAIN-SUFFIX,fbinfra.net
+DOMAIN-SUFFIX,fbpigeon.com
+DOMAIN-SUFFIX,fbthirdpartypixel.com
+DOMAIN-SUFFIX,fbwat.ch
+DOMAIN-SUFFIX,thefacebook.com
+DOMAIN-SUFFIX,messenger.com
+DOMAIN-SUFFIX,m.me
+DOMAIN-SUFFIX,nbabot.net
+DOMAIN-SUFFIX,rocksdb.org
+# 收敛匹配全球 Facebook 国家后缀 (如 facebook.co.uk, facebook.com.hk 等，零冗余)
+DOMAIN-KEYWORD,.facebook.
+DOMAIN-KEYWORD,fbcdn
+
+# ------------------------------------------------------------------------------
+# 4. Instagram & Threads (Instagram 图片视频社区与 Threads 社交网络)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,instagram.com
+DOMAIN-SUFFIX,cdninstagram.com
+DOMAIN-SUFFIX,ig.me
+DOMAIN-SUFFIX,igcdn.com
+DOMAIN-SUFFIX,igsonar.com
+DOMAIN-SUFFIX,igtv.com
+DOMAIN-SUFFIX,instagr.am
+DOMAIN-SUFFIX,threads.net
+DOMAIN-SUFFIX,threads.com
+
+# ------------------------------------------------------------------------------
+# 5. WhatsApp & Business Messaging (WhatsApp 即时通讯与音视频通话网络)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,whatsapp.com
+DOMAIN-SUFFIX,whatsapp.net
+DOMAIN-SUFFIX,whatsapp.biz
+DOMAIN-SUFFIX,whatsapp.org
+DOMAIN-SUFFIX,whatsapp.tv
+DOMAIN-SUFFIX,wa.me
+DOMAIN,graph.whatsapp.com
+DOMAIN,web.whatsapp.com
+DOMAIN,w1.web.whatsapp.com
+DOMAIN,w2.web.whatsapp.com
+DOMAIN,w3.web.whatsapp.com
+DOMAIN,w4.web.whatsapp.com
+DOMAIN,w5.web.whatsapp.com
+DOMAIN,w6.web.whatsapp.com
+DOMAIN,w7.web.whatsapp.com
+DOMAIN,w8.web.whatsapp.com
+
+# ------------------------------------------------------------------------------
+# 6. Meta Quest, Horizon Worlds, Oculus & Ray-Ban Meta (VR/MR 硬件、应用商店与智能眼镜)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,oculus.com
+DOMAIN-SUFFIX,oculuscdn.com
+DOMAIN-SUFFIX,oculusrift.com
+DOMAIN-SUFFIX,oculusvr.com
+DOMAIN-SUFFIX,powersunitedvr.com
+DOMAIN,horizon.meta.com
+DOMAIN,quest.meta.com
+DOMAIN,view.meta.com
+
+# ------------------------------------------------------------------------------
+# 7. Meta Developer Tools & Open Source Ecosystem (React / PyTorch / Docusaurus 等开源框架)
+# 注：Meta 主导的顶级开源项目官网与文档站，纳入统一代理可大幅加速文档查阅与包拉取
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,react.dev
+DOMAIN-SUFFIX,reactjs.org
+DOMAIN-SUFFIX,reactnative.dev
+DOMAIN-SUFFIX,pytorch.org
+DOMAIN-SUFFIX,docusaurus.io
+DOMAIN-SUFFIX,jestjs.io
+DOMAIN-SUFFIX,metro.dev
+DOMAIN-SUFFIX,relay.dev
+DOMAIN-SUFFIX,lexical.dev
+DOMAIN-SUFFIX,stylexjs.com
+DOMAIN-SUFFIX,hermesengine.dev
+DOMAIN-SUFFIX,buck.build
+DOMAIN-SUFFIX,buck2.build
+DOMAIN-SUFFIX,folly.dev
+DOMAIN-SUFFIX,hhvm.com
+DOMAIN-SUFFIX,hacklang.org
+
+# ------------------------------------------------------------------------------
+# 8. Meta Subsidiary Services & Acquisitions (Giphy 历史关联接口 / Mapillary / CrowdTangle 等)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,mapillary.com
+DOMAIN-SUFFIX,crowdtangle.com
+DOMAIN-SUFFIX,accountkit.com
+DOMAIN-SUFFIX,parse.com
+DOMAIN-SUFFIX,onavo.com
+DOMAIN-SUFFIX,liverail.com
+DOMAIN-SUFFIX,atdmt.com
+
+# ------------------------------------------------------------------------------
+
+# ------------------------------------------------------------------------------
+# X. Muse Ecosystem & Related Services (Muse 相关的视频、画布、硬件与 AI 规则)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,muse.ai
+DOMAIN,api.muse.ai
+DOMAIN,assets.muse.ai
+DOMAIN,player.muse.ai
+DOMAIN,search.muse.ai
+DOMAIN-SUFFIX,museapp.com
+DOMAIN,app.museapp.com
+DOMAIN,api.museapp.com
+DOMAIN,updates.museapp.com
+DOMAIN-SUFFIX,choosemuse.com
+DOMAIN-SUFFIX,interaxon.ca
+DOMAIN,app.choosemuse.com
+DOMAIN,api.choosemuse.com
+
+# 9. Process & Client User-Agent Rules (iOS / macOS / 桌面客户端进程与 UA 识别)
+# ------------------------------------------------------------------------------
+USER-AGENT,Facebook*
+USER-AGENT,Instagram*
+USER-AGENT,WhatsApp*
+USER-AGENT,Messenger*
+USER-AGENT,Threads*
+USER-AGENT,*FBAN*
+USER-AGENT,*FBIOS*
+USER-AGENT,*Meta*
+PROCESS-NAME,WhatsApp
+PROCESS-NAME,WhatsApp Helper
+PROCESS-NAME,Messenger
+PROCESS-NAME,Messenger Helper
+
+# ------------------------------------------------------------------------------
+# 10. Meta Official ASN & Core Anycast IP Blocks (Meta 官方自治系统号与全球核心 IP 段)
+# 注：WhatsApp 语音/视频通话及 Instagram 直连流媒体极度依赖 IP 与 ASN 规则兜底
+# ------------------------------------------------------------------------------
+IP-CIDR,31.13.24.0/21,no-resolve
+IP-CIDR,31.13.64.0/18,no-resolve
+IP-CIDR,45.64.40.0/22,no-resolve
+IP-CIDR,57.144.0.0/14,no-resolve
+IP-CIDR,66.220.144.0/20,no-resolve
+IP-CIDR,69.63.176.0/20,no-resolve
+IP-CIDR,69.171.224.0/19,no-resolve
+IP-CIDR,74.119.76.0/22,no-resolve
+IP-CIDR,102.132.96.0/20,no-resolve
+IP-CIDR,103.4.96.0/22,no-resolve
+IP-CIDR,129.134.0.0/16,no-resolve
+IP-CIDR,157.240.0.0/16,no-resolve
+IP-CIDR,163.70.128.0/17,no-resolve
+IP-CIDR,173.252.64.0/18,no-resolve
+IP-CIDR,179.60.192.0/22,no-resolve
+IP-CIDR,185.60.216.0/22,no-resolve
+IP-CIDR,185.89.216.0/22,no-resolve
+IP-CIDR,204.15.20.0/22,no-resolve
+IP-CIDR6,2a03:2880::/32,no-resolve
+IP-CIDR6,2620:0:1c00::/40,no-resolve
+IP-ASN,32934,no-resolve
+IP-ASN,54115,no-resolve
+IP-ASN,63293,no-resolve

@@ -151,3 +151,7 @@ DOMAIN-SUFFIX,boringcompany.com
 DOMAIN-SUFFIX,tesla.com
 DOMAIN-SUFFIX,tesla.cn
 DOMAIN-SUFFIX,teslamotors.com
+
+# Others
+DOMAIN-SUFFIX,skilljar.com
+DOMAIN-SUFFIX,datadoghq.com

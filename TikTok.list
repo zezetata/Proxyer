@@ -1,19 +1,129 @@
-# NAME: TikTok
+# ==============================================================================
+# NAME: TikTok & ByteDance Overseas Complete Rule-Set (TikTok.list)
+# DESCRIPTION: Covers TikTok Web/App, USDS/Oracle Enclave, Video/Live CDNs,
+#              CapCut, Lemon8, TikTok Shop/Ads, Coze/Trae Overseas & ASNs.
+#              Strictly excludes domestic Douyin (.cn / amemv.com / snssdk.com).
+# UPDATED: 2026-10
+# USAGE IN SURGE (Surge.conf):
+#   RULE-SET,TikTok.list,TikTok,extended-matching
+# ==============================================================================
 
-DOMAIN,p16-tiktokcdn-com.akamaized.net
+# ------------------------------------------------------------------------------
+# 1. TikTok Core Domains & USDS / Regional Enclaves (核心主站、短链与美欧数据合规中心)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,tiktok.com
+DOMAIN-SUFFIX,tiktok.org
+DOMAIN-SUFFIX,tiktokv.com
+DOMAIN-SUFFIX,tiktokv.us
+DOMAIN-SUFFIX,tiktokv.eu
+DOMAIN-SUFFIX,tiktokw.us
+DOMAIN-SUFFIX,tiktokw.eu
+DOMAIN-SUFFIX,tiktokus.info
+DOMAIN-SUFFIX,vm.tiktok.com
+DOMAIN-SUFFIX,vt.tiktok.com
+
+# ------------------------------------------------------------------------------
+# 2. TikTok Video, Audio, Live Streaming & Static CDNs (音视频流、直播流与静态边缘节点)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,tiktokcdn.com
+DOMAIN-SUFFIX,tiktokcdn-us.com
+DOMAIN-SUFFIX,tiktokcdn-eu.com
+DOMAIN-SUFFIX,tiktokcdn-in.com
+DOMAIN-SUFFIX,tiktokd.net
+DOMAIN-SUFFIX,tiktokd.org
+DOMAIN-SUFFIX,tlivecdn.com
+DOMAIN-SUFFIX,tlivepush.com
+DOMAIN-SUFFIX,ttlivecdn.com
+DOMAIN-SUFFIX,ttwstatic.com
+DOMAIN-SUFFIX,tik-tokapi.com
+DOMAIN-KEYWORD,tiktokcdn
+DOMAIN-KEYWORD,-tiktokcdn-
+
+# ------------------------------------------------------------------------------
+# 3. ByteDance Overseas Infrastructure & SDKs (字节跳动海外专用底座与风控/推送网关)
+# 注：严格仅收录海外国际版专用域名，已彻底剔除 snssdk.com / amemv.com / pstatp.com 等国内抖音共用域
+# ------------------------------------------------------------------------------
 DOMAIN-SUFFIX,byteoversea.com
+DOMAIN-SUFFIX,byteoversea.net
 DOMAIN-SUFFIX,ibytedtos.com
 DOMAIN-SUFFIX,ibyteimg.com
 DOMAIN-SUFFIX,ipstatp.com
-DOMAIN-SUFFIX,muscdn.com
+DOMAIN-SUFFIX,isnssdk.com
+DOMAIN-SUFFIX,sgsnssdk.com
+DOMAIN-SUFFIX,fengkongcloud.com
+DOMAIN-SUFFIX,bytefcdn-oversea.com
+DOMAIN-SUFFIX,bytefcdn-ttpeu.com
+DOMAIN-SUFFIX,byteglb.com
+DOMAIN-SUFFIX,byteigtm.com
+DOMAIN-SUFFIX,byteintl.com
+DOMAIN-SUFFIX,byteintl.net
+DOMAIN-SUFFIX,byteintlapi.com
+DOMAIN-SUFFIX,byteintlstatic.com
+DOMAIN-SUFFIX,sgali.net
+DOMAIN-SUFFIX,pitaya-clientai.com
+DOMAIN,p16-tiktokcdn-com.akamaized.net
+
+# ------------------------------------------------------------------------------
+# 4. Musical.ly Legacy Endpoints (iOS / Android 客户端底层历史接口与 API 签名域)
+# Note: TikTok 移动客户端底层仍有大量长连接与接口沿用 musical.ly / musemuse.cn 域名
+# ------------------------------------------------------------------------------
 DOMAIN-SUFFIX,musical.ly
-DOMAIN-SUFFIX,sgpstatp.com
-DOMAIN-SUFFIX,snssdk.com
-DOMAIN-SUFFIX,tik-tokapi.com
-DOMAIN-SUFFIX,tiktok.com
-DOMAIN-SUFFIX,tiktokcdn.com
-DOMAIN-SUFFIX,tiktokv.com
-DOMAIN-SUFFIX,tiktokv.us
-DOMAIN-SUFFIX,tiktokcdn-us.com
-DOMAIN-KEYWORD,-tiktokcdn-com
+DOMAIN-SUFFIX,muscdn.com
+DOMAIN-SUFFIX,musemuse.cn
+
+# ------------------------------------------------------------------------------
+# 5. TikTok Shop, Creator Marketplace & Business Ads (跨境电商小店、创作者与商业化广告)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,tiktokshop.com
+DOMAIN-SUFFIX,tiktokglobalshop.com
+DOMAIN-SUFFIX,tiktokglobalshopv.com
+DOMAIN-SUFFIX,tiktokforbusiness.com
+DOMAIN-SUFFIX,tiktokforbusinessoutbound.com
+DOMAIN-SUFFIX,tiktok-minis.com
+
+# ------------------------------------------------------------------------------
+# 6. CapCut (剪映海外版), Lemon8, Hypic & Overseas Apps (剪映国际版、Lemon8 与海外产品矩阵)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,capcut.com
+DOMAIN-SUFFIX,capcut.net
+DOMAIN-SUFFIX,capcutapi.com
+DOMAIN-SUFFIX,capcutstatic.com
+DOMAIN-SUFFIX,lemon8-app.com
+DOMAIN-SUFFIX,lemon8cdn.com
+DOMAIN-SUFFIX,hypic.com
+DOMAIN-SUFFIX,resso.com
+DOMAIN-SUFFIX,resso.app
+DOMAIN-SUFFIX,gauthmath.com
+DOMAIN-SUFFIX,larksuite.com
+DOMAIN-SUFFIX,coze.com
+DOMAIN-SUFFIX,trae.ai
+DOMAIN-SUFFIX,marscode.com
+
+# ------------------------------------------------------------------------------
+# 7. Process & Client User-Agent Rules (iOS / macOS / 客户端进程与 UA 精确识别)
+# ------------------------------------------------------------------------------
 USER-AGENT,TikTok*
+USER-AGENT,musical_ly*
+USER-AGENT,*trill*
+USER-AGENT,CapCut*
+USER-AGENT,Lemon8*
+PROCESS-NAME,TikTok
+PROCESS-NAME,CapCut
+PROCESS-NAME,Trae
+PROCESS-NAME,Lark
+PROCESS-NAME,Lark Helper
+
+# ------------------------------------------------------------------------------
+# 8. ByteDance Overseas Official ASNs & Core IP Blocks (海外专用自治系统号与核心 IP 段)
+# 注：仅包含字节跳动在新加坡、美欧注册的海外 ASN (AS138699 / AS396986)，不含国内 ASN
+# ------------------------------------------------------------------------------
+IP-CIDR,45.114.80.0/22,no-resolve
+IP-CIDR,103.136.220.0/22,no-resolve
+IP-CIDR,130.44.212.0/22,no-resolve
+IP-CIDR,139.177.224.0/19,no-resolve
+IP-CIDR,147.160.176.0/20,no-resolve
+IP-CIDR,161.117.0.0/16,no-resolve
+IP-CIDR6,2404:3080::/32,no-resolve
+IP-CIDR6,2605:3b80::/32,no-resolve
+IP-ASN,138699,no-resolve
+IP-ASN,396986,no-resolve

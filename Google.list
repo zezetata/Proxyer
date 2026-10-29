@@ -1,0 +1,604 @@
+# ==============================================================================
+# NAME: Google All-in-One Complete Rule-Set (Google.list)
+# DESCRIPTION: All Google Services, Registry TLDs, AI/Gemini, YouTube, GCP,
+#              Firebase, Android/FCM, DNS, ASN & QUIC Optimization in ONE file.
+# UPDATED: 2026-10
+#
+# HOW TO USE IN SURGE (Surge.conf):
+#   [Rule]
+#   # (可选) 如果在外部单独写一条 QUIC 阻断，或者直接取消下方第 0 节的注释配合 Sub-Rule 使用
+#   RULE-SET,Google.list,Google
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 0. [可选] QUIC (UDP 443) 逻辑匹配规则 (Surge RULE-SET 原生支持 AND/OR/PROTOCOL 规则)
+# 说明：
+# - 在 Surge 中，RULE-SET (.list) 里的规则默认不带策略名（统一走调用该 RULE-SET 时指定的策略，如 Google）。
+# - 如果你希望在这个 .list 文件里直接识别 Google 的 UDP 443 (QUIC) 流量（例如配合专门的 Reject Rule-Set 调用），
+#   可取消下方这一行的注释；若作为常规代理 Rule-Set 调用，保持注释即可，由下方的域名规则接管全部 TCP/UDP 流量。
+# ------------------------------------------------------------------------------
+AND,((PROTOCOL,UDP),(DEST-PORT,443),(OR,((DOMAIN-SUFFIX,googlevideo.com),(DOMAIN-SUFFIX,youtube.com),(DOMAIN-SUFFIX,ytimg.com),(DOMAIN-SUFFIX,googleapis.com),(DOMAIN-SUFFIX,gstatic.com),(DOMAIN-SUFFIX,google.com),(DOMAIN-SUFFIX,googleusercontent.com))))
+
+# ------------------------------------------------------------------------------
+# 1. Google Brand & Registry Exclusive TLDs (Google 品牌私有顶级域名后缀)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,google
+DOMAIN-SUFFIX,goog
+DOMAIN-SUFFIX,gle
+DOMAIN-SUFFIX,youtube
+DOMAIN-SUFFIX,chrome
+DOMAIN-SUFFIX,android
+DOMAIN-SUFFIX,gmail
+DOMAIN-SUFFIX,gbiz
+DOMAIN-SUFFIX,gdrive
+DOMAIN-SUFFIX,gdn
+DOMAIN-SUFFIX,guge
+DOMAIN-SUFFIX,hangout
+DOMAIN-SUFFIX,nexus
+DOMAIN-SUFFIX,play
+DOMAIN-SUFFIX,prod
+DOMAIN-SUFFIX,search
+DOMAIN-SUFFIX,welt
+DOMAIN-SUFFIX,xn--flw351e
+DOMAIN-SUFFIX,xn--qcka1pmc
+DOMAIN-SUFFIX,dclk
+DOMAIN-SUFFIX,ads
+DOMAIN-SUFFIX,cal
+DOMAIN-SUFFIX,channel
+DOMAIN-SUFFIX,docs
+DOMAIN-SUFFIX,drive
+DOMAIN-SUFFIX,fly
+DOMAIN-SUFFIX,here
+DOMAIN-SUFFIX,map
+DOMAIN-SUFFIX,meet
+
+# ------------------------------------------------------------------------------
+# 2. Google Registry Public TLDs - Google Official Domains (公共后缀中的 Google 官方自用域名)
+# 注：.dev / .app / .page / .new / .ing 对外开放注册，不可全后缀拦截，此处精准收录 Google 官方持有的域名
+# ------------------------------------------------------------------------------
+DOMAIN,dns.google
+DOMAIN,8888.google
+DOMAIN,blog.google
+DOMAIN,about.google
+DOMAIN,safety.google
+DOMAIN,crisisresponse.google
+DOMAIN,grow.google
+DOMAIN,pride.google
+DOMAIN,wellbeing.google
+DOMAIN,sustainability.google
+DOMAIN,tv.google
+DOMAIN,store.google
+DOMAIN,pixel.google
+DOMAIN,fi.google
+DOMAIN,domains.google
+DOMAIN,registry.google
+DOMAIN,nic.google
+DOMAIN,design.google
+DOMAIN,opensource.google
+DOMAIN,research.google
+DOMAIN,quantumai.google
+DOMAIN,health.google
+DOMAIN,ai.google
+DOMAIN,labs.google
+DOMAIN,deepmind.google
+DOMAIN,generativeai.google
+DOMAIN,notebooklm.google
+DOMAIN,colab.google
+DOMAIN,checks.google
+DOMAIN,admob.google
+DOMAIN,adsense.google
+DOMAIN,analytics.google
+DOMAIN,business.google
+DOMAIN,domains.app
+DOMAIN,google.dev
+DOMAIN,developers.google.com
+DOMAIN-SUFFIX,flutter.dev
+DOMAIN-SUFFIX,dart.dev
+DOMAIN-SUFFIX,pub.dev
+DOMAIN-SUFFIX,go.dev
+DOMAIN-SUFFIX,web.dev
+DOMAIN-SUFFIX,v8.dev
+DOMAIN-SUFFIX,fuchsia.dev
+DOMAIN-SUFFIX,tfhub.dev
+DOMAIN-SUFFIX,amp.dev
+DOMAIN-SUFFIX,angular.dev
+DOMAIN-SUFFIX,idx.dev
+DOMAIN-SUFFIX,protobuf.dev
+DOMAIN-SUFFIX,knative.dev
+DOMAIN-SUFFIX,tekton.dev
+DOMAIN-SUFFIX,osv.dev
+DOMAIN-SUFFIX,deps.dev
+DOMAIN-SUFFIX,sigstore.dev
+DOMAIN-SUFFIX,open-vsx.org
+DOMAIN-SUFFIX,pkg.dev
+DOMAIN-SUFFIX,cloudshell.dev
+DOMAIN-SUFFIX,run.app
+DOMAIN-SUFFIX,web.app
+DOMAIN-SUFFIX,page.link
+DOMAIN,docs.new
+DOMAIN,sheets.new
+DOMAIN,slides.new
+DOMAIN,forms.new
+DOMAIN,sites.new
+DOMAIN,keep.new
+DOMAIN,cal.new
+DOMAIN,meet.new
+DOMAIN,repo.new
+
+# ------------------------------------------------------------------------------
+# 3. Google AI, Gemini, DeepMind & Machine Learning (AI 大模型与机器学习全栈服务)
+# ------------------------------------------------------------------------------
+DOMAIN,gemini.google.com
+DOMAIN,aistudio.google.com
+DOMAIN,makersuite.google.com
+DOMAIN,notebooklm.google.com
+DOMAIN,idx.google.com
+DOMAIN,bard.google.com
+DOMAIN,opal.google.com
+DOMAIN,jules.google.com
+DOMAIN,mariner.google.com
+DOMAIN,alkalimakersuite-pa.clients6.google.com
+DOMAIN,generativelanguage.googleapis.com
+DOMAIN,proactivebackend-pa.googleapis.com
+DOMAIN,aisandbox-pa.googleapis.com
+DOMAIN,robinfrontend-pa.googleapis.com
+DOMAIN-SUFFIX,deepmind.com
+DOMAIN-SUFFIX,kaggle.com
+DOMAIN-SUFFIX,kaggle.io
+DOMAIN-SUFFIX,kaggleusercontent.com
+DOMAIN-SUFFIX,tensorflow.org
+DOMAIN-SUFFIX,colab.research.google.com
+
+# ------------------------------------------------------------------------------
+# 4. Google Core Search, Account, Static & Alphabet Holdings (核心基础设施与母公司生态)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,google.com
+DOMAIN-SUFFIX,google.cn
+DOMAIN-SUFFIX,googleapis.com
+DOMAIN-SUFFIX,googleapis.cn
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-SUFFIX,gstatic.cn
+DOMAIN-SUFFIX,googleusercontent.com
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,googlezip.net
+DOMAIN-SUFFIX,1e100.net
+DOMAIN-SUFFIX,gvt0.com
+DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,gvt2.com
+DOMAIN-SUFFIX,gvt3.com
+DOMAIN-SUFFIX,g.co
+DOMAIN-SUFFIX,goo.gl
+DOMAIN-SUFFIX,google.org
+DOMAIN-SUFFIX,googleblog.com
+DOMAIN-SUFFIX,googlebot.com
+DOMAIN-SUFFIX,googledomains.com
+DOMAIN-SUFFIX,googleideas.com
+DOMAIN-SUFFIX,googleinsidesearch.com
+DOMAIN-SUFFIX,googlelabs.com
+DOMAIN-SUFFIX,googlemail.com
+DOMAIN-SUFFIX,googlemashups.com
+DOMAIN-SUFFIX,googlepagecreator.com
+DOMAIN-SUFFIX,googlescholar.com
+DOMAIN-SUFFIX,googlesource.com
+DOMAIN-SUFFIX,googket.com
+DOMAIN-SUFFIX,igoogle.com
+DOMAIN-SUFFIX,withgoogle.com
+DOMAIN-SUFFIX,thinkwithgoogle.com
+DOMAIN-SUFFIX,abc.xyz
+DOMAIN-SUFFIX,waymo.com
+DOMAIN-SUFFIX,wing.com
+DOMAIN-SUFFIX,x.company
+DOMAIN-SUFFIX,gv.com
+DOMAIN-SUFFIX,capitalg.com
+DOMAIN-SUFFIX,calicolabs.com
+DOMAIN-SUFFIX,verily.com
+DOMAIN-SUFFIX,isomorphiclabs.com
+DOMAIN-SUFFIX,intrinsic.ai
+
+# ------------------------------------------------------------------------------
+# 5. YouTube & Streaming Media Ecosystem (精准高性能版 - 零第三方误伤)
+# ------------------------------------------------------------------------------
+# 1. 品牌顶级域名与核心主站
+DOMAIN-SUFFIX,youtube
+DOMAIN-SUFFIX,youtube.com
+DOMAIN-SUFFIX,youtu.be
+DOMAIN-SUFFIX,yt.be
+
+# 2. 音视频流分发 (googlevideo) 与缩略图/头像静态资源
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,ggpht.cn
+DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,gvt2.com
+DOMAIN-SUFFIX,widevine.com
+
+# 3. Google 域下的 YouTube 专用 API 与内嵌播放器接口 (独立分流时必选)
+DOMAIN-SUFFIX,youtubei.googleapis.com
+DOMAIN-SUFFIX,youtube.googleapis.com
+DOMAIN-SUFFIX,youtubeembeddedplayer.googleapis.com
+DOMAIN-SUFFIX,youtube-ui.l.google.com
+DOMAIN-SUFFIX,wide-youtube.l.google.com
+DOMAIN-SUFFIX,video.google.com
+
+# 4. YouTube 独立业务子站
+DOMAIN-SUFFIX,youtube-nocookie.com
+DOMAIN-SUFFIX,youtubemusic.com
+DOMAIN-SUFFIX,youtubekids.com
+DOMAIN-SUFFIX,youtubegaming.com
+DOMAIN-SUFFIX,youtubeeducation.com
+DOMAIN-SUFFIX,youtubefanfest.com
+DOMAIN-SUFFIX,youtubemobilesupport.com
+DOMAIN-SUFFIX,youtuber.com
+DOMAIN-SUFFIX,withyoutube.com
+DOMAIN-SUFFIX,youtubego.com
+
+# 5. 收敛匹配所有国家/地区二级后缀 (如 www.youtube.co.jp, m.youtube.com.hk 等，不误伤第三方下载站)
+DOMAIN-KEYWORD,.youtube.
+DOMAIN-KEYWORD,.youtubego.
+
+# 6. 客户端 UA 与专属 Anycast IP 段
+USER-AGENT,com.google.ios.youtube*
+USER-AGENT,YouTube*
+IP-CIDR,172.110.32.0/21,no-resolve
+IP-CIDR,216.73.80.0/20,no-resolve
+IP-CIDR6,2620:120:e000::/40,no-resolve
+
+# ------------------------------------------------------------------------------
+# 6. Google Workspace, Mail, Drive & Productivity (办公套件、云盘与通信)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,gmail.com
+DOMAIN-SUFFIX,inbox.google.com
+DOMAIN-SUFFIX,googledrive.com
+DOMAIN-SUFFIX,drive.google.com
+DOMAIN-SUFFIX,docs.google.com
+DOMAIN-SUFFIX,sheets.google.com
+DOMAIN-SUFFIX,slides.google.com
+DOMAIN-SUFFIX,forms.google.com
+DOMAIN-SUFFIX,sites.google.com
+DOMAIN-SUFFIX,keep.google.com
+DOMAIN-SUFFIX,calendar.google.com
+DOMAIN-SUFFIX,meet.google.com
+DOMAIN-SUFFIX,chat.google.com
+DOMAIN-SUFFIX,voice.google.com
+DOMAIN-SUFFIX,fi.google.com
+DOMAIN-SUFFIX,gsuite.com
+DOMAIN-SUFFIX,workspace.google.com
+DOMAIN-SUFFIX,blogger.com
+DOMAIN-SUFFIX,blogspot.com
+DOMAIN-SUFFIX,feedburner.com
+
+# ------------------------------------------------------------------------------
+# 7. Android, Google Play, FCM Push, Chrome & Hardware (系统、商店、推送与硬件)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,android.com
+DOMAIN-SUFFIX,androidify.com
+DOMAIN-SUFFIX,androidtv.com
+DOMAIN-SUFFIX,androidauto.com
+DOMAIN-SUFFIX,play.google.com
+DOMAIN-SUFFIX,chromium.org
+DOMAIN-SUFFIX,chrome.com
+DOMAIN-SUFFIX,chromebook.com
+DOMAIN-SUFFIX,chromecast.com
+DOMAIN-SUFFIX,chromeexperiments.com
+DOMAIN-SUFFIX,chromestatus.com
+DOMAIN-SUFFIX,chromiumbugs.com
+DOMAIN-SUFFIX,crbug.com
+DOMAIN-SUFFIX,crrev.com
+DOMAIN-SUFFIX,v8project.org
+DOMAIN-SUFFIX,wearos.com
+DOMAIN-SUFFIX,nest.com
+DOMAIN-SUFFIX,fitbit.com
+DOMAIN,mtalk.google.com
+DOMAIN,alt1-mtalk.google.com
+DOMAIN,alt2-mtalk.google.com
+DOMAIN,alt3-mtalk.google.com
+DOMAIN,alt4-mtalk.google.com
+DOMAIN,alt5-mtalk.google.com
+DOMAIN,alt6-mtalk.google.com
+DOMAIN,alt7-mtalk.google.com
+DOMAIN,alt8-mtalk.google.com
+DOMAIN,fcm.googleapis.com
+DOMAIN,fcmregistrations.googleapis.com
+
+# ------------------------------------------------------------------------------
+# 8. Google Cloud Platform (GCP), Firebase & Open Source (云服务、Firebase 与开源框架)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,cloud.google.com
+DOMAIN-SUFFIX,gcp.gvt2.com
+DOMAIN-SUFFIX,appspot.com
+DOMAIN-SUFFIX,cloudfunctions.net
+DOMAIN-SUFFIX,gcr.io
+DOMAIN-SUFFIX,firebase.com
+DOMAIN-SUFFIX,firebaseio.com
+DOMAIN-SUFFIX,firebaseapp.com
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,app-measurement.com
+DOMAIN-SUFFIX,flutter.io
+DOMAIN-SUFFIX,dartlang.org
+DOMAIN-SUFFIX,golang.org
+DOMAIN-SUFFIX,angular.io
+DOMAIN-SUFFIX,polymer-project.org
+DOMAIN-SUFFIX,ampproject.org
+DOMAIN-SUFFIX,ampproject.net
+DOMAIN-SUFFIX,ampproject.com
+DOMAIN-SUFFIX,material.io
+DOMAIN-SUFFIX,webrtc.org
+DOMAIN-SUFFIX,webmproject.org
+DOMAIN-SUFFIX,pagespeedmobilizer.com
+DOMAIN-SUFFIX,bazel.build
+DOMAIN-SUFFIX,grpc.io
+DOMAIN-SUFFIX,istio.io
+DOMAIN-SUFFIX,kubernetes.io
+DOMAIN-SUFFIX,k8s.io
+
+# ------------------------------------------------------------------------------
+# 9. Google Maps, Earth, DNS, Security & Trust Services (地图、公共 DNS、安全与证书)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,maps.google.com
+DOMAIN-SUFFIX,earth.google.com
+DOMAIN-SUFFIX,waze.com
+DOMAIN-SUFFIX,wazestatic.com
+DOMAIN-SUFFIX,panoramio.com
+DOMAIN-SUFFIX,keyhole.com
+DOMAIN,dns.google.com
+DOMAIN-SUFFIX,pki.goog
+DOMAIN-SUFFIX,recaptcha.net
+DOMAIN-SUFFIX,recaptcha.google.com
+DOMAIN-SUFFIX,virustotal.com
+DOMAIN-SUFFIX,chronicle.security
+DOMAIN-SUFFIX,mandiant.com
+DOMAIN-SUFFIX,beyondcorp.com
+DOMAIN-SUFFIX,certificate-transparency.org
+
+# ------------------------------------------------------------------------------
+# 10. Google Ads, Analytics, Tag Manager & Monetization (广告联盟、统计分析与商业化)
+# ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,google-analytics.com
+DOMAIN-SUFFIX,googleadservices.com
+DOMAIN-SUFFIX,googlesyndication.com
+DOMAIN-SUFFIX,googletagmanager.com
+DOMAIN-SUFFIX,googletagservices.com
+DOMAIN-SUFFIX,doubleclick.net
+DOMAIN-SUFFIX,doubleclick.com
+DOMAIN-SUFFIX,2mdn.net
+DOMAIN-SUFFIX,admob.com
+DOMAIN-SUFFIX,adsense.com
+DOMAIN-SUFFIX,adsensecustomsearchads.com
+DOMAIN-SUFFIX,adsenseformobileapps.com
+DOMAIN-SUFFIX,adwords.com
+DOMAIN-SUFFIX,googleads.com
+DOMAIN-SUFFIX,googlecommerce.com
+DOMAIN-SUFFIX,googledisplaynetwork.com
+DOMAIN-SUFFIX,googleoptimize.com
+DOMAIN-SUFFIX,urchin.com
+
+# ------------------------------------------------------------------------------
+# 11. Google Regional Country Code TLDs (全球近 200 个国家与地区二级域名全覆盖)
+# ------------------------------------------------------------------------------
+DOMAIN-KEYWORD,.google.com.
+DOMAIN-SUFFIX,google.ad
+DOMAIN-SUFFIX,google.ae
+DOMAIN-SUFFIX,google.al
+DOMAIN-SUFFIX,google.am
+DOMAIN-SUFFIX,google.as
+DOMAIN-SUFFIX,google.at
+DOMAIN-SUFFIX,google.az
+DOMAIN-SUFFIX,google.ba
+DOMAIN-SUFFIX,google.be
+DOMAIN-SUFFIX,google.bf
+DOMAIN-SUFFIX,google.bg
+DOMAIN-SUFFIX,google.bi
+DOMAIN-SUFFIX,google.bj
+DOMAIN-SUFFIX,google.bs
+DOMAIN-SUFFIX,google.bt
+DOMAIN-SUFFIX,google.by
+DOMAIN-SUFFIX,google.ca
+DOMAIN-SUFFIX,google.cat
+DOMAIN-SUFFIX,google.cd
+DOMAIN-SUFFIX,google.cf
+DOMAIN-SUFFIX,google.cg
+DOMAIN-SUFFIX,google.ch
+DOMAIN-SUFFIX,google.ci
+DOMAIN-SUFFIX,google.cl
+DOMAIN-SUFFIX,google.cm
+DOMAIN-SUFFIX,google.co.ao
+DOMAIN-SUFFIX,google.co.bw
+DOMAIN-SUFFIX,google.co.ck
+DOMAIN-SUFFIX,google.co.cr
+DOMAIN-SUFFIX,google.co.id
+DOMAIN-SUFFIX,google.co.il
+DOMAIN-SUFFIX,google.co.in
+DOMAIN-SUFFIX,google.co.jp
+DOMAIN-SUFFIX,google.co.ke
+DOMAIN-SUFFIX,google.co.kr
+DOMAIN-SUFFIX,google.co.ls
+DOMAIN-SUFFIX,google.co.ma
+DOMAIN-SUFFIX,google.co.mz
+DOMAIN-SUFFIX,google.co.nz
+DOMAIN-SUFFIX,google.co.th
+DOMAIN-SUFFIX,google.co.tz
+DOMAIN-SUFFIX,google.co.ug
+DOMAIN-SUFFIX,google.co.uk
+DOMAIN-SUFFIX,google.co.uz
+DOMAIN-SUFFIX,google.co.ve
+DOMAIN-SUFFIX,google.co.vi
+DOMAIN-SUFFIX,google.co.za
+DOMAIN-SUFFIX,google.co.zm
+DOMAIN-SUFFIX,google.co.zw
+DOMAIN-SUFFIX,google.com.af
+DOMAIN-SUFFIX,google.com.ag
+DOMAIN-SUFFIX,google.com.ai
+DOMAIN-SUFFIX,google.com.ar
+DOMAIN-SUFFIX,google.com.au
+DOMAIN-SUFFIX,google.com.bd
+DOMAIN-SUFFIX,google.com.bh
+DOMAIN-SUFFIX,google.com.bn
+DOMAIN-SUFFIX,google.com.bo
+DOMAIN-SUFFIX,google.com.br
+DOMAIN-SUFFIX,google.com.bz
+DOMAIN-SUFFIX,google.com.co
+DOMAIN-SUFFIX,google.com.cu
+DOMAIN-SUFFIX,google.com.cy
+DOMAIN-SUFFIX,google.com.do
+DOMAIN-SUFFIX,google.com.ec
+DOMAIN-SUFFIX,google.com.eg
+DOMAIN-SUFFIX,google.com.et
+DOMAIN-SUFFIX,google.com.fj
+DOMAIN-SUFFIX,google.com.gh
+DOMAIN-SUFFIX,google.com.gi
+DOMAIN-SUFFIX,google.com.gt
+DOMAIN-SUFFIX,google.com.hk
+DOMAIN-SUFFIX,google.com.jm
+DOMAIN-SUFFIX,google.com.kh
+DOMAIN-SUFFIX,google.com.kw
+DOMAIN-SUFFIX,google.com.lb
+DOMAIN-SUFFIX,google.com.ly
+DOMAIN-SUFFIX,google.com.mm
+DOMAIN-SUFFIX,google.com.mt
+DOMAIN-SUFFIX,google.com.mx
+DOMAIN-SUFFIX,google.com.my
+DOMAIN-SUFFIX,google.com.na
+DOMAIN-SUFFIX,google.com.nf
+DOMAIN-SUFFIX,google.com.ng
+DOMAIN-SUFFIX,google.com.ni
+DOMAIN-SUFFIX,google.com.np
+DOMAIN-SUFFIX,google.com.om
+DOMAIN-SUFFIX,google.com.pa
+DOMAIN-SUFFIX,google.com.pe
+DOMAIN-SUFFIX,google.com.pg
+DOMAIN-SUFFIX,google.com.ph
+DOMAIN-SUFFIX,google.com.pk
+DOMAIN-SUFFIX,google.com.pr
+DOMAIN-SUFFIX,google.com.py
+DOMAIN-SUFFIX,google.com.qa
+DOMAIN-SUFFIX,google.com.sa
+DOMAIN-SUFFIX,google.com.sb
+DOMAIN-SUFFIX,google.com.sg
+DOMAIN-SUFFIX,google.com.sl
+DOMAIN-SUFFIX,google.com.sv
+DOMAIN-SUFFIX,google.com.tj
+DOMAIN-SUFFIX,google.com.tr
+DOMAIN-SUFFIX,google.com.tw
+DOMAIN-SUFFIX,google.com.ua
+DOMAIN-SUFFIX,google.com.uy
+DOMAIN-SUFFIX,google.com.vc
+DOMAIN-SUFFIX,google.com.vn
+DOMAIN-SUFFIX,google.cv
+DOMAIN-SUFFIX,google.cz
+DOMAIN-SUFFIX,google.de
+DOMAIN-SUFFIX,google.dj
+DOMAIN-SUFFIX,google.dk
+DOMAIN-SUFFIX,google.dm
+DOMAIN-SUFFIX,google.dz
+DOMAIN-SUFFIX,google.ee
+DOMAIN-SUFFIX,google.es
+DOMAIN-SUFFIX,google.fi
+DOMAIN-SUFFIX,google.fm
+DOMAIN-SUFFIX,google.fr
+DOMAIN-SUFFIX,google.ga
+DOMAIN-SUFFIX,google.ge
+DOMAIN-SUFFIX,google.gg
+DOMAIN-SUFFIX,google.gl
+DOMAIN-SUFFIX,google.gm
+DOMAIN-SUFFIX,google.gp
+DOMAIN-SUFFIX,google.gr
+DOMAIN-SUFFIX,google.gy
+DOMAIN-SUFFIX,google.hn
+DOMAIN-SUFFIX,google.hr
+DOMAIN-SUFFIX,google.ht
+DOMAIN-SUFFIX,google.hu
+DOMAIN-SUFFIX,google.ie
+DOMAIN-SUFFIX,google.im
+DOMAIN-SUFFIX,google.iq
+DOMAIN-SUFFIX,google.is
+DOMAIN-SUFFIX,google.it
+DOMAIN-SUFFIX,google.je
+DOMAIN-SUFFIX,google.jo
+DOMAIN-SUFFIX,google.kg
+DOMAIN-SUFFIX,google.ki
+DOMAIN-SUFFIX,google.kz
+DOMAIN-SUFFIX,google.la
+DOMAIN-SUFFIX,google.li
+DOMAIN-SUFFIX,google.lk
+DOMAIN-SUFFIX,google.lt
+DOMAIN-SUFFIX,google.lu
+DOMAIN-SUFFIX,google.lv
+DOMAIN-SUFFIX,google.md
+DOMAIN-SUFFIX,google.me
+DOMAIN-SUFFIX,google.mg
+DOMAIN-SUFFIX,google.mk
+DOMAIN-SUFFIX,google.ml
+DOMAIN-SUFFIX,google.mn
+DOMAIN-SUFFIX,google.ms
+DOMAIN-SUFFIX,google.mu
+DOMAIN-SUFFIX,google.mv
+DOMAIN-SUFFIX,google.mw
+DOMAIN-SUFFIX,google.ne
+DOMAIN-SUFFIX,google.nl
+DOMAIN-SUFFIX,google.no
+DOMAIN-SUFFIX,google.nr
+DOMAIN-SUFFIX,google.nu
+DOMAIN-SUFFIX,google.pl
+DOMAIN-SUFFIX,google.pn
+DOMAIN-SUFFIX,google.ps
+DOMAIN-SUFFIX,google.pt
+DOMAIN-SUFFIX,google.ro
+DOMAIN-SUFFIX,google.rs
+DOMAIN-SUFFIX,google.ru
+DOMAIN-SUFFIX,google.rw
+DOMAIN-SUFFIX,google.sc
+DOMAIN-SUFFIX,google.se
+DOMAIN-SUFFIX,google.sh
+DOMAIN-SUFFIX,google.si
+DOMAIN-SUFFIX,google.sk
+DOMAIN-SUFFIX,google.sm
+DOMAIN-SUFFIX,google.sn
+DOMAIN-SUFFIX,google.so
+DOMAIN-SUFFIX,google.sr
+DOMAIN-SUFFIX,google.st
+DOMAIN-SUFFIX,google.td
+DOMAIN-SUFFIX,google.tg
+DOMAIN-SUFFIX,google.tk
+DOMAIN-SUFFIX,google.tl
+DOMAIN-SUFFIX,google.tm
+DOMAIN-SUFFIX,google.tn
+DOMAIN-SUFFIX,google.to
+DOMAIN-SUFFIX,google.tt
+DOMAIN-SUFFIX,google.vg
+DOMAIN-SUFFIX,google.vu
+DOMAIN-SUFFIX,google.ws
+
+# ------------------------------------------------------------------------------
+# 12. Google Core ASN & Anycast IP Blocks (核心 ASN 自治系统号与 Anycast IP 段)
+# ------------------------------------------------------------------------------
+IP-CIDR,8.8.8.0/24,no-resolve
+IP-CIDR,8.8.4.0/24,no-resolve
+IP-CIDR,8.34.208.0/20,no-resolve
+IP-CIDR,8.35.192.0/20,no-resolve
+IP-CIDR,34.0.0.0/9,no-resolve
+IP-CIDR,35.184.0.0/13,no-resolve
+IP-CIDR,35.192.0.0/12,no-resolve
+IP-CIDR,35.208.0.0/12,no-resolve
+IP-CIDR,35.224.0.0/12,no-resolve
+IP-CIDR,35.240.0.0/13,no-resolve
+IP-CIDR,64.233.160.0/19,no-resolve
+IP-CIDR,66.102.0.0/20,no-resolve
+IP-CIDR,66.249.64.0/19,no-resolve
+IP-CIDR,72.14.192.0/18,no-resolve
+IP-CIDR,74.125.0.0/16,no-resolve
+IP-CIDR,108.177.0.0/17,no-resolve
+IP-CIDR,142.250.0.0/15,no-resolve
+IP-CIDR,172.217.0.0/16,no-resolve
+IP-CIDR,172.253.0.0/16,no-resolve
+IP-CIDR,173.194.0.0/16,no-resolve
+IP-CIDR,209.85.128.0/17,no-resolve
+IP-CIDR,216.58.192.0/19,no-resolve
+IP-CIDR,216.239.32.0/19,no-resolve
+IP-CIDR6,2001:4860:4860::/48,no-resolve
+IP-CIDR6,2607:f8b0::/32,no-resolve
+IP-CIDR6,2800:3f0::/32,no-resolve
+IP-CIDR6,2a00:1450::/32,no-resolve
+IP-CIDR6,2c0f:fb50::/32,no-resolve
+IP-ASN,15169,no-resolve
+IP-ASN,396982,no-resolve
