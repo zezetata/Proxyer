@@ -1,28 +1,30 @@
 # ==============================================================================
-# NAME: United States Internet Services Rule-Set (USA_SERVICE.list)
-# DESCRIPTION: Covers US-based internet services, media, social platforms,
-#              developer tools, cloud/CDN & fintech not covered by dedicated
-#              brand rule-sets (Excludes Google, Microsoft/GitHub, Amazon, Meta,
-#              OpenAI, Anthropic, X/xAI/SpaceX, Cloudflare, Discord & PayPal).
+# NAME: United States Internet Services Complete Rule-Set (USA_SERVICE.list)
+# DESCRIPTION: Exhaustive coverage of US-based internet ecosystems (Media,
+#              Streaming, Social, Cloud/SaaS, DevOps, Package Registries,
+#              Design, Productivity & Fintech) not in dedicated brand rule-sets.
+#              Each company includes main domains, shorteners, CDNs, APIs & auth.
 # UPDATED: 2026-10
 # USAGE IN SURGE (Surge.conf):
 #   RULE-SET,https://raw.githubusercontent.com/zezetata/Proxyer/master/USA_SERVICE.list,"🇺🇸 USA Service",extended-matching
 # ==============================================================================
 
 # ------------------------------------------------------------------------------
-# 1. US Mainstream News, Finance & Magazines (美国主流新闻、财经媒体与深度杂志)
+# 1. US Mainstream News, Finance, Tech Media & Magazines (美国新闻、财经与科技媒体巨头)
 # ------------------------------------------------------------------------------
-# > The New York Times (纽约时报)
+# > The New York Times (纽约时报全栈：主站、短链、静态图床、音频与The Athletic)
 DOMAIN-SUFFIX,nytimes.com
 DOMAIN-SUFFIX,newyorktimes.com
 DOMAIN-SUFFIX,nyt.com
 DOMAIN-SUFFIX,nytco.com
+DOMAIN-SUFFIX,nyti.ms
 DOMAIN-SUFFIX,nytimg.com
 DOMAIN-SUFFIX,nytlog.com
 DOMAIN-SUFFIX,nytstyle.com
 DOMAIN-SUFFIX,tmagazine.com
+DOMAIN-SUFFIX,theathletic.com
 
-# > Dow Jones: WSJ, Barron's & MarketWatch (道琼斯：华尔街日报、巴伦周刊、市场观察)
+# > Dow Jones & News Corp (道琼斯全栈：华尔街日报、巴伦周刊、MarketWatch、纽约邮报)
 DOMAIN-SUFFIX,wsj.com
 DOMAIN-SUFFIX,wsj.net
 DOMAIN-SUFFIX,dowjones.com
@@ -33,47 +35,236 @@ DOMAIN-SUFFIX,mktw.net
 DOMAIN-SUFFIX,investors.com
 DOMAIN-SUFFIX,djservices.io
 DOMAIN-SUFFIX,dwcdn.net
+DOMAIN-SUFFIX,nypost.com
+DOMAIN-SUFFIX,newscorp.com
 
-# > Bloomberg (彭博社 - 排除国内直连的 bloomberg.cn)
+# > Bloomberg (彭博社全栈：主站、终端、静态 CDN 与短链 - 排除国内直连的 bloomberg.cn)
 DOMAIN-SUFFIX,bloomberg.com
 DOMAIN-SUFFIX,bloomberg.de
+DOMAIN-SUFFIX,bloomberg.net
 DOMAIN-SUFFIX,bloombergview.com
+DOMAIN-SUFFIX,bloomberglaw.com
+DOMAIN-SUFFIX,bloombergquint.com
 DOMAIN-SUFFIX,bwbx.io
+DOMAIN-SUFFIX,blmbrg.com
+DOMAIN-SUFFIX,bgov.com
 
-# > The Washington Post (华盛顿邮报)
+# > The Washington Post, LA Times, USA Today & Boston Globe (华盛顿邮报与全美大报)
 DOMAIN-SUFFIX,washingtonpost.com
+DOMAIN-SUFFIX,wapo.st
 DOMAIN-SUFFIX,wpdigital.net
+DOMAIN-SUFFIX,wpcompany.com
+DOMAIN-SUFFIX,latimes.com
+DOMAIN-SUFFIX,usatoday.com
+DOMAIN-SUFFIX,bostonglobe.com
+DOMAIN-SUFFIX,chicagotribune.com
+DOMAIN-SUFFIX,sfchronicle.com
+DOMAIN-SUFFIX,sfgate.com
 
-# > Forbes, Time, The New Yorker & Condé Nast (福布斯、时代周刊、纽约客、康泰纳仕)
+# > Condé Nast, Vox Media, Forbes, Time & Atlantic (康泰纳仕、Vox、福布斯、时代与大西洋月刊)
 DOMAIN-SUFFIX,forbes.com
+DOMAIN-SUFFIX,forbesimg.com
 DOMAIN-SUFFIX,time.com
+DOMAIN-SUFFIX,timeinc.net
+DOMAIN-SUFFIX,fortune.com
+DOMAIN-SUFFIX,theatlantic.com
 DOMAIN-SUFFIX,newyorker.com
-DOMAIN-SUFFIX,cntraveler.com
 DOMAIN-SUFFIX,wired.com
 DOMAIN-SUFFIX,arstechnica.com
+DOMAIN-SUFFIX,vanityfair.com
+DOMAIN-SUFFIX,vogue.com
+DOMAIN-SUFFIX,gq.com
+DOMAIN-SUFFIX,cntraveler.com
+DOMAIN-SUFFIX,pitchfork.com
+DOMAIN-SUFFIX,condenast.com
+DOMAIN-SUFFIX,condenastdigital.com
+DOMAIN-SUFFIX,theverge.com
+DOMAIN-SUFFIX,vox.com
+DOMAIN-SUFFIX,voxmedia.com
+DOMAIN-SUFFIX,vox-cdn.com
+DOMAIN-SUFFIX,nymag.com
+DOMAIN-SUFFIX,polygon.com
+DOMAIN-SUFFIX,recodenet.com
+DOMAIN-SUFFIX,techcrunch.com
+DOMAIN-SUFFIX,engadget.com
+DOMAIN-SUFFIX,gizmodo.com
+DOMAIN-SUFFIX,lifehacker.com
+DOMAIN-SUFFIX,mashable.com
+DOMAIN-SUFFIX,zdnet.com
+DOMAIN-SUFFIX,cnet.com
+DOMAIN-SUFFIX,cnetcontent.com
+DOMAIN-SUFFIX,pcmag.com
+DOMAIN-SUFFIX,tomshardware.com
+DOMAIN-SUFFIX,anandtech.com
+DOMAIN-SUFFIX,9to5mac.com
+DOMAIN-SUFFIX,9to5google.com
+DOMAIN-SUFFIX,macrumors.com
+DOMAIN-SUFFIX,appleinsider.com
+DOMAIN-SUFFIX,cultofmac.com
+DOMAIN-SUFFIX,macstories.net
+DOMAIN-SUFFIX,daringfireball.net
 
-# > CNN, NBC, AP & Politico (美国电视新闻网、美联社与政客杂志)
+# > CNN, NBC, CBS, ABC, Fox, NPR, PBS, AP & Politico (美国电视广播网、通讯社与政论媒体)
 DOMAIN-SUFFIX,cnn.com
 DOMAIN-SUFFIX,cnn.io
 DOMAIN-SUFFIX,cnn.co.uk
+DOMAIN-SUFFIX,cnn.it
+DOMAIN-SUFFIX,turner.com
 DOMAIN-SUFFIX,nbc.com
 DOMAIN-SUFFIX,nbcnews.com
 DOMAIN-SUFFIX,mynbcnews.com
+DOMAIN-SUFFIX,msnbc.com
+DOMAIN-SUFFIX,cnbc.com
+DOMAIN-SUFFIX,cnbcfm.com
+DOMAIN-SUFFIX,today.com
+DOMAIN-SUFFIX,cbsnews.com
+DOMAIN-SUFFIX,cbs.com
+DOMAIN-SUFFIX,cbsistatic.com
+DOMAIN-SUFFIX,abcnews.com
+DOMAIN-SUFFIX,go.com
+DOMAIN-SUFFIX,foxnews.com
+DOMAIN-SUFFIX,foxbusiness.com
+DOMAIN-SUFFIX,fncstatic.com
+DOMAIN-SUFFIX,npr.org
+DOMAIN-SUFFIX,pbs.org
 DOMAIN-SUFFIX,apnews.com
 DOMAIN-SUFFIX,ap.org
 DOMAIN-SUFFIX,politico.com
 DOMAIN-SUFFIX,politico.eu
 DOMAIN-SUFFIX,politicopro.com
-DOMAIN-SUFFIX,today.com
+DOMAIN-SUFFIX,axios.com
+DOMAIN-SUFFIX,thehill.com
+DOMAIN-SUFFIX,semafor.com
+DOMAIN-SUFFIX,puck.news
+DOMAIN-SUFFIX,theinformation.com
+DOMAIN-SUFFIX,propublica.org
+DOMAIN-SUFFIX,theintercept.com
+DOMAIN-SUFFIX,dailybeast.com
+DOMAIN-SUFFIX,huffpost.com
+DOMAIN-SUFFIX,slate.com
+DOMAIN-SUFFIX,salon.com
+DOMAIN-SUFFIX,vice.com
+DOMAIN-SUFFIX,buzzfeed.com
+DOMAIN-SUFFIX,buzzfeednews.com
 DOMAIN-SUFFIX,newsweek.com
+DOMAIN-SUFFIX,usnews.com
 DOMAIN-SUFFIX,foreignaffairs.com
 DOMAIN-SUFFIX,foreignpolicy.com
+DOMAIN-SUFFIX,csis.org
+DOMAIN-SUFFIX,brookings.edu
+DOMAIN-SUFFIX,rand.org
+DOMAIN-SUFFIX,cfr.org
+DOMAIN-SUFFIX,pewresearch.org
 DOMAIN-SUFFIX,newsdata.io
 
 # ------------------------------------------------------------------------------
-# 2. US Social Networks, Forums & Content Publishing (美国社交网络、社区与内容出版)
+# 2. US Video, Music & Entertainment Streaming (美国顶级影视流媒体、院线与音乐平台)
 # ------------------------------------------------------------------------------
-# > Reddit (全美最大社区论坛)
+# > Netflix (奈飞全栈：主站、视频流、测速 Fast.com、静态图床与官方 ASN/IP)
+USER-AGENT,Argo*
+DOMAIN-SUFFIX,netflix.com
+DOMAIN-SUFFIX,netflix.net
+DOMAIN-SUFFIX,nflxext.com
+DOMAIN-SUFFIX,nflximg.com
+DOMAIN-SUFFIX,nflximg.net
+DOMAIN-SUFFIX,nflxso.net
+DOMAIN-SUFFIX,nflxvideo.net
+DOMAIN-SUFFIX,netflixdnstest0.com
+DOMAIN-SUFFIX,netflixdnstest1.com
+DOMAIN-SUFFIX,netflixdnstest2.com
+DOMAIN-SUFFIX,netflixdnstest3.com
+DOMAIN-SUFFIX,netflixdnstest4.com
+DOMAIN-SUFFIX,netflixdnstest5.com
+DOMAIN-SUFFIX,netflixdnstest6.com
+DOMAIN-SUFFIX,netflixdnstest7.com
+DOMAIN-SUFFIX,netflixdnstest8.com
+DOMAIN-SUFFIX,netflixdnstest9.com
+DOMAIN-SUFFIX,fast.com
+DOMAIN-SUFFIX,netflixinvestor.com
+DOMAIN-SUFFIX,netflixstudios.com
+DOMAIN-SUFFIX, netflixtechblog.com
+IP-ASN,2906,no-resolve
+IP-ASN,40027,no-resolve
+
+# > Disney+, Hulu & ESPN (迪士尼流媒体矩阵全栈：主站、BAMTech 视频底座、DRM 与图床)
+DOMAIN-SUFFIX,disney.com
+DOMAIN-SUFFIX,disneyplus.com
+DOMAIN-SUFFIX,disney-plus.net
+DOMAIN-SUFFIX,disneystreaming.com
+DOMAIN-SUFFIX,dssott.com
+DOMAIN-SUFFIX,bamgrid.com
+DOMAIN-SUFFIX,bamtechmedia.com
+DOMAIN-SUFFIX,disney.demdex.net
+DOMAIN-SUFFIX,dilcdn.com
+DOMAIN-SUFFIX,marvel.com
+DOMAIN-SUFFIX,starwars.com
+DOMAIN-SUFFIX,nationalgeographic.com
+DOMAIN-SUFFIX,natgeo.com
+DOMAIN-SUFFIX,hulu.com
+DOMAIN-SUFFIX,hulu.jp
+DOMAIN-SUFFIX,hulustream.com
+DOMAIN-SUFFIX,huluim.com
+DOMAIN-SUFFIX,espn.com
+DOMAIN-SUFFIX,espn.net
+DOMAIN-SUFFIX,espncdn.com
+DOMAIN-SUFFIX,watchespn.com
+
+# > Max (HBO), Paramount+, Peacock, Apple TV+ & Plex (华纳、派拉蒙、环球流媒体与媒体库)
+DOMAIN-SUFFIX,max.com
+DOMAIN-SUFFIX,hbomax.com
+DOMAIN-SUFFIX,hbomaxcdn.com
+DOMAIN-SUFFIX,hbo.com
+DOMAIN-SUFFIX,hbogo.com
+DOMAIN-SUFFIX,hbonow.com
+DOMAIN-SUFFIX,warnerbros.com
+DOMAIN-SUFFIX,wbd.com
+DOMAIN-SUFFIX,discovery.com
+DOMAIN-SUFFIX,paramountplus.com
+DOMAIN-SUFFIX,pplusstatic.com
+DOMAIN-SUFFIX,cbsi.com
+DOMAIN-SUFFIX,showtime.com
+DOMAIN-SUFFIX,peacocktv.com
+DOMAIN-SUFFIX,nbcuni.com
+DOMAIN-SUFFIX,crunchyroll.com
+DOMAIN-SUFFIX,vrv.co
+DOMAIN-SUFFIX,funimation.com
+DOMAIN-SUFFIX,roku.com
+DOMAIN-SUFFIX,tubitv.com
+DOMAIN-SUFFIX,pluto.tv
+DOMAIN-SUFFIX,plex.tv
+DOMAIN-SUFFIX,plex.direct
+DOMAIN-SUFFIX,infuse.tv
+DOMAIN-SUFFIX,firecore.com
+DOMAIN-SUFFIX,emby.media
+DOMAIN-SUFFIX,jellyfin.org
+DOMAIN-SUFFIX,vimeo.com
+DOMAIN-SUFFIX,vimeocdn.com
+DOMAIN-SUFFIX,livestream.com
+DOMAIN-SUFFIX,ted.com
+DOMAIN-SUFFIX,tedcdn.com
+DOMAIN-SUFFIX,pandora.com
+DOMAIN-SUFFIX,tidal.com
+DOMAIN-SUFFIX,tidalhifi.com
+DOMAIN-SUFFIX,iheart.com
+DOMAIN-SUFFIX,siriusxm.com
+DOMAIN-SUFFIX,bandcamp.com
+DOMAIN-SUFFIX,bcbits.com
+DOMAIN-SUFFIX,genius.com
+DOMAIN-SUFFIX,last.fm
+DOMAIN-SUFFIX,discogs.com
+DOMAIN-SUFFIX,rottentomatoes.com
+DOMAIN-SUFFIX,metacritic.com
+DOMAIN-SUFFIX,letterboxd.com
+DOMAIN-SUFFIX,trakt.tv
+DOMAIN-SUFFIX,thetvdb.com
+DOMAIN-SUFFIX,themoviedb.org
+DOMAIN-SUFFIX,tmdb.org
+
+# ------------------------------------------------------------------------------
+# 3. US Social Networks, Communities & Content Publishing (美国社交网络、社区与出版生态)
+# ------------------------------------------------------------------------------
+# > Reddit (全美最大论坛全栈：主站、短链、音视频流 v.redd.it、图床 i.redd.it 与静态资源)
+USER-AGENT,Reddit*
 DOMAIN-SUFFIX,reddit.com
 DOMAIN-SUFFIX,redd.it
 DOMAIN-SUFFIX,redditinc.com
@@ -84,53 +275,128 @@ DOMAIN-SUFFIX,redditmedia.com
 DOMAIN-SUFFIX,redditmail.com
 DOMAIN-SUFFIX,redditforcommunity.com
 DOMAIN-SUFFIX,redditstatic.com
+DOMAIN-SUFFIX,redditstatus.com
 
-# > Bluesky (去中心化社交网络)
+# > Bluesky (去中心化社交网络全栈：主站、AT Protocol 节点、图床与中继)
 DOMAIN-SUFFIX,bsky.app
 DOMAIN-SUFFIX,bsky.social
 DOMAIN-SUFFIX,bsky.network
 DOMAIN-SUFFIX,bsky.team
+DOMAIN-SUFFIX,bsky.link
+DOMAIN-SUFFIX,atproto.com
 
-# > Quora, Medium & Substack (问答社区、专栏博客与独立通讯订阅)
+# > Snapchat (Snap 全栈：主站、短链、地图、Bitmoji 与多媒体 CDN)
+DOMAIN-SUFFIX,snapchat.com
+DOMAIN-SUFFIX,snap.com
+DOMAIN-SUFFIX,sc-cdn.net
+DOMAIN-SUFFIX,sc-gw.com
+DOMAIN-SUFFIX,sc-jpl.com
+DOMAIN-SUFFIX,sc-prod.net
+DOMAIN-SUFFIX,sc-static.net
+DOMAIN-SUFFIX,snapkit.com
+DOMAIN-SUFFIX,bitmoji.com
+
+# > Signal (美国端到端加密通讯标杆全栈：主站、通信网关与 CDN)
+DOMAIN-SUFFIX,signal.org
+DOMAIN-SUFFIX,whispersystems.org
+DOMAIN-SUFFIX,signal.art
+DOMAIN-SUFFIX,signal.group
+DOMAIN-SUFFIX,signal.link
+DOMAIN-SUFFIX,signal.me
+
+# > Quora, Medium, Substack & Ghost (问答社区、专栏博客与独立创作者平台全栈)
 DOMAIN-SUFFIX,quora.com
 DOMAIN-SUFFIX,quoracdn.net
+DOMAIN-SUFFIX,qr.ae
 DOMAIN-SUFFIX,medium.com
+DOMAIN-SUFFIX,medium.amam
+DOMAIN-SUFFIX,miro.medium.com
 DOMAIN-SUFFIX,substack.com
+DOMAIN-SUFFIX,substackcdn.com
+DOMAIN-SUFFIX,ghost.org
+DOMAIN-SUFFIX,ghost.io
+DOMAIN-SUFFIX,patreon.com
+DOMAIN-SUFFIX,patreonusercontent.com
+DOMAIN-SUFFIX,buymeacoffee.com
+DOMAIN-SUFFIX,ko-fi.com
+DOMAIN-SUFFIX,gumroad.com
 
-# > Pinterest & Flickr (图片社交与摄影社区)
+# > Pinterest, Imgur, Giphy, Flickr, Unsplash, 500px & DeviantArt (图片、GIF 与视觉社区)
 DOMAIN-SUFFIX,pinterest.com
+DOMAIN-SUFFIX,pin.it
 DOMAIN-SUFFIX,pinimg.com
 DOMAIN-KEYWORD,.pinterest.
+DOMAIN-SUFFIX,imgur.com
+DOMAIN-SUFFIX,imgurinc.com
+DOMAIN-SUFFIX,giphy.com
+DOMAIN-SUFFIX,gph.is
 DOMAIN-SUFFIX,flickr.com
+DOMAIN-SUFFIX,flic.kr
 DOMAIN-SUFFIX,staticflickr.com
+DOMAIN-SUFFIX,unsplash.com
+DOMAIN-SUFFIX,deviantart.com
+DOMAIN-SUFFIX,deviantart.net
+DOMAIN-SUFFIX,sta.sh
+DOMAIN-SUFFIX,artstation.com
+DOMAIN-SUFFIX,dribbble.com
+DOMAIN-SUFFIX,behance.net
 
-# > Automattic (WordPress / Tumblr / Gravatar)
+# > Automattic (WordPress / Tumblr / Gravatar / Pocket Casts 全栈)
+DOMAIN-SUFFIX,automattic.com
 DOMAIN-SUFFIX,wordpress.com
 DOMAIN-SUFFIX,wordpress.org
 DOMAIN-SUFFIX,wp.com
+DOMAIN-SUFFIX,wp.me
+DOMAIN-SUFFIX,w.org
+DOMAIN-SUFFIX,woocommerce.com
 DOMAIN-SUFFIX,tumblr.com
+DOMAIN-SUFFIX,tmblr.co
 DOMAIN-SUFFIX,gravatar.com
 DOMAIN-SUFFIX,videopress.com
+DOMAIN-SUFFIX,jetpack.com
+DOMAIN-SUFFIX,simplenote.com
+DOMAIN-SUFFIX,dayoneapp.com
+DOMAIN-SUFFIX,pocketcasts.com
+DOMAIN-SUFFIX,pca.st
 
-# > Match Group & Bumble (Tinder / Bumble 社交软件)
+# > Match Group, Bumble, Clubhouse & Linktree (婚恋交友、语音社交与个人主页)
 DOMAIN-SUFFIX,tinder.com
 DOMAIN-SUFFIX,gotinder.com
+DOMAIN-SUFFIX,tindersparks.com
+DOMAIN-SUFFIX,hinge.co
+DOMAIN-SUFFIX,okcupid.com
+DOMAIN-SUFFIX,match.com
+DOMAIN-SUFFIX,pof.com
 DOMAIN-SUFFIX,bumble.com
 DOMAIN-SUFFIX,bumblebff.com
 DOMAIN-SUFFIX,bumbcdn.com
-
-# > Clubhouse (语音社交)
 DOMAIN-SUFFIX,joinclubhouse.com
+DOMAIN-SUFFIX,clubhouse.com
 DOMAIN-SUFFIX,clubhouseapi.com
 DOMAIN,clubhouse.pubnubapi.com
+DOMAIN-SUFFIX,linktr.ee
+DOMAIN-SUFFIX,linktree.com
+DOMAIN-SUFFIX,bio.site
+DOMAIN-SUFFIX,bento.me
+DOMAIN-SUFFIX,about.me
+DOMAIN-SUFFIX,producthunt.com
+DOMAIN-SUFFIX,ph-static.com
+DOMAIN-SUFFIX,indiehackers.com
+DOMAIN-SUFFIX,goodreads.com
+DOMAIN-SUFFIX,nextdoor.com
+DOMAIN-SUFFIX,meetup.com
+DOMAIN-SUFFIX,eventbrite.com
+DOMAIN-SUFFIX,evbstatic.com
+DOMAIN-SUFFIX,lu.ma
 
 # ------------------------------------------------------------------------------
-# 3. Knowledge, Reference, News Readers & Portals (百科全书、门户与阅读器)
+# 4. Knowledge, Education, Portals, Browsers & Readers (百科、MOOC、门户、浏览器与阅读)
 # ------------------------------------------------------------------------------
-# > Wikimedia Foundation (维基百科全栈生态)
+# > Wikimedia Foundation & Internet Archive (维基百科与互联网档案馆 Wayback Machine 全栈)
 DOMAIN-SUFFIX,wikipedia.org
 DOMAIN-SUFFIX,wikimedia.org
 DOMAIN-SUFFIX,wikimediafoundation.org
+DOMAIN-SUFFIX,wmfusercontent.org
 DOMAIN-SUFFIX,mediawiki.org
 DOMAIN-SUFFIX,wikidata.org
 DOMAIN-SUFFIX,wikibooks.org
@@ -141,101 +407,878 @@ DOMAIN-SUFFIX,wikiversity.org
 DOMAIN-SUFFIX,wikivoyage.org
 DOMAIN-SUFFIX,wiktionary.org
 DOMAIN-SUFFIX,wikileaks.org
+DOMAIN-SUFFIX,w.wiki
+DOMAIN-SUFFIX,archive.org
+DOMAIN-SUFFIX,waybackmachine.org
+DOMAIN-SUFFIX,archive.is
+DOMAIN-SUFFIX,archive.ph
+DOMAIN-SUFFIX,archive.today
+DOMAIN-SUFFIX,archive.md
+DOMAIN-SUFFIX,archive.vn
+DOMAIN-SUFFIX,change.org
 
-# > Yahoo & Engadget (雅虎门户、邮箱与瘾科技)
+# > Coursera, edX, Udemy, Khan Academy & Academic (美国在线高等教育、arXiv 与科研平台)
+DOMAIN-SUFFIX,coursera.org
+DOMAIN-SUFFIX,coursera-assets.org
+DOMAIN-SUFFIX,edx.org
+DOMAIN-SUFFIX,udemy.com
+DOMAIN-SUFFIX,udemycdn.com
+DOMAIN-SUFFIX,udacity.com
+DOMAIN-SUFFIX,khanacademy.org
+DOMAIN-SUFFIX,kasandbox.org
+DOMAIN-SUFFIX,kastatic.org
+DOMAIN-SUFFIX,skillshare.com
+DOMAIN-SUFFIX,masterclass.com
+DOMAIN-SUFFIX,datacamp.com
+DOMAIN-SUFFIX,codecademy.com
+DOMAIN-SUFFIX,freecodecamp.org
+DOMAIN-SUFFIX,leetcode.com
+DOMAIN-SUFFIX,hackerrank.com
+DOMAIN-SUFFIX,brilliant.org
+DOMAIN-SUFFIX,quizlet.com
+DOMAIN-SUFFIX,chegg.com
+DOMAIN-SUFFIX,coursehero.com
+DOMAIN-SUFFIX,scribd.com
+DOMAIN-SUFFIX,slideshare.net
+DOMAIN-SUFFIX,academia.edu
+DOMAIN-SUFFIX,arxiv.org
+DOMAIN-SUFFIX,biorxiv.org
+DOMAIN-SUFFIX,medrxiv.org
+DOMAIN-SUFFIX,ssrn.com
+DOMAIN-SUFFIX,jstor.org
+DOMAIN-SUFFIX,ieee.org
+DOMAIN-SUFFIX,acm.org
+DOMAIN-SUFFIX,science.org
+DOMAIN-SUFFIX,sciencemag.org
+DOMAIN-SUFFIX,pnas.org
+DOMAIN-SUFFIX,nejm.org
+DOMAIN-SUFFIX,jamanetwork.com
+DOMAIN-SUFFIX,acs.org
+DOMAIN-SUFFIX,aps.org
+DOMAIN-SUFFIX,aip.org
+DOMAIN-SUFFIX,plos.org
+DOMAIN-SUFFIX,orcid.org
+DOMAIN-SUFFIX,crossref.org
+DOMAIN-SUFFIX,doi.org
+DOMAIN-SUFFIX,zotero.org
+DOMAIN-SUFFIX,overleaf.com
+
+# > Yahoo, AOL, DuckDuckGo, Brave & Mozilla (美国门户、隐私搜索与浏览器全栈)
 DOMAIN-SUFFIX,yahoo.com
+DOMAIN-SUFFIX,yahoo.net
 DOMAIN-SUFFIX,ymail.com
 DOMAIN-SUFFIX,yimg.com
 DOMAIN-SUFFIX,myyahoo.com
-DOMAIN-SUFFIX,engadget.com
+DOMAIN-SUFFIX,aol.com
+DOMAIN-SUFFIX,duckduckgo.com
+DOMAIN-SUFFIX,ddg.gg
+DOMAIN-SUFFIX,duck.com
+DOMAIN-SUFFIX,startpage.com
+DOMAIN-SUFFIX,brave.com
+DOMAIN-SUFFIX,bravesoftware.com
+DOMAIN-SUFFIX,brave.software
+DOMAIN-SUFFIX,mozilla.org
+DOMAIN-SUFFIX,mozilla.com
+DOMAIN-SUFFIX,mozilla.net
+DOMAIN-SUFFIX,firefox.com
+DOMAIN-SUFFIX,firefoxusercontent.com
+DOMAIN-SUFFIX,getpocket.com
+DOMAIN-SUFFIX,thebrowser.company
+DOMAIN-SUFFIX,arc.net
+DOMAIN-SUFFIX,diabrowser.com
 
-# > Feedly, Flipboard, Thesaurus & iFixit (RSS 阅读器、新闻聚合、词典与拆解维修指南)
+# > Feedly, Flipboard, Readwise, Instapaper & Reference (RSS 阅读器、稍后读、词典与维修指南)
 DOMAIN-SUFFIX,feedly.com
 DOMAIN-SUFFIX,flipboard.com
+DOMAIN-SUFFIX,readwise.io
+DOMAIN-SUFFIX,instapaper.com
+DOMAIN-SUFFIX,inoreader.com
+DOMAIN-SUFFIX,raindrop.io
+DOMAIN-SUFFIX,omnivore.app
+DOMAIN-SUFFIX,matter.xyz
+DOMAIN-SUFFIX,pinboard.in
 DOMAIN-SUFFIX,thesaurus.com
 DOMAIN-SUFFIX,dictionary.com
+DOMAIN-SUFFIX,merriam-webster.com
+DOMAIN-SUFFIX,urbandictionary.com
+DOMAIN-SUFFIX,britannica.com
+DOMAIN-SUFFIX,goodreads.com
 DOMAIN-SUFFIX,ifixit.com
 
 # ------------------------------------------------------------------------------
-# 4. Apple US-Locked Services & Podcasts (Apple 美区锁区播客与音频分发)
+# 5. Apple US-Locked Services & Podcasts (Apple 美区锁区播客与第三方播客托管引擎)
 # ------------------------------------------------------------------------------
 DOMAIN-SUFFIX,podcasts.apple.com
 DOMAIN-SUFFIX,itunes.apple.com
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,xp.apple.com
 DOMAIN-SUFFIX,acast.com
+DOMAIN-SUFFIX,megaphone.fm
+DOMAIN-SUFFIX,simplecast.com
+DOMAIN-SUFFIX,libsyn.com
+DOMAIN-SUFFIX,buzzsprout.com
+DOMAIN-SUFFIX,transistor.fm
+DOMAIN-SUFFIX,podbean.com
+DOMAIN-SUFFIX,spreaker.com
+DOMAIN-SUFFIX,art19.com
+DOMAIN-SUFFIX,omny.fm
+DOMAIN-SUFFIX,omnycontent.com
 DOMAIN-SUFFIX,tritondigital.com
 DOMAIN-SUFFIX,podscribe.com
+DOMAIN-SUFFIX,podtrac.com
+DOMAIN-SUFFIX,chartable.com
+DOMAIN-SUFFIX,overcast.fm
+DOMAIN-SUFFIX,castro.fm
 
 # ------------------------------------------------------------------------------
-# 5. US Developer Tools, Cloud, CDN & Security (美国开发者工具、BaaS、CDN 与安全鉴权)
+# 6. US SaaS, Design, Productivity, Storage & Collaboration (美国设计、办公协同与云存储)
 # ------------------------------------------------------------------------------
-# > Homebrew, Raycast, Mozilla Add-ons & Network Tools (macOS 生产力与网络工具)
-DOMAIN-SUFFIX,brew.sh
-DOMAIN-SUFFIX,raycast.com
-DOMAIN-SUFFIX,ray.so
-DOMAIN-SUFFIX,proxifier.com
-DOMAIN-SUFFIX,privoxy.org
-DOMAIN-SUFFIX,wireguard.com
-DOMAIN,addons.mozilla.org
+# > Figma (在线 UI 设计标杆全栈：主站、静态资源与协作网关)
+DOMAIN-SUFFIX,figma.com
+DOMAIN-SUFFIX,figmacdn.com
 
-# > Supabase (开源 Firebase 替代方案与 Postgres BaaS)
-DOMAIN-SUFFIX,supabase.com
-DOMAIN-SUFFIX,supabase.co
-DOMAIN-SUFFIX,supabase.in
+# > Adobe (创意云全栈：主站、Creative Cloud、字体 Typekit、Behance、Stock 与鉴权)
+DOMAIN-SUFFIX,adobe.com
+DOMAIN-SUFFIX,adobe.io
+DOMAIN-SUFFIX,adobelogin.com
+DOMAIN-SUFFIX,adobecc.com
+DOMAIN-SUFFIX,adobeccstatic.com
+DOMAIN-SUFFIX,adobedtm.com
+DOMAIN-SUFFIX,adobess.com
+DOMAIN-SUFFIX,adobestock.com
+DOMAIN-SUFFIX,Creativecloud.com
+DOMAIN-SUFFIX,typekit.com
+DOMAIN-SUFFIX,typekit.net
+DOMAIN-SUFFIX,ftcdn.net
+DOMAIN-SUFFIX,photoshop.com
+DOMAIN-SUFFIX,lightroom.com
+DOMAIN-SUFFIX,frame.io
 
-# > Dropbox (美国云存储服务)
+# > Slack, Zoom, Loom, Miro, Airtable & Asana (美国现代企业协同办公全栈)
+DOMAIN-SUFFIX,slack.com
+DOMAIN-SUFFIX,slack-edge.com
+DOMAIN-SUFFIX,slack-msgs.com
+DOMAIN-SUFFIX,slack-files.com
+DOMAIN-SUFFIX,slack-imgs.com
+DOMAIN-SUFFIX,slack-core.com
+DOMAIN-SUFFIX,slackb.com
+DOMAIN-SUFFIX,zoom.us
+DOMAIN-SUFFIX,zoom.com
+DOMAIN-SUFFIX,zoomgov.com
+DOMAIN-SUFFIX,zmcdn.com
+DOMAIN-SUFFIX,loom.com
+DOMAIN-SUFFIX,loomcdn.com
+DOMAIN-SUFFIX,miro.com
+DOMAIN-SUFFIX,realtimeboard.com
+DOMAIN-SUFFIX,airtable.com
+DOMAIN-SUFFIX,airtableblocks.com
+DOMAIN-SUFFIX,asana.com
+DOMAIN-SUFFIX,monday.com
+DOMAIN-SUFFIX,clickup.com
+DOMAIN-SUFFIX,coda.io
+DOMAIN-SUFFIX,obsidian.md
+DOMAIN-SUFFIX,publish.obsidian.md
+DOMAIN-SUFFIX,roamresearch.com
+DOMAIN-SUFFIX,logseq.com
+DOMAIN-SUFFIX,evernote.com
+DOMAIN-SUFFIX,todoist.com
+DOMAIN-SUFFIX,doist.com
+DOMAIN-SUFFIX,ticktick.com
+DOMAIN-SUFFIX,calendly.com
+DOMAIN-SUFFIX,cal.com
+DOMAIN-SUFFIX,docusign.com
+DOMAIN-SUFFIX,docusign.net
+DOMAIN-SUFFIX,surveymonkey.com
+DOMAIN-SUFFIX,typeform.com
+DOMAIN-SUFFIX,tally.so
+DOMAIN-SUFFIX,zapier.com
+DOMAIN-SUFFIX,ifttt.com
+DOMAIN-SUFFIX,make.com
+
+# > Dropbox & Box (美国云存储网盘全栈)
 DOMAIN-SUFFIX,dropbox.com
 DOMAIN-SUFFIX,dropboxapi.com
 DOMAIN-SUFFIX,dropboxusercontent.com
+DOMAIN-SUFFIX,dropboxstatic.com
+DOMAIN-SUFFIX,dropboxforums.com
+DOMAIN-SUFFIX,db.tt
+DOMAIN-SUFFIX,paper.dropbox.com
+DOMAIN-SUFFIX,box.com
+DOMAIN-SUFFIX,box.net
+DOMAIN-SUFFIX,boxcdn.net
+DOMAIN-SUFFIX,boxcloud.com
 
-# > Fastly, Akamai & JSDelivr CDN (美国核心边缘 CDN 与静态资源加速)
+# > 1Password, Bitwarden, LastPass & Dashlane (美国密码管理器与密钥安全全栈)
+DOMAIN-SUFFIX,1password.com
+DOMAIN-SUFFIX,1password.ca
+DOMAIN-SUFFIX,1password.eu
+DOMAIN-SUFFIX,1passwordservices.com
+DOMAIN-SUFFIX,agilebits.com
+DOMAIN-SUFFIX,bitwarden.com
+DOMAIN-SUFFIX,bitwarden.net
+DOMAIN-SUFFIX, bitwarden.eu
+DOMAIN-SUFFIX,lastpass.com
+DOMAIN-SUFFIX,dashlane.com
+DOMAIN-SUFFIX,yubico.com
+
+# > Salesforce, HubSpot, Zendesk, Intercom & ServiceNow (美国企业 CRM 与工单客服基础设施)
+DOMAIN-SUFFIX,salesforce.com
+DOMAIN-SUFFIX,force.com
+DOMAIN-SUFFIX,salesforceliveagent.com
+DOMAIN-SUFFIX,heroku.com
+DOMAIN-SUFFIX,herokuapp.com
+DOMAIN-SUFFIX,herokussl.com
+DOMAIN-SUFFIX,tableau.com
+DOMAIN-SUFFIX,hubspot.com
+DOMAIN-SUFFIX,hs-scripts.com
+DOMAIN-SUFFIX,hs-analytics.net
+DOMAIN-SUFFIX,hsforms.net
+DOMAIN-SUFFIX,hsforms.com
+DOMAIN-SUFFIX,hubspotusercontent.com
+DOMAIN-SUFFIX,zendesk.com
+DOMAIN-SUFFIX,zdassets.com
+DOMAIN-SUFFIX,zopim.com
+DOMAIN-SUFFIX,servicenow.com
+DOMAIN-SUFFIX,freshworks.com
+DOMAIN-SUFFIX,freshdesk.com
+DOMAIN-SUFFIX,mailchimp.com
+DOMAIN-SUFFIX,list-manage.com
+DOMAIN-SUFFIX,sendgrid.com
+DOMAIN-SUFFIX,sendgrid.net
+DOMAIN-SUFFIX,twilio.com
+DOMAIN-SUFFIX,twiliocdn.com
+
+# ------------------------------------------------------------------------------
+# 7. US Cloud Native, DevOps, Package Registries, CDN & Security (云原生、包管理与 CDN)
+# ------------------------------------------------------------------------------
+# > Vercel, Netlify, Render, Fly.io, Railway & DigitalOcean (美国现代前端部署与云主机全栈)
+DOMAIN-SUFFIX,vercel.com
+DOMAIN-SUFFIX,vercel.app
+DOMAIN-SUFFIX,vercel.sh
+DOMAIN-SUFFIX,vercel-dns.com
+DOMAIN-SUFFIX,vercel-insights.com
+DOMAIN-SUFFIX,vercel-scripts.com
+DOMAIN-SUFFIX,vercel-storage.com
+DOMAIN-SUFFIX,now.sh
+DOMAIN-SUFFIX,nextjs.org
+DOMAIN-SUFFIX,turborepo.com
+DOMAIN-SUFFIX,netlify.com
+DOMAIN-SUFFIX,netlify.app
+DOMAIN-SUFFIX,netlify.ee
+DOMAIN-SUFFIX,render.com
+DOMAIN-SUFFIX,onrender.com
+DOMAIN-SUFFIX,fly.io
+DOMAIN-SUFFIX,fly.dev
+DOMAIN-SUFFIX,railway.app
+DOMAIN-SUFFIX, railway.com
+DOMAIN-SUFFIX,digitalocean.com
+DOMAIN-SUFFIX,digitaloceanspaces.com
+DOMAIN-SUFFIX,do.co
+DOMAIN-SUFFIX,linode.com
+DOMAIN-SUFFIX,vultr.com
+DOMAIN-SUFFIX,choopa.com
+
+# > Supabase, PlanetScale, Neon, MongoDB, Upstash & Convex (现代 Serverless 数据库与 BaaS)
+DOMAIN-SUFFIX,supabase.com
+DOMAIN-SUFFIX,supabase.co
+DOMAIN-SUFFIX,supabase.in
+DOMAIN-SUFFIX,supabase.net
+DOMAIN-SUFFIX,planetscale.com
+DOMAIN-SUFFIX,psdb.cloud
+DOMAIN-SUFFIX,neon.tech
+DOMAIN-SUFFIX,mongodb.com
+DOMAIN-SUFFIX,mongodb.org
+DOMAIN-SUFFIX,mongodb.net
+DOMAIN-SUFFIX,redis.io
+DOMAIN-SUFFIX,redis.com
+DOMAIN-SUFFIX,upstash.com
+DOMAIN-SUFFIX,convex.dev
+DOMAIN-SUFFIX,convex.cloud
+DOMAIN-SUFFIX,turso.tech
+DOMAIN-SUFFIX,cockroachlabs.com
+DOMAIN-SUFFIX,fauna.com
+DOMAIN-SUFFIX,appwrite.io
+DOMAIN-SUFFIX,nhost.io
+DOMAIN-SUFFIX,pocketbase.io
+DOMAIN-SUFFIX,prisma.io
+DOMAIN-SUFFIX,drizzle.team
+
+# > GitLab, Docker, HashiCorp, Kubernetes & Linux Foundation (DevOps 与容器基础设施全栈)
+DOMAIN-SUFFIX,gitlab.com
+DOMAIN-SUFFIX,gitlab.io
+DOMAIN-SUFFIX,gitlab.net
+DOMAIN-SUFFIX,gitlab-static.net
+DOMAIN-SUFFIX,docker.com
+DOMAIN-SUFFIX,docker.io
+DOMAIN-SUFFIX,dockerstatic.com
+DOMAIN-SUFFIX,compose-spec.io
+DOMAIN-SUFFIX,hashicorp.com
+DOMAIN-SUFFIX,vagrantup.com
+DOMAIN-SUFFIX,vagrantcloud.com
+DOMAIN-SUFFIX,terraform.io
+DOMAIN-SUFFIX,consul.io
+DOMAIN-SUFFIX,nomadproject.io
+DOMAIN-SUFFIX,vaultproject.io
+DOMAIN-SUFFIX,circleci.com
+DOMAIN-SUFFIX,travis-ci.org
+DOMAIN-SUFFIX,travis-ci.com
+DOMAIN-SUFFIX,codecov.io
+DOMAIN-SUFFIX,coveralls.io
+DOMAIN-SUFFIX,sonarqube.org
+DOMAIN-SUFFIX,sonarcloud.io
+DOMAIN-SUFFIX,snyk.io
+DOMAIN-SUFFIX,jfrog.com
+DOMAIN-SUFFIX,bintray.com
+DOMAIN-SUFFIX,postman.com
+DOMAIN-SUFFIX,getpostman.com
+DOMAIN-SUFFIX,pstmn.io
+DOMAIN-SUFFIX,insomnia.rest
+DOMAIN-SUFFIX,hoppscotch.io
+DOMAIN-SUFFIX,swagger.io
+DOMAIN-SUFFIX,apifox.com
+DOMAIN-SUFFIX,ngrok.com
+DOMAIN-SUFFIX,ngrok.io
+DOMAIN-SUFFIX,ngrok-free.app
+DOMAIN-SUFFIX,tailscale.com
+DOMAIN-SUFFIX,tailscale.io
+DOMAIN-SUFFIX,ts.net
+DOMAIN-SUFFIX,zerotier.com
+DOMAIN-SUFFIX,wireguard.com
+
+# > Programming Languages, Package Registries & StackOverflow (各大语言包管理器与技术问答)
+# 注：npmjs / nuget 已在 Microsoft.list，pub.dev / go.dev 已在 Google.list
+DOMAIN-SUFFIX,stackoverflow.com
+DOMAIN-SUFFIX,stackexchange.com
+DOMAIN-SUFFIX,stacksnippets.net
+DOMAIN-SUFFIX,sstatic.net
+DOMAIN-SUFFIX,askubuntu.com
+DOMAIN-SUFFIX,serverfault.com
+DOMAIN-SUFFIX,superuser.com
+DOMAIN-SUFFIX,mathoverflow.net
+DOMAIN-SUFFIX,pypi.org
+DOMAIN-SUFFIX,pypi.io
+DOMAIN-SUFFIX,python.org
+DOMAIN-SUFFIX,pythonhosted.org
+DOMAIN-SUFFIX,anaconda.com
+DOMAIN-SUFFIX,anaconda.org
+DOMAIN-SUFFIX,conda.io
+DOMAIN-SUFFIX,jupyter.org
+DOMAIN-SUFFIX,rust-lang.org
+DOMAIN-SUFFIX,crates.io
+DOMAIN-SUFFIX,docs.rs
+DOMAIN-SUFFIX,rustup.rs
+DOMAIN-SUFFIX,yarnpkg.com
+DOMAIN-SUFFIX,pnpm.io
+DOMAIN-SUFFIX,bun.sh
+DOMAIN-SUFFIX,deno.com
+DOMAIN-SUFFIX,deno.land
+DOMAIN-SUFFIX,jsr.io
+DOMAIN-SUFFIX,nodejs.org
+DOMAIN-SUFFIX,rubygems.org
+DOMAIN-SUFFIX,ruby-lang.org
+DOMAIN-SUFFIX,packagist.org
+DOMAIN-SUFFIX,composer.org
+DOMAIN-SUFFIX,php.net
+DOMAIN-SUFFIX,laravel.com
+DOMAIN-SUFFIX,symfony.com
+DOMAIN-SUFFIX,maven.org
+DOMAIN-SUFFIX,mvnrepository.com
+DOMAIN-SUFFIX,gradle.org
+DOMAIN-SUFFIX,spring.io
+DOMAIN-SUFFIX,apache.org
+DOMAIN-SUFFIX,eclipse.org
+DOMAIN-SUFFIX,cocoapods.org
+DOMAIN-SUFFIX,swift.org
+DOMAIN-SUFFIX,swiftpackageindex.com
+DOMAIN-SUFFIX,brew.sh
+DOMAIN-SUFFIX,macports.org
+DOMAIN-SUFFIX,cpan.org
+DOMAIN-SUFFIX,perl.org
+DOMAIN-SUFFIX,lua.org
+DOMAIN-SUFFIX,julialang.org
+DOMAIN-SUFFIX,r-project.org
+DOMAIN-SUFFIX,rstudio.com
+DOMAIN-SUFFIX,posit.co
+DOMAIN-SUFFIX,haskell.org
+DOMAIN-SUFFIX,elixir-lang.org
+DOMAIN-SUFFIX,hex.pm
+DOMAIN-SUFFIX,erlang.org
+DOMAIN-SUFFIX,scala-lang.org
+DOMAIN-SUFFIX,clojure.org
+DOMAIN-SUFFIX,ziglang.org
+DOMAIN-SUFFIX,vuejs.org
+DOMAIN-SUFFIX,vitejs.dev
+DOMAIN-SUFFIX,nuxt.com
+DOMAIN-SUFFIX,svelte.dev
+DOMAIN-SUFFIX,astro.build
+DOMAIN-SUFFIX,solidjs.com
+DOMAIN-SUFFIX, remix.run
+DOMAIN-SUFFIX,tailwindcss.com
+DOMAIN-SUFFIX,tailwindui.com
+DOMAIN-SUFFIX,shadcn.com
+DOMAIN-SUFFIX,radix-ui.com
+DOMAIN-SUFFIX,mui.com
+DOMAIN-SUFFIX,chakra-ui.com
+DOMAIN-SUFFIX,framer.com
+DOMAIN-SUFFIX,framer.website
+DOMAIN-SUFFIX,webflow.com
+DOMAIN-SUFFIX,webflow.io
+DOMAIN-SUFFIX,threejs.org
+DOMAIN-SUFFIX,Babylonjs.com
+DOMAIN-SUFFIX,electronjs.org
+DOMAIN-SUFFIX,tauri.app
+DOMAIN-SUFFIX,expo.dev
+DOMAIN-SUFFIX,expo.io
+DOMAIN-SUFFIX,ionicframework.com
+
+# > macOS Productivity & Developer Utilities (Raycast / Proxifier / iTerm2 / Homebrew 等)
+DOMAIN-SUFFIX,raycast.com
+DOMAIN-SUFFIX,ray.so
+DOMAIN-SUFFIX,alfredapp.com
+DOMAIN-SUFFIX,iterm2.com
+DOMAIN-SUFFIX,proxifier.com
+DOMAIN-SUFFIX,privoxy.org
+DOMAIN-SUFFIX,charlesproxy.com
+DOMAIN-SUFFIX,paw.cloud
+DOMAIN-SUFFIX,rapidapi.com
+DOMAIN-SUFFIX,tableplus.com
+DOMAIN-SUFFIX,sequelpro.com
+DOMAIN-SUFFIX,dbgate.org
+DOMAIN-SUFFIX,dbeaver.com
+DOMAIN-SUFFIX,sublimehq.com
+DOMAIN-SUFFIX,sublimetext.com
+DOMAIN-SUFFIX,panic.com
+DOMAIN-SUFFIX,nova.app
+DOMAIN-SUFFIX,bbedit.com
+DOMAIN-SUFFIX,barebones.com
+DOMAIN-SUFFIX,tower-git.com
+DOMAIN-SUFFIX,gitkraken.com
+DOMAIN-SUFFIX,fork.dev
+DOMAIN-SUFFIX,kapeli.com
+DOMAIN-SUFFIX,rogueamoeba.com
+DOMAIN-SUFFIX,bjango.com
+DOMAIN-SUFFIX,folivora.ai
+DOMAIN-SUFFIX,contexts.co
+DOMAIN-SUFFIX,rectangleapp.com
+DOMAIN-SUFFIX,alt-tab-macos.netlify.app
+DOMAIN-SUFFIX,keka.io
+DOMAIN-SUFFIX,iina.io
+DOMAIN-SUFFIX,handbrake.fr
+DOMAIN-SUFFIX,obsproject.com
+
+# > Fastly, Akamai, JSDelivr, Unpkg,CDNJS & Let's Encrypt (全球核心 CDN、开源静态源与 SSL 证书)
+DOMAIN-SUFFIX,fastly.com
 DOMAIN-SUFFIX,fastly.net
+DOMAIN-SUFFIX,fastlylb.net
+DOMAIN-SUFFIX,akamai.com
 DOMAIN-SUFFIX,akamai.net
 DOMAIN-SUFFIX,akadns.net
+DOMAIN-SUFFIX,akamaiedge.net
 DOMAIN-SUFFIX,akamaized.net
+DOMAIN-SUFFIX,akamaihd.net
+DOMAIN-SUFFIX,edgekey.net
+DOMAIN-SUFFIX,edgesuite.net
+DOMAIN-SUFFIX,jsdelivr.com
 DOMAIN-SUFFIX,jsdelivr.net
+DOMAIN-SUFFIX,unpkg.com
+DOMAIN-SUFFIX,cdnjs.com
+DOMAIN-SUFFIX,esm.sh
+DOMAIN-SUFFIX,skypack.dev
+DOMAIN-SUFFIX,bootcdn.net
+DOMAIN-SUFFIX,letsencrypt.org
+DOMAIN-SUFFIX,lencr.org
+DOMAIN-SUFFIX,digicert.com
+DOMAIN-SUFFIX,ocsp.digicert.com
+DOMAIN-SUFFIX,sectigo.com
+DOMAIN-SUFFIX,comodoca.com
+DOMAIN-SUFFIX,globalsign.com
+DOMAIN-SUFFIX,entrust.net
+DOMAIN-SUFFIX,godaddy.com
+DOMAIN-SUFFIX,namecheap.com
+DOMAIN-SUFFIX,namesilo.com
+DOMAIN-SUFFIX,porkbun.com
+DOMAIN-SUFFIX,name.com
+DOMAIN-SUFFIX,hover.com
+DOMAIN-SUFFIX,dynadot.com
+DOMAIN-SUFFIX,iana.org
+DOMAIN-SUFFIX,icann.org
+DOMAIN-SUFFIX,arin.net
+DOMAIN-SUFFIX,whois.com
 
-# > Datadog, New Relic, Okta & Optimizely (美国云监控、APM、身份认证与移动端归因)
+# > Oracle, IBM, RedHat, VMware, Cisco, Datadog, Okta & CrowdStrike (美国企业级云、监控与安全)
+DOMAIN-SUFFIX,oracle.com
+DOMAIN-SUFFIX,oraclecloud.com
+DOMAIN-SUFFIX,oracleimg.com
+DOMAIN-SUFFIX,java.com
+DOMAIN-SUFFIX,mysql.com
+DOMAIN-SUFFIX,virtualbox.org
+DOMAIN-SUFFIX,ibm.com
+DOMAIN-SUFFIX,ibm.net
+DOMAIN-SUFFIX,s81c.com
+DOMAIN-SUFFIX,redhat.com
+DOMAIN-SUFFIX,fedoraproject.org
+DOMAIN-SUFFIX,centos.org
+DOMAIN-SUFFIX,ansible.com
+DOMAIN-SUFFIX,vmware.com
+DOMAIN-SUFFIX,broadcom.com
+DOMAIN-SUFFIX,cisco.com
+DOMAIN-SUFFIX,webex.com
+DOMAIN-SUFFIX,meraki.com
+DOMAIN-SUFFIX,opendns.com
+DOMAIN-SUFFIX,umbrella.com
+DOMAIN-SUFFIX,snowflake.com
+DOMAIN-SUFFIX,palantir.com
+DOMAIN-SUFFIX,splunk.com
+DOMAIN-SUFFIX,elastic.co
 DOMAIN-SUFFIX,datadoghq.com
-DOMAIN-SUFFIX,nr-data.net
+DOMAIN-SUFFIX,datadoghq.eu
+DOMAIN-SUFFIX,dd-data.com
 DOMAIN-SUFFIX,newrelic.com
+DOMAIN-SUFFIX,nr-data.net
+DOMAIN-SUFFIX,dynatrace.com
+DOMAIN-SUFFIX,pagerduty.com
+DOMAIN-SUFFIX,atlassianstatus.com
 DOMAIN-SUFFIX,okta.com
 DOMAIN-SUFFIX,oktacdn.com
+DOMAIN-SUFFIX,oktapreview.com
+DOMAIN-SUFFIX,duo.com
+DOMAIN-SUFFIX,duosecurity.com
+DOMAIN-SUFFIX,onelogin.com
+DOMAIN-SUFFIX,pingidentity.com
+DOMAIN-SUFFIX,crowdstrike.com
+DOMAIN-SUFFIX,paloaltonetworks.com
+DOMAIN-SUFFIX,fortinet.com
+DOMAIN-SUFFIX,zscaler.com
+DOMAIN-SUFFIX,netscout.com
+DOMAIN-SUFFIX,imperva.com
+DOMAIN-SUFFIX,incapsula.com
+DOMAIN-SUFFIX,f5.com
+DOMAIN-SUFFIX,nginx.com
+DOMAIN-SUFFIX,nginx.org
+DOMAIN-SUFFIX,maxmind.com
+DOMAIN-SUFFIX,ipinfo.io
+DOMAIN-SUFFIX,ipapi.co
+DOMAIN-SUFFIX,ip-api.com
+DOMAIN-SUFFIX,whatismyipaddress.com
+DOMAIN-SUFFIX,speedtest.net
+DOMAIN-SUFFIX,ookla.com
+DOMAIN-SUFFIX,cellmapper.net
+DOMAIN-SUFFIX,downdetector.com
 DOMAIN-SUFFIX,optimizely.com
+DOMAIN-SUFFIX,segment.com
+DOMAIN-SUFFIX,segment.io
+DOMAIN-SUFFIX,amplitude.com
+DOMAIN-SUFFIX,mixpanel.com
+DOMAIN-SUFFIX,heap.io
+DOMAIN-SUFFIX,fullstory.com
+DOMAIN-SUFFIX,hotjar.com
+DOMAIN-SUFFIX,logrocket.com
+DOMAIN-SUFFIX,launchdarkly.com
+DOMAIN-SUFFIX,split.io
 DOMAIN-SUFFIX,branch.io
+DOMAIN-SUFFIX,app.link
 DOMAIN-SUFFIX,appsflyer.com
+DOMAIN-SUFFIX,adjust.com
+DOMAIN-SUFFIX,kochava.com
+DOMAIN-SUFFIX,singular.net
+DOMAIN-SUFFIX,onesignal.com
 DOMAIN-SUFFIX,urbanairship.com
+DOMAIN-SUFFIX,braze.com
+DOMAIN-SUFFIX,cleverTap.com
+DOMAIN-SUFFIX,customer.io
+DOMAIN-SUFFIX,revenuecat.com
+DOMAIN-SUFFIX,paddle.com
+DOMAIN-SUFFIX,lemonsqueezy.com
+DOMAIN-SUFFIX,fastspring.com
+DOMAIN-SUFFIX,chargebee.com
+DOMAIN-SUFFIX,recurly.com
 DOMAIN-SUFFIX,avo.app
 
 # ------------------------------------------------------------------------------
-# 6. US Fintech, Crypto Exchanges & Remote Work (美国金融支付、合规加密交易所与远程工作)
+# 8. US Gaming, E-Commerce, Fintech, Crypto & Remote Work (游戏平台、金融、美股与加密合规所)
 # ------------------------------------------------------------------------------
-# > Stripe & Moomoo (美国在线支付网关与美股券商)
+# > Valve (Steam), Epic Games, EA, Riot, Rockstar & Roblox (美国 PC/主机游戏与引擎全栈)
+DOMAIN-SUFFIX,steampowered.com
+DOMAIN-SUFFIX,steamcommunity.com
+DOMAIN-SUFFIX,steamgames.com
+DOMAIN-SUFFIX,steamstatic.com
+DOMAIN-SUFFIX,steamcontent.com
+DOMAIN-SUFFIX,steamusercontent.com
+DOMAIN-SUFFIX,steam-chat.com
+DOMAIN-SUFFIX,s.team
+DOMAIN-SUFFIX,valvesoftware.com
+DOMAIN-SUFFIX,steamdeck.com
+DOMAIN-SUFFIX,protondb.com
+DOMAIN-SUFFIX,steamdb.info
+DOMAIN-SUFFIX,epicgames.com
+DOMAIN-SUFFIX,epicgames.dev
+DOMAIN-SUFFIX,unrealengine.com
+DOMAIN-SUFFIX,fortnite.com
+DOMAIN-SUFFIX,paragon.com
+DOMAIN-SUFFIX,helpshift.com
+DOMAIN-SUFFIX,ea.com
+DOMAIN-SUFFIX,origin.com
+DOMAIN-SUFFIX,tnt-ea.com
+DOMAIN-SUFFIX,battle.net
+DOMAIN-SUFFIX,blizzard.com
+DOMAIN-SUFFIX,activision.com
+DOMAIN-SUFFIX,riotgames.com
+DOMAIN-SUFFIX,leagueoflegends.com
+DOMAIN-SUFFIX,valorant.com
+DOMAIN-SUFFIX,pvp.net
+DOMAIN-SUFFIX,rockstargames.com
+DOMAIN-SUFFIX,take2games.com
+DOMAIN-SUFFIX,2k.com
+DOMAIN-SUFFIX,roblox.com
+DOMAIN-SUFFIX,rbxcdn.com
+DOMAIN-SUFFIX,unity.com
+DOMAIN-SUFFIX,unity3d.com
+DOMAIN-SUFFIX,itch.io
+DOMAIN-SUFFIX,humblebundle.com
+DOMAIN-SUFFIX,ign.com
+DOMAIN-SUFFIX,gamespot.com
+DOMAIN-SUFFIX,kotaku.com
+DOMAIN-SUFFIX,pcgamer.com
+DOMAIN-SUFFIX,nexusmods.com
+DOMAIN-SUFFIX,curseforge.com
+DOMAIN-SUFFIX,modrinth.com
+
+# > eBay, Walmart, Target, Etsy, Airbnb, Uber & DoorDash (美国零售电商、短租与本地生活)
+DOMAIN-SUFFIX,ebay.com
+DOMAIN-SUFFIX,ebayimg.com
+DOMAIN-SUFFIX,ebaystatic.com
+DOMAIN-SUFFIX,ebaycdn.net
+DOMAIN-SUFFIX,walmart.com
+DOMAIN-SUFFIX,walmartimages.com
+DOMAIN-SUFFIX,target.com
+DOMAIN-SUFFIX,bestbuy.com
+DOMAIN-SUFFIX,costco.com
+DOMAIN-SUFFIX,newegg.com
+DOMAIN-SUFFIX,bhphotovideo.com
+DOMAIN-SUFFIX,adorama.com
+DOMAIN-SUFFIX,etsy.com
+DOMAIN-SUFFIX,etsystatic.com
+DOMAIN-SUFFIX,stockx.com
+DOMAIN-SUFFIX,goat.com
+DOMAIN-SUFFIX,nike.com
+DOMAIN-SUFFIX,swoo.sh
+DOMAIN-SUFFIX,airbnb.com
+DOMAIN-SUFFIX,airbnb.co.uk
+DOMAIN-SUFFIX,muscache.com
+DOMAIN-SUFFIX,expedia.com
+DOMAIN-SUFFIX,hotels.com
+DOMAIN-SUFFIX,vrbo.com
+DOMAIN-SUFFIX,tripadvisor.com
+DOMAIN-SUFFIX,tacdn.com
+DOMAIN-SUFFIX,yelp.com
+DOMAIN-SUFFIX,yelpcdn.com
+DOMAIN-SUFFIX,uber.com
+DOMAIN-SUFFIX,ubereats.com
+DOMAIN-SUFFIX,lyft.com
+DOMAIN-SUFFIX,doordash.com
+DOMAIN-SUFFIX,instacart.com
+
+# > Stripe, Visa, Mastercard, US Banks & Stock Brokers (美国支付网关、银行与美股券商)
+# 注：PayPal / Venmo 已在独立的 PayPal.list 中
 DOMAIN-SUFFIX,stripe.com
 DOMAIN-SUFFIX,stripe.network
+DOMAIN-SUFFIX,stripecdn.com
+DOMAIN-SUFFIX,js.stripe.com
+DOMAIN-SUFFIX,squareup.com
+DOMAIN-SUFFIX,square.com
+DOMAIN-SUFFIX,cash.app
+DOMAIN-SUFFIX,plaid.com
+DOMAIN-SUFFIX,mercury.com
+DOMAIN-SUFFIX,brex.com
+DOMAIN-SUFFIX,ramp.com
+DOMAIN-SUFFIX,deel.com
+DOMAIN-SUFFIX,gusto.com
+DOMAIN-SUFFIX,rippling.com
+DOMAIN-SUFFIX,visa.com
+DOMAIN-SUFFIX,mastercard.com
+DOMAIN-SUFFIX,americanexpress.com
+DOMAIN-SUFFIX,aexp-static.com
+DOMAIN-SUFFIX,chase.com
+DOMAIN-SUFFIX,jpmorgan.com
+DOMAIN-SUFFIX,jpmorganchase.com
+DOMAIN-SUFFIX,bankofamerica.com
+DOMAIN-SUFFIX,bofa.com
+DOMAIN-SUFFIX,citi.com
+DOMAIN-SUFFIX,citibank.com
+DOMAIN-SUFFIX,wellsfargo.com
+DOMAIN-SUFFIX,capitalone.com
+DOMAIN-SUFFIX,discover.com
+DOMAIN-SUFFIX,usbank.com
+DOMAIN-SUFFIX,goldmansachs.com
+DOMAIN-SUFFIX,morganstanley.com
+DOMAIN-SUFFIX,schwab.com
+DOMAIN-SUFFIX,fidelity.com
+DOMAIN-SUFFIX,vanguard.com
+DOMAIN-SUFFIX,blackrock.com
+DOMAIN-SUFFIX,ishares.com
+DOMAIN-SUFFIX,interactivebrokers.com
+DOMAIN-SUFFIX,ibkr.com
+DOMAIN-SUFFIX,robinhood.com
+DOMAIN-SUFFIX,webull.com
 DOMAIN-SUFFIX,moomoo.com
+DOMAIN-SUFFIX, snowballsecurities.com
+DOMAIN-SUFFIX,itiger.com
+DOMAIN-SUFFIX,laohu8.com
+DOMAIN-SUFFIX,firstrade.com
+DOMAIN-SUFFIX,tastytrade.com
+DOMAIN-SUFFIX,nasdaq.com
+DOMAIN-SUFFIX,nyse.com
+DOMAIN-SUFFIX,cmegroup.com
+DOMAIN-SUFFIX,spglobal.com
+DOMAIN-SUFFIX,msci.com
+DOMAIN-SUFFIX,morningstar.com
+DOMAIN-SUFFIX,seekingalpha.com
+DOMAIN-SUFFIX,motleyfool.com
+DOMAIN-SUFFIX,fool.com
+DOMAIN-SUFFIX,zacks.com
+DOMAIN-SUFFIX,benzinga.com
+DOMAIN-SUFFIX,finviz.com
+DOMAIN-SUFFIX,barchart.com
+DOMAIN-SUFFIX,investing.com
+DOMAIN-SUFFIX,tradingview.com
+DOMAIN-SUFFIX,FRED.stlouisfed.org
 
-# > US Regulated Crypto & Web3 (美国本土合规交易所、行情与以太坊生态)
+# > US Regulated Crypto, Web3 Infra, RPC Nodes & Wallets (美国本土合规加密所、公链 RPC 与钱包)
 DOMAIN-SUFFIX,coinbase.com
-DOMAIN-SUFFIX,coinmarketcap.com
+DOMAIN-SUFFIX,coinbase.net
+DOMAIN-SUFFIX,cbhq.net
+DOMAIN-SUFFIX,base.org
 DOMAIN-SUFFIX,kraken.com
 DOMAIN-SUFFIX,gemini.com
+DOMAIN-SUFFIX,circle.com
+DOMAIN-SUFFIX,paxos.com
+DOMAIN-SUFFIX,coinmarketcap.com
 DOMAIN-SUFFIX,uniswap.org
+DOMAIN-SUFFIX,aave.com
+DOMAIN-SUFFIX,makerdao.com
+DOMAIN-SUFFIX,sky.money
+DOMAIN-SUFFIX,lido.fi
+DOMAIN-SUFFIX,eigenlayer.xyz
+DOMAIN-SUFFIX,arbitrum.io
+DOMAIN-SUFFIX,optimism.io
+DOMAIN-SUFFIX,polygon.technology
+DOMAIN-SUFFIX,zksync.io
+DOMAIN-SUFFIX,starknet.io
+DOMAIN-SUFFIX,solana.com
+DOMAIN-SUFFIX,solana.org
+DOMAIN-SUFFIX,solscan.io
+DOMAIN-SUFFIX,phantom.app
+DOMAIN-SUFFIX,backpack.app
+DOMAIN-SUFFIX,jup.ag
+DOMAIN-SUFFIX,raydium.io
+DOMAIN-SUFFIX,aptoslabs.com
+DOMAIN-SUFFIX,sui.io
+DOMAIN-SUFFIX,Monad.xyz
+DOMAIN-SUFFIX,berachain.com
+DOMAIN-SUFFIX,celestia.org
+DOMAIN-SUFFIX,cosmos.network
+DOMAIN-SUFFIX,polkadot.network
+DOMAIN-SUFFIX,avax.network
+DOMAIN-SUFFIX,near.org
+DOMAIN-SUFFIX,ethereum.org
 DOMAIN-SUFFIX,etherscan.io
+DOMAIN-SUFFIX,ethgasstation.info
+DOMAIN-SUFFIX,metamask.io
+DOMAIN-SUFFIX,consensys.io
+DOMAIN-SUFFIX,infura.io
+DOMAIN-SUFFIX,alchemy.com
+DOMAIN-SUFFIX,alchemyapi.io
+DOMAIN-SUFFIX,quicknode.com
+DOMAIN-SUFFIX,ankr.com
+DOMAIN-SUFFIX,chainlink.com
+DOMAIN-SUFFIX,thegraph.com
+DOMAIN-SUFFIX,ens.domains
+DOMAIN-SUFFIX,opensea.io
+DOMAIN-SUFFIX,seadn.io
+DOMAIN-SUFFIX,blur.io
+DOMAIN-SUFFIX,magiceden.io
+DOMAIN-SUFFIX,polymarket.com
+DOMAIN-SUFFIX,kalshi.com
+DOMAIN-SUFFIX,dune.com
+DOMAIN-SUFFIX,nansen.ai
+DOMAIN-SUFFIX,arkhamintelligence.com
+DOMAIN-SUFFIX,messari.io
+DOMAIN-SUFFIX,theblock.co
+DOMAIN-SUFFIX,coindesk.com
+DOMAIN-SUFFIX,cointelegraph.com
+DOMAIN-SUFFIX,decrypt.co
+DOMAIN-SUFFIX,blockworks.co
 DOMAIN-SUFFIX,bitcointalk.org
 
-# > Y Combinator & US Remote Job Boards (YC 创业社区与美国远程招聘平台)
+# > Y Combinator, VC & US Remote Job Boards (硅谷创投、Hacker News 与美国远程招聘平台)
 DOMAIN-SUFFIX,ycombinator.com
+DOMAIN-SUFFIX,startupschool.org
+DOMAIN-SUFFIX,a16z.com
+DOMAIN-SUFFIX,sequoiacap.com
+DOMAIN-SUFFIX,benchmark.com
+DOMAIN-SUFFIX,lightspeedvp.com
+DOMAIN-SUFFIX,greylock.com
+DOMAIN-SUFFIX,kpcb.com
+DOMAIN-SUFFIX,accel.com
+DOMAIN-SUFFIX,bessemer.com
+DOMAIN-SUFFIX,crunchbase.com
+DOMAIN-SUFFIX,pitchbook.com
+DOMAIN-SUFFIX,cbinsights.com
+DOMAIN-SUFFIX,wellfound.com
+DOMAIN-SUFFIX,angel.co
+DOMAIN-SUFFIX,angellist.com
+DOMAIN-SUFFIX,levels.fyi
+DOMAIN-SUFFIX,glassdoor.com
+DOMAIN-SUFFIX,indeed.com
+DOMAIN-SUFFIX,ziprecruiter.com
+DOMAIN-SUFFIX,monster.com
+DOMAIN-SUFFIX,dice.com
 DOMAIN-SUFFIX,upwork.com
+DOMAIN-SUFFIX,upwork.CTT
 DOMAIN-SUFFIX,remoteok.com
 DOMAIN-SUFFIX,weworkremotely.com
 DOMAIN-SUFFIX,remotive.com
+DOMAIN-SUFFIX,remote.com
+DOMAIN-SUFFIX,toptal.com
+DOMAIN-SUFFIX,mercator.com
+DOMAIN-SUFFIX,turing.com
 
 # ------------------------------------------------------------------------------
-# 7. Tesla, Neuralink & The Boring Company (马斯克旗下非 X/SpaceX 实体公司)
-# 注：已剔除 tesla.cn（归入 China.list 直连），此处仅代理海外官网
+# 9. NVIDIA, AMD, Intel, Qualcomm, Broadcom & Tesla (美国半导体芯片巨头与马斯克非 X 实体)
+# 注：tesla.cn 已归入 China.list 直连
 # ------------------------------------------------------------------------------
+DOMAIN-SUFFIX,nvidia.com
+DOMAIN-SUFFIX,nvidiagrid.net
+DOMAIN-SUFFIX,geforce.com
+DOMAIN-SUFFIX,geforcenow.com
+DOMAIN-SUFFIX,amd.com
+DOMAIN-SUFFIX,radeon.com
+DOMAIN-SUFFIX,xilinx.com
+DOMAIN-SUFFIX,intel.com
+DOMAIN-SUFFIX,intel.cn
+DOMAIN-SUFFIX,altera.com
+DOMAIN-SUFFIX,qualcomm.com
+DOMAIN-SUFFIX,snapdragon.com
+DOMAIN-SUFFIX,arm.com
+DOMAIN-SUFFIX,ti.com
+DOMAIN-SUFFIX,analog.com
+DOMAIN-SUFFIX,micron.com
+DOMAIN-SUFFIX,crucial.com
+DOMAIN-SUFFIX,westerndigital.com
+DOMAIN-SUFFIX,sandisk.com
+DOMAIN-SUFFIX,seagate.com
+DOMAIN-SUFFIX,dell.com
+DOMAIN-SUFFIX,dellcdn.com
+DOMAIN-SUFFIX,alienware.com
+DOMAIN-SUFFIX,hp.com
+DOMAIN-SUFFIX,hpconnected.com
+DOMAIN-SUFFIX,garmin.com
+DOMAIN-SUFFIX,gopro.com
+DOMAIN-SUFFIX,bose.com
+DOMAIN-SUFFIX,sonos.com
+DOMAIN-SUFFIX,synology.com
+DOMAIN-SUFFIX,ubnt.com
+DOMAIN-SUFFIX,ui.com
 DOMAIN-SUFFIX,tesla.com
 DOMAIN-SUFFIX,teslamotors.com
 DOMAIN-SUFFIX,neuralink.com
