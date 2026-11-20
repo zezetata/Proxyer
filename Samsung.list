@@ -1,0 +1,68 @@
+# > Samsung 顶级域名与核心主站
+DOMAIN-SUFFIX,samsung
+DOMAIN-SUFFIX,xn--cg4bki
+DOMAIN-SUFFIX,samsung.com
+DOMAIN-SUFFIX,samsung.com.cn
+DOMAIN-SUFFIX,samsung.net
+DOMAIN-SUFFIX,samsung.co.kr
+DOMAIN-SUFFIX,samsungcn.com
+
+# > 账户、云服务与同步 (Samsung Account & Cloud)
+DOMAIN-SUFFIX,samsungcloud.com
+DOMAIN-SUFFIX,samsungcloudcdn.com
+DOMAIN-SUFFIX,samsungcloudplatform.com
+DOMAIN-SUFFIX,samsungcloudsolution.com
+DOMAIN-SUFFIX,samsungcloudsolution.net
+DOMAIN-SUFFIX,samsungosp.com
+DOMAIN-SUFFIX,samsungpass.com
+DOMAIN-SUFFIX,samsungdive.com
+DOMAIN-SUFFIX,findmymobile.samsung.com
+
+# > 应用商店、主题与内容服务 (Galaxy Store & Services)
+DOMAIN-SUFFIX,samsungapps.com
+DOMAIN-SUFFIX,galaxyapps.com
+DOMAIN-SUFFIX,galaxystore.com
+DOMAIN-SUFFIX,samsunggalaxystore.com
+DOMAIN-SUFFIX,samsungthemes.com
+DOMAIN-SUFFIX,samsungmembers.com
+DOMAIN-SUFFIX,samsungnews.com
+DOMAIN-SUFFIX,samsungtvplus.com
+DOMAIN-SUFFIX,samsungvideohub.com
+DOMAIN-SUFFIX,samsungmusic.com
+DOMAIN-SUFFIX,samsunggame.com
+DOMAIN-SUFFIX,gamelauncher.samsung.com
+
+# > 系统更新、安全与底层服务 (OTA, Knox, Push)
+DOMAIN-SUFFIX,samsungotn.net
+DOMAIN-SUFFIX,ospserver.net
+DOMAIN-SUFFIX,samsungknox.com
+DOMAIN-SUFFIX,secb2b.com
+DOMAIN-SUFFIX,secb2b.com.cn
+DOMAIN-SUFFIX,samsungdm.com
+DOMAIN-SUFFIX,samsungpush.com
+DOMAIN-SUFFIX,spp.samsung.com
+DOMAIN-SUFFIX,fota-cloud-dn.ospserver.net
+DOMAIN-SUFFIX,vas.samsungapps.com
+
+# > AI、健康与物联网生态 (Bixby, Health, SmartThings, Pay, DeX)
+DOMAIN-SUFFIX,bixby.com
+DOMAIN-SUFFIX,samsungbixby.com
+DOMAIN-SUFFIX,shealth.samsung.com
+DOMAIN-SUFFIX,samsunghealth.com
+DOMAIN-SUFFIX,smartthings.com
+DOMAIN-SUFFIX,smartthingsgslb.com
+DOMAIN-SUFFIX,samsungconnect.com
+DOMAIN-SUFFIX,samsungpay.com
+DOMAIN-SUFFIX,mpay.samsung.com
+DOMAIN-SUFFIX,samsungdex.com
+DOMAIN-SUFFIX,samsungsds.com
+DOMAIN-SUFFIX,samsungdisplay.com
+DOMAIN-SUFFIX,samsungsem.com
+DOMAIN-SUFFIX,samsungresearch.com
+
+# > 关键字兜底（可选，防止漏掉地区性子域名）
+DOMAIN-KEYWORD,samsung
+
+# > 三星官方 ASN（可选，建议加 no-resolve 避免触发本地 DNS 解析）
+IP-ASN,23520,no-resolve
+IP-ASN,38092,no-resolve
