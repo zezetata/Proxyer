@@ -1283,3 +1283,16 @@ DOMAIN-SUFFIX,tesla.com
 DOMAIN-SUFFIX,teslamotors.com
 DOMAIN-SUFFIX,neuralink.com
 DOMAIN-SUFFIX,boringcompany.com
+
+# Infini.money Ruleset
+DOMAIN,infini.money
+DOMAIN,www.infini.money
+DOMAIN,app.infini.money
+DOMAIN,business.infini.money
+DOMAIN,help.infini.money
+DOMAIN,developer.infini.money
+DOMAIN,openapi.infini.money
+DOMAIN,openapi-sandbox.infini.money
+DOMAIN,home-sandbox.infini.money
+DOMAIN-SUFFIX,infini.money
+USER-AGENT,Infini*
